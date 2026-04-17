@@ -283,7 +283,8 @@
     root.appendChild(backdrop);
     root.appendChild(launcher);
     root.appendChild(panel);
-    document.body.appendChild(root);
+    /* documentElement avoids position:fixed quirks when body has overflow-x:hidden (iOS / some Chrome). */
+    document.documentElement.appendChild(root);
 
     var panelOpen = false;
     /** Ignore stray document clicks right after open (mobile synthetic / delayed clicks). */
