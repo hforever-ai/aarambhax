@@ -11,6 +11,8 @@
   --hero-pad-top:88px;
   --hero-pad-bottom:40px;
   --text-hero-h1:clamp(32px,5vw,56px);
+  /* Home hero only — long EN/Hinglish headline reads huge at full --text-hero-h1 */
+  --text-home-hero-h1:clamp(24px,4vw,44px);
   --text-lead:18px;
   --lh-lead:1.6;
   --prose-body-size:15.5px;
@@ -1245,8 +1247,8 @@ a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1p
 }
 .home-hero-h1{
   font-family:var(--font-hi);
-  font-size:var(--text-hero-h1);
-  font-weight:800;line-height:1.1;letter-spacing:-.02em;
+  font-size:var(--text-home-hero-h1);
+  font-weight:800;line-height:1.12;letter-spacing:-.02em;
   color:var(--white);
   text-shadow:none;
   margin:0 0 12px;
