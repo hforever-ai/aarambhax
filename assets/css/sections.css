@@ -1,0 +1,174 @@
+/* =============================================================================
+   AARAMBHAX SECTIONS — shared section patterns used across every page.
+   Consumes tokens from tokens.css.
+   Spec: docs/superpowers/specs/2026-04-17-aarambhax-structural-refactor-design.md
+
+   Extracted from site.css. Initial pass: only blocks with no cross-dependencies
+   on combined @media groups or .about-longform overrides. Further extractions
+   (product-section, cta-section, stats/how/testi, etc.) can follow in a later
+   phase once this baseline is proven safe.
+   ============================================================================= */
+
+/* ---- Page main wrapper ----------------------------------------------------- */
+.page-main{
+  position:relative;
+  z-index:1;
+  width:100%;
+}
+
+/* ---- Page hero (inner pages: saavi, shrutam, schools, about, contact) ----- */
+.page-hero{
+  padding:var(--hero-pad-top) var(--shell-pad-x) var(--hero-pad-bottom);
+  position:relative;z-index:1;
+  max-width:var(--shell-max);margin:0 auto;
+  text-align:left;
+}
+.page-hero h1{
+  font-family:var(--font-hi);
+  font-size:var(--text-hero-h1);
+  font-weight:800;
+  margin-bottom:16px;
+  letter-spacing:-.02em;
+  color:var(--white);
+  line-height:1.12;
+}
+.page-hero--compact{padding-bottom:24px;}
+.page-hero p.lead{
+  color:var(--muted);
+  font-size:var(--text-lead);
+  line-height:var(--lh-lead);
+  font-family:var(--font-hi);
+}
+.page-hero .sec-sub{
+  max-width:none;
+  font-size:var(--text-lead);
+  line-height:var(--lh-lead);
+}
+.page-hero__note{margin-top:16px;color:var(--muted);}
+
+/* ---- Policy / legal hero + body (privacy, terms, /faq) -------------------- */
+.policy-hero{
+  margin-bottom:36px;
+  padding-bottom:24px;
+  border-bottom:1px solid var(--border);
+  text-align:left;
+}
+.policy-hero h1{
+  font-size:var(--text-hero-h1);
+  font-weight:800;
+  margin-bottom:8px;
+  font-family:var(--font-hi);
+  color:var(--white);
+  letter-spacing:-.02em;
+  line-height:1.12;
+}
+.policy-subtitle{
+  font-size:17px;
+  color:var(--teal2);
+  font-family:'Noto Sans Devanagari',sans-serif;
+  margin-bottom:6px;
+}
+.policy-date{font-size:13px;color:var(--dim);}
+.policy-date--block{margin-top:24px;}
+.policy-content{
+  font-size:var(--prose-body-size);
+  line-height:var(--prose-body-lh);
+  color:var(--muted);
+  font-family:var(--font-hi);
+}
+.policy-section{margin-top:28px;}
+.policy-section h2{
+  font-size:clamp(20px,3vw,28px);
+  color:var(--gold);
+  margin-bottom:12px;
+  font-family:var(--font-hi);
+  font-weight:700;
+}
+.policy-section h3{font-size:16px;color:var(--white);margin:22px 0 10px;}
+.policy-section p{margin-bottom:12px;}
+.policy-section ul{margin:8px 0 12px 18px;}
+.policy-section li{margin-bottom:8px;}
+
+/* ---- 404 page -------------------------------------------------------------- */
+.page-404{
+  text-align:left;
+  max-width:var(--shell-max);
+  margin:0 auto;
+  padding:var(--hero-pad-top) var(--shell-pad-x) 80px;
+}
+.page-404__title{
+  font-size:var(--text-hero-h1);
+  line-height:1.12;
+  margin-bottom:16px;
+}
+.page-404__lead{
+  max-width:36rem;
+  margin:0 0 28px;
+  color:var(--muted);
+  font-size:var(--text-lead);
+  line-height:var(--lh-lead);
+}
+.page-404__actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:flex-start;
+  margin-top:8px;
+}
+
+/* ---- FAQ accordion (used on home + /faq) ---------------------------------- */
+.faq-section{
+  padding:80px var(--shell-pad-x);
+  max-width:var(--shell-max);
+  margin:0 auto;
+  position:relative;z-index:1;
+}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{
+  width:100%;text-align:left;
+  background:none;border:none;
+  color:var(--white);
+  font-size:16px;font-weight:600;
+  padding:20px 0;
+  cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:16px;
+}
+.faq-q:hover{color:var(--teal2);}
+.faq-a{
+  padding:0 0 22px;
+  color:var(--muted);
+  line-height:1.65;
+  font-size:15px;
+}
+.faq-a[hidden]{display:none !important;}
+
+/* ---- Press strip (home) --------------------------------------------------- */
+.press-section{
+  padding:36px 48px;
+  position:relative;z-index:1;
+  text-align:center;
+}
+.press-logos{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:20px 28px;
+  opacity:0.7;
+  font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--dim);
+}
+
+/* ---- Reveal-on-scroll utility --------------------------------------------- */
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .55s ease, transform .55s ease;
+}
+.reveal.visible{opacity:1;transform:none;}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{
+    opacity:1 !important;
+    transform:none !important;
+    transition:none !important;
+  }
+}
