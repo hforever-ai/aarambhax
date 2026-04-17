@@ -14,8 +14,9 @@
   --shell-pad-x:24px;
   --hero-pad-top:88px;
   --hero-pad-bottom:40px;
-  /* Primary page / hero H1s (home, inner heroes, legal, 404) — one scale site-wide */
-  --text-hero-h1:clamp(20px,3.4vw,36px);
+  /* Primary page / hero H1s (home, inner heroes, legal, 404) — one scale site-wide.
+     Consumed from tokens.css (--fs-h1 = clamp(36px, 1.25rem + 4.5vw, 72px)). */
+  --text-hero-h1: var(--fs-h1);
   --text-lead:18px;
   --lh-lead:1.6;
   --prose-body-size:15.5px;
@@ -395,7 +396,7 @@
   font-family:var(--font-en);
 }
 .sec-h2{
-  font-size:clamp(32px,5vw,52px);
+  font-size: var(--fs-h2);
   font-weight:700;line-height:1.1;
   margin-bottom:16px;
   letter-spacing:-.02em;

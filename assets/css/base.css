@@ -111,13 +111,18 @@ body {
   overflow-x: hidden;
 }
 
+/* Devanagari body needs ~1 step larger and more line-height for matras (W3C ilreq). */
 html[data-lang="hi"] body,
 html[data-lang="mr"] body {
   font-family: var(--font-hi);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-body-hi);
 }
 
 html[data-lang="te"] body {
   font-family: var(--font-te);
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-body-hi);
 }
 
 .container {
