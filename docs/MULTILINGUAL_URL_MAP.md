@@ -1,13 +1,13 @@
-# Multilingual URLs + `.com`-only (SEO playbook)
+# Multilingual URLs + primary host (SEO playbook)
 
 ## Decisions (locked for this doc)
 
 | Topic | Choice | Rationale |
 |--------|--------|-----------|
-| **Primary marketing host** | `https://www.aarambhax.com` | Matches current canonicals and `sitemap.xml`. |
-| **`x-default` (hreflang)** | `https://www.aarambhax.com/` | India-first product; current homepage is Hindi-primary (`lang="hi-IN"`). Use as fallback when Google has no better locale match. |
+| **Primary marketing host** | `https://www.aarambhax.ai` | Matches current canonicals and `sitemap.xml`. **Aarambha** = brand; **Aarambhax** = site / product name on this domain. |
+| **`x-default` (hreflang)** | `https://www.aarambhax.ai/` | India-first product; current homepage is Hindi-primary (`lang="hi-IN"`). Use as fallback when Google has no better locale match. |
 | **Locale in URL** | **Path prefix** `/hi/`, `/en/`, `/mr/`, `/te/` | Best balance of clarity, one property in GSC, and indexable per-language URLs. |
-| **`.ai` domain** | **301 → `www.aarambhax.com`** (same path) | Avoid duplicate indexing; keep `.ai` for email/brand only if you want. |
+| **Legacy `.com` host** | **301 → `www.aarambhax.ai`** (same path) | Single indexed site; avoid duplicate content. |
 
 ---
 
@@ -17,11 +17,13 @@ Implement **301** at Cloudflare (or your DNS proxy) / host:
 
 | From | To |
 |------|-----|
-| `http://www.aarambhax.com/*` | `https://www.aarambhax.com/$1` |
-| `http://aarambhax.com/*` | `https://www.aarambhax.com/$1` |
-| `https://aarambhax.com/*` | `https://www.aarambhax.com/$1` |
-| `https://aarambhax.ai/*` | `https://www.aarambhax.com/$1` |
-| `https://www.aarambhax.ai/*` | `https://www.aarambhax.com/$1` |
+| `http://www.aarambhax.ai/*` | `https://www.aarambhax.ai/$1` |
+| `http://aarambhax.ai/*` | `https://www.aarambhax.ai/$1` |
+| `https://aarambhax.ai/*` | `https://www.aarambhax.ai/$1` |
+| `http://www.aarambhax.com/*` | `https://www.aarambhax.ai/$1` |
+| `http://aarambhax.com/*` | `https://www.aarambhax.ai/$1` |
+| `https://www.aarambhax.com/*` | `https://www.aarambhax.ai/$1` |
+| `https://aarambhax.com/*` | `https://www.aarambhax.ai/$1` |
 
 Pick **one** of `www` vs apex as canonical; the table assumes **`www`** (aligned with HTML today).
 
@@ -60,7 +62,7 @@ Mirror under each locale: `/shrutam/`, `/saavi/`, `/about/`, `/faq/`, `/contact/
 
 ### Phase 3 — App / product
 
-`shrutam.ai` stays separate product domain; marketing canonicals remain `aarambhax.com`.
+`shrutam.ai` stays separate product domain; marketing canonicals remain **`aarambhax.ai`** (this site).
 
 ---
 
@@ -71,11 +73,11 @@ For every indexable URL, `<head>` should include **self + all other locale URLs 
 Example when English post exists at `/en/blog/photosynthesis-class-6-hindi/`:
 
 ```html
-<link rel="alternate" hreflang="hi-IN" href="https://www.aarambhax.com/blog/photosynthesis-class-6-hindi/" />
-<link rel="alternate" hreflang="en-IN" href="https://www.aarambhax.com/en/blog/photosynthesis-class-6-hindi/" />
-<link rel="alternate" hreflang="mr-IN" href="https://www.aarambhax.com/mr/blog/photosynthesis-class-6-hindi/" />
-<link rel="alternate" hreflang="te-IN" href="https://www.aarambhax.com/te/blog/photosynthesis-class-6-hindi/" />
-<link rel="alternate" hreflang="x-default" href="https://www.aarambhax.com/blog/photosynthesis-class-6-hindi/" />
+<link rel="alternate" hreflang="hi-IN" href="https://www.aarambhax.ai/blog/photosynthesis-class-6-hindi/" />
+<link rel="alternate" hreflang="en-IN" href="https://www.aarambhax.ai/en/blog/photosynthesis-class-6-hindi/" />
+<link rel="alternate" hreflang="mr-IN" href="https://www.aarambhax.ai/mr/blog/photosynthesis-class-6-hindi/" />
+<link rel="alternate" hreflang="te-IN" href="https://www.aarambhax.ai/te/blog/photosynthesis-class-6-hindi/" />
+<link rel="alternate" hreflang="x-default" href="https://www.aarambhax.ai/blog/photosynthesis-class-6-hindi/" />
 ```
 
 Rules:
@@ -118,15 +120,15 @@ For pages that exist in multiple locales:
 
 ## 8. GSC / GA4
 
-- **GSC:** one **Domain** property on `aarambhax.com` covers all paths; monitor **International targeting** and **hreflang** errors after launch.
+- **GSC:** one **Domain** property on `aarambhax.ai` covers all paths; monitor **International targeting** and **hreflang** errors after launch.
 - **GA4:** optional `language` / `locale` custom dimension from URL path prefix for reporting.
 
 ---
 
 ## Summary
 
-- **`.com` only:** enforce with **301**s; don’t serve a parallel indexed site on **`.ai`**.
-- **Language for SEO:** **separate URLs per language** (path prefix); **`x-default`** = Hindi homepage `https://www.aarambhax.com/`; add **`/en/`** first, then `mr`/`te` when copy exists.
+- **Canonical host:** `www.aarambhax.ai`; **301** legacy `.com` (and apex `.ai` if needed) to avoid duplicate indexing.
+- **Language for SEO:** **separate URLs per language** (path prefix); **`x-default`** = Hindi homepage `https://www.aarambhax.ai/`; add **`/en/`** first, then `mr`/`te` when copy exists.
 - **Phase 1 URL set:** home, waitlist, blog hub, three posts — then expand.
 
 When you’re ready to implement Phase 1 in the repo, say whether you prefer **A** (keep `/` as Hindi, add `/en/...`) or **B** (move Hindi to `/hi/`, 301 old URLs).

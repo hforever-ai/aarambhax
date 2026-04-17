@@ -37,12 +37,12 @@ Do not put PII in event parameters.
 GSC is **verification + monitoring**, not a tag.
 
 1. Add a property in [Google Search Console](https://search.google.com/search-console):
-   - **Domain** property for `aarambhax.com` (recommended — covers `www` and apex), **or**
-   - **URL-prefix** `https://www.aarambhax.com/`
+   - **Domain** property for `aarambhax.ai` (recommended — covers `www` and apex), **or**
+   - **URL-prefix** `https://www.aarambhax.ai/`
 2. **Verify** using the method Google shows:
    - Domain: **DNS TXT** record at your registrar, or
    - URL-prefix: HTML file upload, **HTML tag** (meta on homepage), or DNS.
-3. **Sitemaps →** submit: `https://www.aarambhax.com/sitemap.xml`  
+3. **Sitemaps →** submit: `https://www.aarambhax.ai/sitemap.xml`  
    (`robots.txt` already references this URL.)
 4. After a few days, check **Performance** (queries, impressions, CTR), **Page indexing**, and **Core Web Vitals**.
 

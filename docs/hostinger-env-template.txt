@@ -1,0 +1,31 @@
+# Aarambha — production environment (TEMPLATE ONLY)
+# Copy to Hostinger: /home/<user>/.env — NOT inside public_html.
+# Never commit real secrets. Generate new random values for production.
+
+# Core (use: openssl rand -hex 32)
+CSRF_SECRET=
+SESSION_SECRET=
+CONTACT_HMAC=
+
+# Internal API / waitlist (generate unique strings)
+API_KEY=
+WAITLIST_NONCE=
+
+# MySQL (Hostinger hPanel → Databases)
+DB_HOST=
+DB_PORT=3306
+DB_NAME=
+DB_USER=
+DB_PASS=
+
+# Google reCAPTCHA v3 (console.cloud.google.com)
+RECAPTCHA_SITE_KEY=
+RECAPTCHA_SECRET=
+
+# Site
+SITE_URL=https://www.aarambhax.ai
+SITE_NAME=Aarambha
+ADMIN_EMAIL=hello@aarambhax.com
+NOREPLY_EMAIL=noreply@aarambhax.com
+
+CSP_NONCE_SALT=

@@ -1,0 +1,85 @@
+/* AARAMBHAX_MASTER_DESIGN — cosmic bg, eyebrow, buttons */
+.cosmos-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cosmos-bg .ring {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 1px solid rgba(77, 200, 240, var(--opacity, 0.15));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ringPulse 6s ease-in-out var(--delay, 0s) infinite;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font: 600 var(--text-xs) / 1 var(--font-en);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal-bright);
+  margin-bottom: 12px;
+}
+
+.eyebrow-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal-bright);
+  animation: blink 2s infinite;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--blue-bright);
+  color: var(--bg-void);
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font: 700 14px/1 var(--font-en);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  animation: glowBreathe 3s ease-in-out infinite;
+  transition: transform var(--dur-fast), filter var(--dur-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-mid);
+  font: 500 14px/1 var(--font-en);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--dur-fast);
+}
+
+.btn-ghost:hover {
+  border-color: var(--border-bright);
+  color: var(--text-primary);
+  background: var(--blue-line);
+}

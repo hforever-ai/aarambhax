@@ -1,0 +1,53 @@
+/* AARAMBHAX_MASTER_DESIGN — motion */
+@keyframes ringPulse {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1.03);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes glowBreathe {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(77, 200, 240, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(77, 200, 240, 0.55);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}

@@ -6,8 +6,6 @@
 header('Content-Type: application/json; charset=utf-8');
 
 $allowed_origins = [
-    'https://www.aarambhax.com',
-    'https://aarambhax.com',
     'https://www.aarambhax.ai',
     'https://aarambhax.ai',
     'http://localhost:8080',
@@ -345,7 +343,7 @@ $reply_subject = 'Aapka message mila — Aarambha';
 $reply_body = "Namaste {$name},\n\n"
     . "Aapka message humein mil gaya. Hum jald reply karenge.\n\n"
     . "Aapne likha:\n\"{$message}\"\n\n"
-    . "Waitlist: https://www.aarambhax.com/waitlist/\n\n"
+    . "Waitlist: https://www.aarambhax.ai/waitlist/\n\n"
     . "Shukriya,\nAarambha Team\nhello@aarambhax.com\n";
 
 $reply_headers = [

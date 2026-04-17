@@ -1,0 +1,138 @@
+/* AARAMBHAX_MASTER_DESIGN — tokens + reset + legacy aliases */
+:root {
+  --bg-void: #010408;
+  --bg-deep: #03060f;
+  --bg-surface: #060d1c;
+  --bg-elevated: #0a1428;
+  --bg-glass: rgba(6, 13, 28, 0.75);
+
+  --blue-bright: #4dc8f0;
+  --blue-mid: #1a7fcc;
+  --blue-dark: #0d4a7a;
+  --blue-glow: rgba(77, 200, 240, 0.15);
+  --blue-line: rgba(77, 200, 240, 0.08);
+
+  --teal-bright: #0aacba;
+  --teal-mid: #077a85;
+  --teal-glow: rgba(10, 172, 186, 0.12);
+
+  --gold-bright: #f0c060;
+  --gold-warm: #d4943a;
+  --gold-muted: #8a5e20;
+  --gold-glow: rgba(240, 192, 96, 0.1);
+
+  --text-primary: #e8f4ff;
+  --text-secondary: #8aaec8;
+  --text-muted: #4a6680;
+  --text-gold: #f0c060;
+  --text-blue: #4dc8f0;
+
+  --border-bright: rgba(77, 200, 240, 0.25);
+  --border-mid: rgba(77, 200, 240, 0.12);
+  --border-subtle: rgba(77, 200, 240, 0.06);
+  --border-gold: rgba(240, 192, 96, 0.2);
+
+  --success: #2a9d6a;
+  --warning: #d4943a;
+  --error: #c44040;
+  --info: #4dc8f0;
+
+  --font-en: "Sora", sans-serif;
+  --font-hi: "Noto Sans Devanagari", "Sora", sans-serif;
+  --font-te: "Noto Sans Telugu", sans-serif;
+
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-md: 17px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 30px;
+  --text-3xl: 38px;
+  --text-4xl: 48px;
+  --text-5xl: 62px;
+  --text-hero: clamp(42px, 7vw, 80px);
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 100px;
+
+  --max-width: 1200px;
+  --nav-height: 68px;
+  --dur-fast: 150ms;
+  --dur-mid: 300ms;
+  --dur-slow: 600ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Legacy names — existing site.css rules */
+  --cosmos: var(--bg-deep);
+  --deep: var(--bg-surface);
+  --navy: var(--bg-elevated);
+  --teal: var(--blue-mid);
+  --teal2: var(--blue-bright);
+  --gold: var(--gold-warm);
+  --gold2: var(--gold-bright);
+  --violet: #818cf8;
+  --white: var(--text-primary);
+  --muted: var(--text-secondary);
+  --dim: rgba(232, 244, 255, 0.45);
+  --border: var(--border-mid);
+  --glow: var(--border-bright);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-en);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+html[data-lang="hi"] body,
+html[data-lang="mr"] body {
+  font-family: var(--font-hi);
+}
+
+html[data-lang="te"] body {
+  font-family: var(--font-te);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+}
