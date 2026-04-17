@@ -11,7 +11,7 @@
   --hero-pad-top:88px;
   --hero-pad-bottom:40px;
   /* Primary page / hero H1s (home, inner heroes, legal, 404) — one scale site-wide */
-  --text-hero-h1:clamp(24px,4vw,44px);
+  --text-hero-h1:clamp(20px,3.4vw,36px);
   --text-lead:18px;
   --lh-lead:1.6;
   --prose-body-size:15.5px;
@@ -1035,7 +1035,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
 .about-story-title span{color:var(--gold);font-family:var(--font-hi);}
 /* Saavi / Shrutam split hero: smaller than generic .about-story-title — long subtitle reads huge at one size */
 .about-longform .about-story-title.product-hero-split{
-  font-size:clamp(18px,2.85vw,28px);
+  font-size:clamp(16px,2.5vw,24px);
   line-height:1.28;
 }
 /* Saavi / Shrutam: keep primary line white — override gold span rule above */
@@ -1048,7 +1048,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
   color:var(--gold);
   font-family:var(--font-hi);
   font-weight:600;
-  font-size:clamp(13px,2.15vw,16px);
+  font-size:clamp(12px,1.95vw,15px);
   line-height:1.45;
 }
 .about-longform .product-hero-split .product-hero-split__sep{color:var(--dim);font-weight:600;}
