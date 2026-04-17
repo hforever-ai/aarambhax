@@ -55,19 +55,39 @@ def mobile_link(href, i18n, current):
     return f'  <a href="{href}" class="nav-link"{ac} data-i18n="{i18n}"></a>'
 
 
+def flyout_link(href, i18n, current):
+    cur = current and href.split("#")[0].rstrip("/") == current.rstrip("/")
+    ac = ' aria-current="page"' if cur else ""
+    return (
+        f'          <a href="{href}" class="nav-flyout__link" role="menuitem"{ac} data-i18n="{i18n}"></a>'
+    )
+
+
 def build_nav(current):
-    desktop = []
+    desktop = [
+        nav_link("/shrutam/", "nav.product", current),
+        nav_link("/saavi/", "nav.saavi", current),
+    ]
+    company_links = []
     for href, key in [
-        ("/shrutam/", "nav.product"),
         ("/about/", "nav.about"),
-        ("/saavi/", "nav.saavi"),
         ("/blog/", "nav.blog"),
         ("/faq/", "nav.faq"),
         ("/contact/", "nav.contact_page"),
         ("/schools/", "nav.schools"),
-        ("/#jnana", "nav.jnana"),
     ]:
-        desktop.append(nav_link(href, key, current))
+        company_links.append(flyout_link(href, key, current))
+    desktop.append(
+        "      <div class=\"nav-flyout\" data-nav-flyout>\n"
+        "        <button type=\"button\" class=\"nav-flyout__trigger\" id=\"nav-company-trigger\" "
+        'aria-expanded="false" aria-haspopup="true" aria-controls="nav-company-panel" '
+        'data-i18n="nav.company_menu">Company</button>\n'
+        '        <div class="nav-flyout__panel" id="nav-company-panel" role="menu" '
+        'aria-labelledby="nav-company-trigger" hidden>\n'
+        + "\n".join(company_links)
+        + "\n        </div>\n      </div>"
+    )
+    desktop.append(nav_link("/#jnana", "nav.jnana", current))
     desktop.append(
         '      <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" '
         'data-i18n="nav.launch_app" data-i18n-aria-label="nav.launch_aria"></a>'

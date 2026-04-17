@@ -1,8 +1,54 @@
-/* AARAMBHAX_MASTER_DESIGN — mobile nav + sticky scroll */
+/* AARAMBHAX_MASTER_DESIGN — mobile nav, desktop company flyout, sticky scroll */
 (function () {
   function $(sel, root) {
     return (root || document).querySelector(sel);
   }
+
+  function closeAllNavFlyouts() {
+    document.querySelectorAll("[data-nav-flyout]").forEach(function (fly) {
+      var panel = fly.querySelector(".nav-flyout__panel");
+      var btn = fly.querySelector(".nav-flyout__trigger");
+      if (panel) panel.hidden = true;
+      if (btn) btn.setAttribute("aria-expanded", "false");
+      fly.classList.remove("is-open");
+    });
+  }
+
+  function initNavFlyouts() {
+    document.querySelectorAll("[data-nav-flyout]").forEach(function (fly) {
+      var btn = fly.querySelector(".nav-flyout__trigger");
+      var panel = fly.querySelector(".nav-flyout__panel");
+      if (!btn || !panel) return;
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (window.closeLangDropdowns) window.closeLangDropdowns();
+        var willOpen = panel.hidden;
+        closeAllNavFlyouts();
+        if (willOpen) {
+          panel.hidden = false;
+          btn.setAttribute("aria-expanded", "true");
+          fly.classList.add("is-open");
+        }
+      });
+      panel.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+      panel.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          closeAllNavFlyouts();
+        });
+      });
+    });
+    document.addEventListener("click", function () {
+      closeAllNavFlyouts();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeAllNavFlyouts();
+    });
+  }
+
+  window.closeNavFlyouts = closeAllNavFlyouts;
 
   function initNav() {
     var nav = $("#main-nav");
@@ -82,9 +128,14 @@
     );
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initNav);
-  } else {
+  function boot() {
+    initNavFlyouts();
     initNav();
   }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
+

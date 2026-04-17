@@ -146,6 +146,7 @@
       toggle.addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
+        if (window.closeNavFlyouts) window.closeNavFlyouts();
         if (menu.hidden) openDropdown(wrap);
         else closeAllLangDropdowns();
       });
@@ -163,6 +164,7 @@
     return currentLang;
   };
   window.getTranslation = getTranslation;
+  window.closeLangDropdowns = closeAllLangDropdowns;
 
   document.addEventListener("DOMContentLoaded", function () {
     initLangDropdowns();

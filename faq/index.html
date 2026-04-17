@@ -62,7 +62,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=1727666000-b1921bfb">
+<link rel="stylesheet" href="/assets/css/site.css?v=4973490000-212d603e">
 <script src="/assets/js/analytics-config.js"></script>
 <script defer src="/assets/js/translations.js"></script>
 <script defer src="/assets/js/i18n.js"></script>
@@ -85,12 +85,17 @@
     </a>
     <div class="nav-desktop-only" role="menubar">
       <a href="/shrutam/" class="nav-link" data-i18n="nav.product"></a>
-      <a href="/about/" class="nav-link" data-i18n="nav.about"></a>
       <a href="/saavi/" class="nav-link" data-i18n="nav.saavi"></a>
-      <a href="/blog/" class="nav-link" data-i18n="nav.blog"></a>
-      <a href="/faq/" class="nav-link" aria-current="page" data-i18n="nav.faq"></a>
-      <a href="/contact/" class="nav-link" data-i18n="nav.contact_page"></a>
-      <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
+      <div class="nav-flyout" data-nav-flyout>
+        <button type="button" class="nav-flyout__trigger" id="nav-company-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="nav-company-panel" data-i18n="nav.company_menu">Company</button>
+        <div class="nav-flyout__panel" id="nav-company-panel" role="menu" aria-labelledby="nav-company-trigger" hidden>
+          <a href="/about/" class="nav-flyout__link" role="menuitem" data-i18n="nav.about"></a>
+          <a href="/blog/" class="nav-flyout__link" role="menuitem" data-i18n="nav.blog"></a>
+          <a href="/faq/" class="nav-flyout__link" role="menuitem" aria-current="page" data-i18n="nav.faq"></a>
+          <a href="/contact/" class="nav-flyout__link" role="menuitem" data-i18n="nav.contact_page"></a>
+          <a href="/schools/" class="nav-flyout__link" role="menuitem" data-i18n="nav.schools"></a>
+        </div>
+      </div>
       <a href="/#jnana" class="nav-link" data-i18n="nav.jnana"></a>
       <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app" data-i18n-aria-label="nav.launch_aria"></a>
     </div>
