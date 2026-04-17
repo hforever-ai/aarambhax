@@ -73,7 +73,7 @@
       showStatus(
         statusEl,
         false,
-        "Form backend not configured yet. Email hello@aarambhax.com directly."
+        "Form backend not configured yet. Email hello@aarambhax.ai directly."
       );
       submitBtn.disabled = true;
       return;
@@ -135,7 +135,7 @@
           showStatus(
             statusEl,
             false,
-            "Network error. Try again or email hello@aarambhax.com."
+            "Network error. Try again or email hello@aarambhax.ai."
           );
         })
         .finally(function () {

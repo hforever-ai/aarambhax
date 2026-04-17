@@ -344,7 +344,7 @@ $reply_body = "Namaste {$name},\n\n"
     . "Aapka message humein mil gaya. Hum jald reply karenge.\n\n"
     . "Aapne likha:\n\"{$message}\"\n\n"
     . "Waitlist: https://www.aarambhax.ai/waitlist/\n\n"
-    . "Shukriya,\nAarambha Team\nhello@aarambhax.com\n";
+    . "Shukriya,\nAarambha Team\nhello@aarambhax.ai\n";
 
 $reply_headers = [
     'From: Aarambha <' . $email_from . '>',

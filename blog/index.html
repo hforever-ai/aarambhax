@@ -65,9 +65,9 @@
 <body>
 <a href="#main-content" class="skip-link" data-i18n="skip.main">मुख्य सामग्री पर जाएं · Skip to main content</a>
 <div class="cosmos-bg" aria-hidden="true">
-  <div class="ring" style="--size:600px;--delay:0s;--opacity:0.12"></div>
-  <div class="ring" style="--size:900px;--delay:1.2s;--opacity:0.07"></div>
-  <div class="ring" style="--size:1200px;--delay:2.4s;--opacity:0.04"></div>
+  <div class="ring ring--a"></div>
+  <div class="ring ring--b"></div>
+  <div class="ring ring--c"></div>
 </div>
 <div class="stars" aria-hidden="true"></div>
 <!-- NAV -->
@@ -107,9 +107,9 @@
   <a href="/about/" class="nav-link" data-i18n="nav.about"></a>
   <a href="/saavi/" class="nav-link" data-i18n="nav.saavi"></a>
   <a href="/blog/" class="nav-link" aria-current="page" data-i18n="nav.blog"></a>
-  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/faq/" class="nav-link" data-i18n="nav.faq"></a>
   <a href="/contact/" class="nav-link" data-i18n="nav.contact_page"></a>
+  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/#jnana" class="nav-link" data-i18n="nav.jnana"></a>
   <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app"></a>
   <div class="lang-switcher mobile-lang" role="group" aria-label="Language">
@@ -123,11 +123,12 @@
 
 <main id="main-content" class="page-main" tabindex="-1">
 
-<section class="page-hero reveal">
-  <div class="sec-eyebrow" data-i18n="blog_page.eyebrow">Blog</div>
-  <h1 data-i18n="blog_page.title">Seekhte Rahenge</h1>
-  <p class="lead" data-i18n="blog_page.lead">SEO articles coming soon — CG Board Class 10 Science, photosynthesis in Hindi, maths anxiety, aur more.</p>
-</section>
+<div class="about-longform reveal">
+<div class="about-meta-row">
+  <span class="about-meta-tag about-meta-tag--teal" data-i18n="blog_page.eyebrow">Blog</span>
+</div>
+<h1 class="about-story-title" data-i18n="blog_page.title">Seekhte Rahenge</h1>
+<p class="about-story-sub" data-i18n="blog_page.lead">SEO articles coming soon — CG Board Class 10 Science, photosynthesis in Hindi, maths anxiety, aur more.</p>
 
 <section class="product-section blog-index reveal">
   <div class="feat-grid">
@@ -149,13 +150,14 @@
   </div>
 </section>
 
+</div>
 </main>
 <!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-col">
-      <a href="/" class="foot-logo" style="margin-bottom:12px;display:inline-block">
-        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha" style="height:40px;width:auto">
+      <a href="/" class="foot-logo">
+        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha">
       </a>
       <p data-i18n="footer.blurb">Audio-first AI education — CG Board &amp; CBSE. SAAVI didi, Hinglish mein.</p>
     </div>

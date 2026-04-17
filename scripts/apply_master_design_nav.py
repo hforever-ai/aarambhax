@@ -15,9 +15,9 @@ NEW_FONT = (
 )
 
 COSMOS = """<div class="cosmos-bg" aria-hidden="true">
-  <div class="ring" style="--size:600px;--delay:0s;--opacity:0.12"></div>
-  <div class="ring" style="--size:900px;--delay:1.2s;--opacity:0.07"></div>
-  <div class="ring" style="--size:1200px;--delay:2.4s;--opacity:0.04"></div>
+  <div class="ring ring--a"></div>
+  <div class="ring ring--b"></div>
+  <div class="ring ring--c"></div>
 </div>
 """
 
@@ -79,9 +79,9 @@ def build_nav(current):
         ("/about/", "nav.about"),
         ("/saavi/", "nav.saavi"),
         ("/blog/", "nav.blog"),
-        ("/schools/", "nav.schools"),
         ("/faq/", "nav.faq"),
         ("/contact/", "nav.contact_page"),
+        ("/schools/", "nav.schools"),
         ("/#jnana", "nav.jnana"),
         ("https://shrutam.ai", "nav.launch_app"),
     ]:

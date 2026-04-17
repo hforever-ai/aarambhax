@@ -25,7 +25,7 @@ RECAPTCHA_SECRET=
 # Site
 SITE_URL=https://www.aarambhax.ai
 SITE_NAME=Aarambha
-ADMIN_EMAIL=hello@aarambhax.com
+ADMIN_EMAIL=hello@aarambhax.ai
 NOREPLY_EMAIL=noreply@aarambhax.com
 
 CSP_NONCE_SALT=

@@ -41,9 +41,9 @@
 <body>
 <a href="#main-content" class="skip-link" data-i18n="skip.main">मुख्य सामग्री पर जाएं · Skip to main content</a>
 <div class="cosmos-bg" aria-hidden="true">
-  <div class="ring" style="--size:600px;--delay:0s;--opacity:0.12"></div>
-  <div class="ring" style="--size:900px;--delay:1.2s;--opacity:0.07"></div>
-  <div class="ring" style="--size:1200px;--delay:2.4s;--opacity:0.04"></div>
+  <div class="ring ring--a"></div>
+  <div class="ring ring--b"></div>
+  <div class="ring ring--c"></div>
 </div>
 <div class="stars" aria-hidden="true"></div>
 <!-- NAV -->
@@ -83,9 +83,9 @@
   <a href="/about/" class="nav-link" data-i18n="nav.about"></a>
   <a href="/saavi/" class="nav-link" data-i18n="nav.saavi"></a>
   <a href="/blog/" class="nav-link" data-i18n="nav.blog"></a>
-  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/faq/" class="nav-link" data-i18n="nav.faq"></a>
   <a href="/contact/" class="nav-link" data-i18n="nav.contact_page"></a>
+  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/#jnana" class="nav-link" data-i18n="nav.jnana"></a>
   <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app"></a>
   <div class="lang-switcher mobile-lang" role="group" aria-label="Language">
@@ -99,19 +99,20 @@
 
 <main id="main-content" class="page-main" tabindex="-1">
 
-<section class="page-hero reveal">
-  <div class="sec-eyebrow" data-i18n="shrutam.eyebrow">First AI EdTech for CG Board</div>
-  <h1 style="font-family:'Noto Sans Devanagari',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:800;margin-bottom:12px" data-i18n="shrutam.title">Meet Shrutam</h1>
-  <p class="lead" data-i18n="shrutam.subtitle">SAAVI didi — in Hinglish, 24/7, without judgment.</p>
-  <div class="hero-ctas" style="margin-top:28px">
-    <a href="/waitlist/" class="btn-glow" data-i18n="nav.cta">Join Waitlist →</a>
-    <a href="https://shrutam.ai" class="btn-outline" rel="noopener noreferrer" target="_blank">shrutam.ai</a>
-  </div>
-</section>
+<div class="about-longform reveal">
+<div class="about-meta-row">
+  <span class="about-meta-tag about-meta-tag--teal" data-i18n="shrutam.eyebrow">First AI EdTech for CG Board</span>
+</div>
+<h1 class="about-story-title" data-i18n="shrutam.title">Meet Shrutam</h1>
+<p class="about-story-sub" data-i18n="shrutam.subtitle">SAAVI didi — in Hinglish, 24/7, without judgment.</p>
+<div class="hero-ctas hero-ctas--spaced">
+  <a href="/waitlist/" class="btn-glow" data-i18n="nav.cta">Join Waitlist →</a>
+  <a href="https://shrutam.ai" class="btn-outline" rel="noopener noreferrer" target="_blank">shrutam.ai</a>
+</div>
 
 <section class="product-section reveal">
   <h2 class="sec-h2" data-i18n="shrutam.problem_title">Does this happen to you?</h2>
-  <p class="sec-sub" style="margin-bottom:32px" data-i18n="shrutam.solution">SAAVI didi is always with you ✅</p>
+  <p class="sec-sub sec-sub--mb32" data-i18n="shrutam.solution">SAAVI didi is always with you ✅</p>
   <div class="feat-grid">
     <div class="feat-card"><span class="feat-emoji">📖</span><div class="feat-title" data-i18n="shrutam.problems.0">Textbooks feel boring</div></div>
     <div class="feat-card"><span class="feat-emoji">🙏</span><div class="feat-title" data-i18n="shrutam.problems.1">Too shy to ask the teacher</div></div>
@@ -123,31 +124,31 @@
 <section class="product-section reveal" id="demo">
   <div class="sec-eyebrow" data-i18n="shrutam.demo.eyebrow">Demo</div>
   <h2 class="sec-h2" data-i18n="shrutam.demo.title">Chat simulation</h2>
-  <p class="sec-sub" style="margin-bottom:20px" data-i18n="shrutam.demo.sub">Type a message — sample reply (frontend only).</p>
-  <div style="max-width:520px;margin:0 auto;background:var(--navy);border:1px solid var(--border);border-radius:16px;padding:20px">
-    <label for="demo-in" class="sec-eyebrow" style="display:block;margin-bottom:8px" data-i18n="shrutam.demo.input_label">Tumhara sawal</label>
-    <input id="demo-in" type="text" placeholder="Photosynthesis kya hai?" data-i18n-placeholder="shrutam.demo.input_placeholder" autocomplete="off" aria-describedby="demo-hint" style="width:100%;padding:12px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.3);color:var(--white);margin-bottom:8px;font-size:15px">
+  <p class="sec-sub sec-sub--mb20" data-i18n="shrutam.demo.sub">Type a message — sample reply (frontend only).</p>
+  <div class="demo-panel">
+    <label for="demo-in" class="sec-eyebrow demo-panel__label" data-i18n="shrutam.demo.input_label">Tumhara sawal</label>
+    <input id="demo-in" class="form-input form-input--compact" type="text" placeholder="Photosynthesis kya hai?" data-i18n-placeholder="shrutam.demo.input_placeholder" autocomplete="off" aria-describedby="demo-hint">
     <p id="demo-hint" class="sr-only" data-i18n="shrutam.demo.hint">Sample question bhejne ke baad neeche SAAVI ka jawab dikhega.</p>
-    <button type="button" id="demo-go" class="btn-glow" style="border:none;cursor:pointer" data-i18n="shrutam.demo.btn">Bhejo →</button>
-    <div id="demo-out" style="margin-top:16px;font-size:15px;line-height:1.6;color:var(--muted);min-height:4em" role="status" aria-live="polite" aria-atomic="true"></div>
+    <button type="button" id="demo-go" class="btn-glow" data-i18n="shrutam.demo.btn">Bhejo →</button>
+    <div id="demo-out" class="demo-panel__out" role="status" aria-live="polite" aria-atomic="true"></div>
   </div>
 </section>
 
 <section class="product-section reveal">
   <div class="sec-eyebrow" data-i18n="shrutam.price_title">How much does it cost?</div>
   <h2 class="sec-h2"><span data-i18n="shrutam.free_label">FREE</span> vs <span data-i18n="shrutam.pro_label">PRO</span></h2>
-  <div class="jnana-showcase" style="grid-template-columns:1fr 1fr;margin-top:24px">
+  <div class="jnana-showcase jnana-showcase--spaced">
     <div>
-      <h3 style="margin-bottom:12px" data-i18n="shrutam.free_label">FREE</h3>
-      <ul style="color:var(--muted);line-height:1.8;font-size:15px">
+      <h3 class="price-title" data-i18n="shrutam.free_label">FREE</h3>
+      <ul class="price-list">
         <li data-i18n="shrutam.free_features.0">3 chapters FREE</li>
         <li data-i18n="shrutam.free_features.1">Basic SAAVI</li>
         <li data-i18n="shrutam.free_features.2">Hindi medium</li>
       </ul>
     </div>
-    <div style="border-left:1px solid var(--border);padding-left:32px">
-      <h3 style="margin-bottom:12px;color:var(--teal)"><span data-i18n="shrutam.pro_label">PRO</span> — <span data-i18n="shrutam.pro_price">₹199/month</span></h3>
-      <ul style="color:var(--muted);line-height:1.8;font-size:15px">
+    <div class="price-divider">
+      <h3 class="price-title price-title--pro"><span data-i18n="shrutam.pro_label">PRO</span> — <span data-i18n="shrutam.pro_price">₹199/month</span></h3>
+      <ul class="price-list">
         <li data-i18n="shrutam.pro_features.0">All 160+ chapters</li>
         <li data-i18n="shrutam.pro_features.1">Full SAAVI Jadoo</li>
         <li data-i18n="shrutam.pro_features.2">4 mock exams/chapter</li>
@@ -155,20 +156,21 @@
         <li data-i18n="shrutam.pro_features.4">Spoken English</li>
         <li data-i18n="shrutam.pro_features.5">Priority support</li>
       </ul>
-      <a href="/waitlist/" class="btn-glow" style="margin-top:16px;display:inline-flex" data-i18n="shrutam.cta">Join Waitlist — Free!</a>
+      <a href="/waitlist/" class="btn-glow btn-glow--inline-mt" data-i18n="shrutam.cta">Join Waitlist — Free!</a>
     </div>
   </div>
 </section>
 
 <section class="product-section reveal">
   <div class="sec-eyebrow" data-i18n="shrutam.cg_title">Built for Chhattisgarh</div>
-  <ul class="sec-sub" style="list-style:none;padding:0;margin-top:16px;color:var(--muted);line-height:1.85">
+  <ul class="bullet-list-loose">
     <li data-i18n="shrutam.cg_points.0">🌾 Local examples: Dhan, Indravati, Bastar</li>
     <li data-i18n="shrutam.cg_points.1">📚 SCERT approved content</li>
     <li data-i18n="shrutam.cg_points.2">🗺️ Exact CG Board syllabus</li>
     <li data-i18n="shrutam.cg_points.3">🏫 Raipur to Jagdalpur</li>
   </ul>
 </section>
+
 <script>
 (function(){
   var replies = [
@@ -188,13 +190,14 @@
 })();
 </script>
 
+</div>
 </main>
 <!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-col">
-      <a href="/" class="foot-logo" style="margin-bottom:12px;display:inline-block">
-        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha" style="height:40px;width:auto">
+      <a href="/" class="foot-logo">
+        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha">
       </a>
       <p data-i18n="footer.blurb">Audio-first AI education — CG Board &amp; CBSE. SAAVI didi, Hinglish mein.</p>
     </div>

@@ -2,7 +2,6 @@
  * Nova — on-site help widget (static replies). Swap findReply for an API when AI is ready.
  */
 (function () {
-  var STORAGE_OPEN = "nova_widget_open";
   var RUPEE = "\u20b9";
 
   var QUICK = [
@@ -101,7 +100,7 @@
         { text: "Humse connect: " },
         { link: "/contact/", label: "Contact page" },
         { text: " · " },
-        { link: "mailto:hello@aarambhax.com", label: "hello@aarambhax.com", ext: true },
+        { link: "mailto:hello@aarambhax.ai", label: "hello@aarambhax.ai", ext: true },
       ],
     },
     {
@@ -177,9 +176,18 @@
   function init() {
     if (document.getElementById("nova-widget-root")) return;
 
+    try {
+      sessionStorage.removeItem("nova_widget_open");
+    } catch (e) {}
+
     var root = document.createElement("div");
     root.id = "nova-widget-root";
     root.className = "nova-widget";
+
+    var backdrop = document.createElement("div");
+    backdrop.className = "nova-backdrop";
+    backdrop.id = "nova-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
 
     var launcher = document.createElement("button");
     launcher.type = "button";
@@ -204,6 +212,8 @@
     panel.setAttribute("role", "dialog");
     panel.setAttribute("aria-modal", "true");
     panel.setAttribute("aria-labelledby", "nova-title");
+    panel.setAttribute("hidden", "");
+    panel.setAttribute("aria-hidden", "true");
     panel.hidden = true;
 
     var head = document.createElement("div");
@@ -270,9 +280,16 @@
     panel.appendChild(quickEl);
     panel.appendChild(form);
 
+    root.appendChild(backdrop);
     root.appendChild(launcher);
     root.appendChild(panel);
     document.body.appendChild(root);
+
+    var panelOpen = false;
+    /** Ignore stray document clicks right after open (mobile synthetic / delayed clicks). */
+    var ignoreOutsideCloseUntil = 0;
+    /** After close, block launcher clicks briefly — avoids ghost tap reopening the panel (same issue as mobile menus). */
+    var suppressLauncherUntil = 0;
 
     function renderQuick() {
       quickEl.textContent = "";
@@ -318,13 +335,33 @@
     }
 
     function setOpen(open) {
-      panel.hidden = !open;
-      launcher.setAttribute("aria-expanded", open ? "true" : "false");
-      try {
-        if (open) sessionStorage.setItem(STORAGE_OPEN, "1");
-        else sessionStorage.removeItem(STORAGE_OPEN);
-      } catch (e) {}
-      if (open) {
+      var isOpen = !!open;
+      var wasOpen = panelOpen;
+      panelOpen = isOpen;
+      root.classList.toggle("nova--open", isOpen);
+      if (isOpen) {
+        ignoreOutsideCloseUntil = Date.now() + 400;
+        panel.hidden = false;
+        panel.removeAttribute("hidden");
+        panel.setAttribute("aria-hidden", "false");
+      } else {
+        ignoreOutsideCloseUntil = 0;
+        if (wasOpen) suppressLauncherUntil = Date.now() + 700;
+        panel.hidden = true;
+        panel.setAttribute("hidden", "");
+        panel.setAttribute("aria-hidden", "true");
+        try {
+          input.blur();
+        } catch (e) {}
+        try {
+          if (document.activeElement && root.contains(document.activeElement)) {
+            document.activeElement.blur();
+          }
+        } catch (e2) {}
+      }
+      panel.classList.toggle("nova-panel--open", isOpen);
+      launcher.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      if (isOpen) {
         input.focus();
         if (!messagesEl.dataset.seeded) {
           messagesEl.dataset.seeded = "1";
@@ -339,15 +376,47 @@
       }
     }
 
-    launcher.addEventListener("click", function () {
-      setOpen(panel.hidden);
-    });
-    closeBtn.addEventListener("click", function () {
-      setOpen(false);
+    launcher.addEventListener("click", function (e) {
+      e.stopPropagation();
+      if (Date.now() < suppressLauncherUntil) {
+        e.preventDefault();
+        return;
+      }
+      setOpen(!panelOpen);
     });
 
+    function closeFromUi(e) {
+      if (e) {
+        e.preventDefault();
+        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+        else e.stopPropagation();
+      }
+      setOpen(false);
+    }
+
+    closeBtn.addEventListener(
+      "pointerdown",
+      function (e) {
+        if (e.button != null && e.button !== 0) return;
+        closeFromUi(e);
+      },
+      true
+    );
+    closeBtn.addEventListener("click", closeFromUi, true);
+
+    function onBackdropClose(e) {
+      if (!panelOpen) return;
+      if (Date.now() < ignoreOutsideCloseUntil) return;
+      if (e.type === "mousedown" && e.button !== 0) return;
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(false);
+    }
+    backdrop.addEventListener("mousedown", onBackdropClose, true);
+    backdrop.addEventListener("click", onBackdropClose, true);
+
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !panel.hidden) setOpen(false);
+      if (e.key === "Escape" && panelOpen) setOpen(false);
     });
 
     form.addEventListener("submit", function (e) {
@@ -358,11 +427,12 @@
     });
 
     renderQuick();
-
-    try {
-      if (sessionStorage.getItem(STORAGE_OPEN) === "1") setOpen(true);
-    } catch (e) {}
+    setOpen(false);
   }
 
-  document.addEventListener("DOMContentLoaded", init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();

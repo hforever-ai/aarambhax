@@ -66,9 +66,9 @@
 <body>
 <a href="#main-content" class="skip-link" data-i18n="skip.main">मुख्य सामग्री पर जाएं · Skip to main content</a>
 <div class="cosmos-bg" aria-hidden="true">
-  <div class="ring" style="--size:600px;--delay:0s;--opacity:0.12"></div>
-  <div class="ring" style="--size:900px;--delay:1.2s;--opacity:0.07"></div>
-  <div class="ring" style="--size:1200px;--delay:2.4s;--opacity:0.04"></div>
+  <div class="ring ring--a"></div>
+  <div class="ring ring--b"></div>
+  <div class="ring ring--c"></div>
 </div>
 <div class="stars" aria-hidden="true"></div>
 <nav id="main-nav" role="navigation" aria-label="Main navigation">
@@ -107,9 +107,9 @@
   <a href="/about/" class="nav-link" data-i18n="nav.about"></a>
   <a href="/saavi/" class="nav-link" data-i18n="nav.saavi"></a>
   <a href="/blog/" class="nav-link" data-i18n="nav.blog"></a>
-  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/faq/" class="nav-link" aria-current="page" data-i18n="nav.faq"></a>
   <a href="/contact/" class="nav-link" data-i18n="nav.contact_page"></a>
+  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/#jnana" class="nav-link" data-i18n="nav.jnana"></a>
   <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app"></a>
   <div class="lang-switcher mobile-lang" role="group" aria-label="Language">
@@ -122,16 +122,17 @@
 </div>
 <main id="main-content" class="page-main" tabindex="-1">
 
-<section class="page-hero reveal" style="text-align:center;padding-bottom:24px">
-  <div class="sec-eyebrow">Help Center</div>
-  <h1>Sawaal poochho — <span style="color:var(--gold);font-family:var(--font-hi)">Jawab yahan hain।</span></h1>
-  <p class="lead">Shrutam aur SAAVI ke baare mein 20+ important questions — Hindi, English, aur Marathi mein real, honest answers।</p>
-</section>
-<div class="faq-directory reveal" data-active-cat="all">
+<div class="about-longform reveal">
+<div class="about-meta-row">
+  <span class="about-meta-tag about-meta-tag--teal">Help Center</span>
+</div>
+<h1 class="about-story-title">Sawaal poochho — <span class="highlight-gold-hi">Jawab yahan hain।</span></h1>
+<p class="about-story-sub">Shrutam aur SAAVI ke baare mein 20+ important questions — Hindi, English, aur Marathi mein real, honest answers।</p>
+<div class="faq-directory" data-active-cat="all">
   <div class="faq-page-search-wrap">
     <input type="search" class="faq-page-search" id="faq-page-search" placeholder="Sawaal dhundho — CG Board, blind, offline, SAAVI…" autocomplete="off" aria-label="Search FAQ">
   </div>
-  <p style="text-align:center;font-size:12px;color:var(--dim);margin:-12px 0 28px">Instant search across all answers</p>
+  <p class="faq-search-hint">Instant search across all answers</p>
   <div class="faq-cat-row">
     <button type="button" class="faq-cat-pill active" data-faq-cat-btn="all">All</button>
     <button type="button" class="faq-cat-pill" data-faq-cat-btn="product">Product</button>
@@ -144,7 +145,7 @@
   </div>
 
   <div class="faq-section">
-    <div class="section-title" style="color:var(--gold)">Product — Shrutam kya hai?</div>
+    <div class="section-title faq-section-accent-gold">Product — Shrutam kya hai?</div>
 
  <div class="faq-item" data-faq-cats="product">
       <button type="button" class="faq-q" id="faq-dd-q-1" aria-expanded="false" aria-controls="faq-dd-a-1">
@@ -261,7 +262,7 @@
   </div>
 
   <div class="faq-section">
-    <div class="section-title" style="color:var(--violet)">SAAVI — AI Teacher Didi</div>
+    <div class="section-title faq-section-accent-violet">SAAVI — AI Teacher Didi</div>
 
  <div class="faq-item" data-faq-cats="saavi">
       <button type="button" class="faq-q" id="faq-dd-q-8" aria-expanded="false" aria-controls="faq-dd-a-8">
@@ -325,7 +326,7 @@
   </div>
 
   <div class="faq-section">
-    <div class="section-title" style="color:var(--teal2)">Accessibility — Sabke liye</div>
+    <div class="section-title faq-section-accent-teal">Accessibility — Sabke liye</div>
 
  <div class="faq-item" data-faq-cats="access">
       <button type="button" class="faq-q" id="faq-dd-q-12" aria-expanded="false" aria-controls="faq-dd-a-12">
@@ -375,7 +376,7 @@
   </div>
 
   <div class="faq-section">
-    <div class="section-title" style="color:var(--gold)">Schools aur teachers</div>
+    <div class="section-title faq-section-accent-gold">Schools aur teachers</div>
 
  <div class="faq-item" data-faq-cats="school">
       <button type="button" class="faq-q" id="faq-dd-q-15" aria-expanded="false" aria-controls="faq-dd-a-15">
@@ -410,7 +411,7 @@
   </div>
 
   <div class="faq-section">
-    <div class="section-title" style="color:var(--teal2)">Technology &amp; privacy</div>
+    <div class="section-title faq-section-accent-teal">Technology &amp; privacy</div>
 
  <div class="faq-item" data-faq-cats="tech">
       <button type="button" class="faq-q" id="faq-dd-q-17" aria-expanded="false" aria-controls="faq-dd-a-17">
@@ -459,7 +460,7 @@
   </div>
 
   <div class="faq-section">
-    <div class="section-title" style="color:var(--gold)">Hamara mission</div>
+    <div class="section-title faq-section-accent-gold">Hamara mission</div>
 
  <div class="faq-item" data-faq-cats="mission">
       <button type="button" class="faq-q" id="faq-dd-q-20" aria-expanded="false" aria-controls="faq-dd-a-20">
@@ -499,17 +500,18 @@
     <p>Hamaari team jald reply karti hai — Hindi, English, ya Marathi mein।</p>
     <div class="faq-still-btns">
       <a class="btn-primary" href="/contact/">Message bhejo →</a>
-      <a class="btn-outline" href="mailto:hello@aarambhax.com">hello@aarambhax.com</a>
+      <a class="btn-outline" href="mailto:hello@aarambhax.ai">hello@aarambhax.ai</a>
       <a class="btn-outline" href="/waitlist/">Waitlist join karo</a>
     </div>
   </div>
+</div>
 </div>
 </main>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-col">
-      <a href="/" class="foot-logo" style="margin-bottom:12px;display:inline-block">
-        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha" style="height:40px;width:auto">
+      <a href="/" class="foot-logo">
+        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha">
       </a>
       <p data-i18n="footer.blurb">Audio-first AI education — CG Board &amp; CBSE. SAAVI didi, Hinglish mein.</p>
     </div>

@@ -41,9 +41,9 @@
 <body>
 <a href="#main-content" class="skip-link" data-i18n="skip.main">मुख्य सामग्री पर जाएं · Skip to main content</a>
 <div class="cosmos-bg" aria-hidden="true">
-  <div class="ring" style="--size:600px;--delay:0s;--opacity:0.12"></div>
-  <div class="ring" style="--size:900px;--delay:1.2s;--opacity:0.07"></div>
-  <div class="ring" style="--size:1200px;--delay:2.4s;--opacity:0.04"></div>
+  <div class="ring ring--a"></div>
+  <div class="ring ring--b"></div>
+  <div class="ring ring--c"></div>
 </div>
 <div class="stars" aria-hidden="true"></div>
 <!-- NAV -->
@@ -83,9 +83,9 @@
   <a href="/about/" class="nav-link" data-i18n="nav.about"></a>
   <a href="/saavi/" class="nav-link" data-i18n="nav.saavi"></a>
   <a href="/blog/" class="nav-link" data-i18n="nav.blog"></a>
-  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/faq/" class="nav-link" data-i18n="nav.faq"></a>
   <a href="/contact/" class="nav-link" data-i18n="nav.contact_page"></a>
+  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/#jnana" class="nav-link" data-i18n="nav.jnana"></a>
   <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app"></a>
   <div class="lang-switcher mobile-lang" role="group" aria-label="Language">
@@ -99,51 +99,52 @@
 
 <main id="main-content" class="page-main" tabindex="-1">
 
-<section class="page-hero reveal" style="text-align:center;max-width:640px" aria-labelledby="waitlist-hero-h1">
-  <div class="sec-eyebrow" data-i18n="waitlist.eyebrow">Early Access</div>
-  <h1 id="waitlist-hero-h1" data-i18n="waitlist.title">Reserve your spot</h1>
-  <p class="lead"><span data-i18n="waitlist.subtitle">First 1,000 students get 3 months FREE!</span> · <span data-i18n="common.launch_date">May 20, 2026</span></p>
-  <div id="countdown" style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:32px 0;font-weight:800;font-size:clamp(20px,4vw,32px);color:var(--teal)"></div>
-  <p id="spots" style="color:var(--gold);font-weight:600;margin-bottom:24px" data-i18n="waitlist.counter">spots remaining</p>
-</section>
+<div class="about-longform reveal">
+<div class="about-meta-row">
+  <span class="about-meta-tag about-meta-tag--teal" data-i18n="waitlist.eyebrow">Early Access</span>
+</div>
+<h1 id="waitlist-hero-h1" class="about-story-title" data-i18n="waitlist.title">Reserve your spot</h1>
+<p class="about-story-sub"><span data-i18n="waitlist.subtitle">First 1,000 students get 3 months FREE!</span> · <span data-i18n="common.launch_date">May 20, 2026</span></p>
+<div id="countdown" class="waitlist-countdown"></div>
+<p id="spots" class="waitlist-spots" data-i18n="waitlist.counter">spots remaining</p>
 
-<section class="product-section reveal" style="max-width:520px;margin:0 auto" aria-labelledby="waitlist-form-h2">
-  <h2 id="waitlist-form-h2" class="sec-h2" style="font-size:26px" data-i18n="waitlist.title">Reserve your spot</h2>
+<section class="product-section reveal waitlist-form-narrow" aria-labelledby="waitlist-form-h2">
+  <h2 id="waitlist-form-h2" class="sec-h2 sec-h2--form" data-i18n="waitlist.title">Reserve your spot</h2>
   <p id="form-note" class="sr-only" data-i18n="waitlist.form_note">Form submit se tumhara email client khulega. Zaroori fields mark kiye gaye hain.</p>
-  <form action="mailto:hello@aarambhax.com" method="get" enctype="text/plain" style="display:flex;flex-direction:column;gap:14px;margin-top:20px" aria-describedby="form-note">
+  <form action="mailto:hello@aarambhax.ai" method="get" enctype="text/plain" class="form-stack" aria-describedby="form-note">
     <input name="subject" type="hidden" value="Shrutam Waitlist">
     <div>
       <label for="wl-name" class="form-label" data-i18n="waitlist.form.name">Your name</label>
-      <input id="wl-name" required type="text" name="name" autocomplete="name" data-i18n-placeholder="waitlist.form.name" placeholder="Your name" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white)">
+      <input id="wl-name" class="form-input" required type="text" name="name" autocomplete="name" data-i18n-placeholder="waitlist.form.name" placeholder="Your name">
     </div>
     <div>
       <label for="wl-email" class="form-label" data-i18n="waitlist.form.email">Email address</label>
-      <input id="wl-email" required type="email" name="email" autocomplete="email" data-i18n-placeholder="waitlist.form.email" placeholder="Email address" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white)">
+      <input id="wl-email" class="form-input" required type="email" name="email" autocomplete="email" data-i18n-placeholder="waitlist.form.email" placeholder="Email address">
     </div>
     <div>
       <label for="wl-class" class="form-label" data-i18n="waitlist.form.class">Class</label>
-      <select id="wl-class" name="class" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--navy);color:var(--white)">
+      <select id="wl-class" class="form-select" name="class">
         <option>Class 6</option><option>Class 7</option><option>Class 8</option><option>Class 9</option><option>Class 10</option>
       </select>
     </div>
     <div>
       <label for="wl-board" class="form-label" data-i18n="waitlist.form.board">Board</label>
-      <select id="wl-board" name="board" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--navy);color:var(--white)">
+      <select id="wl-board" class="form-select" name="board">
         <option>CG Board</option><option>CBSE</option>
       </select>
     </div>
     <div>
       <label for="wl-city" class="form-label" data-i18n="waitlist.form.city">Your city</label>
-      <input id="wl-city" type="text" name="city" autocomplete="address-level2" data-i18n-placeholder="waitlist.form.city" placeholder="Your city" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white)">
+      <input id="wl-city" class="form-input" type="text" name="city" autocomplete="address-level2" data-i18n-placeholder="waitlist.form.city" placeholder="Your city">
     </div>
-    <button type="submit" class="btn-glow" style="border:none;cursor:pointer;width:100%;justify-content:center" data-i18n="waitlist.form.submit">Join Waitlist →</button>
+    <button type="submit" class="btn-glow btn-glow--block" data-i18n="waitlist.form.submit">Join Waitlist →</button>
   </form>
-  <p style="margin-top:16px;font-size:14px;color:var(--dim)"><span aria-hidden="true">🔒</span> <span data-i18n="waitlist.form.privacy">No spam. Promise.</span></p>
+  <p class="form-privacy-note"><span aria-hidden="true">🔒</span> <span data-i18n="waitlist.form.privacy">No spam. Promise.</span></p>
 </section>
 
 <section class="product-section reveal">
-  <h3 style="margin-bottom:16px" data-i18n="waitlist.perks_title">What waitlist members get?</h3>
-  <ul style="color:var(--muted);line-height:1.85;font-size:15px">
+  <h3 class="waitlist-perks-heading" data-i18n="waitlist.perks_title">What waitlist members get?</h3>
+  <ul class="perks-list">
     <li data-i18n="waitlist.perks.0">🎁 3 months FREE Pro access (₹597 value)</li>
     <li data-i18n="waitlist.perks.1">🏆 "Founding Member" badge in app</li>
     <li data-i18n="waitlist.perks.2">🎯 Direct feedback channel with SAAVI team</li>
@@ -151,13 +152,14 @@
   </ul>
 </section>
 
+</div>
 </main>
 <!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-col">
-      <a href="/" class="foot-logo" style="margin-bottom:12px;display:inline-block">
-        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha" style="height:40px;width:auto">
+      <a href="/" class="foot-logo">
+        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha">
       </a>
       <p data-i18n="footer.blurb">Audio-first AI education — CG Board &amp; CBSE. SAAVI didi, Hinglish mein.</p>
     </div>

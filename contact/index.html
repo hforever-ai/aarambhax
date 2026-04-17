@@ -24,7 +24,7 @@ window.AARAMBHAX_CONTACT_API = "https://www.aarambhax.ai/api/contact.php";
 </script>
 <script defer src="/assets/js/contact-form.js"></script>
 <title>Contact — Aarambhax</title>
-<meta name="description" content="Contact Aarambha — hello@aarambhax.com, schools, privacy.">
+<meta name="description" content="Contact Aarambha — hello@aarambhax.ai, schools, privacy.">
 <link rel="canonical" href="https://www.aarambhax.ai/contact/">
 <link rel="alternate" hreflang="hi-IN" href="https://www.aarambhax.ai/contact/">
 <link rel="alternate" hreflang="en-IN" href="https://www.aarambhax.ai/contact/">
@@ -40,7 +40,7 @@ window.AARAMBHAX_CONTACT_API = "https://www.aarambhax.ai/api/contact.php";
       "@id": "https://www.aarambhax.ai/contact/#contactpage",
       "url": "https://www.aarambhax.ai/contact/",
       "name": "Contact — Aarambhax",
-      "description": "Contact Aarambha — hello@aarambhax.com, schools, privacy.",
+      "description": "Contact Aarambha — hello@aarambhax.ai, schools, privacy.",
       "isPartOf": { "@id": "https://www.aarambhax.ai/#website" },
       "breadcrumb": { "@id": "https://www.aarambhax.ai/contact/#breadcrumb" }
     },
@@ -59,9 +59,9 @@ window.AARAMBHAX_CONTACT_API = "https://www.aarambhax.ai/api/contact.php";
 <body>
 <a href="#main-content" class="skip-link" data-i18n="skip.main">मुख्य सामग्री पर जाएं · Skip to main content</a>
 <div class="cosmos-bg" aria-hidden="true">
-  <div class="ring" style="--size:600px;--delay:0s;--opacity:0.12"></div>
-  <div class="ring" style="--size:900px;--delay:1.2s;--opacity:0.07"></div>
-  <div class="ring" style="--size:1200px;--delay:2.4s;--opacity:0.04"></div>
+  <div class="ring ring--a"></div>
+  <div class="ring ring--b"></div>
+  <div class="ring ring--c"></div>
 </div>
 <div class="stars" aria-hidden="true"></div>
 <nav id="main-nav" role="navigation" aria-label="Main navigation">
@@ -100,9 +100,9 @@ window.AARAMBHAX_CONTACT_API = "https://www.aarambhax.ai/api/contact.php";
   <a href="/about/" class="nav-link" data-i18n="nav.about"></a>
   <a href="/saavi/" class="nav-link" data-i18n="nav.saavi"></a>
   <a href="/blog/" class="nav-link" data-i18n="nav.blog"></a>
-  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/faq/" class="nav-link" data-i18n="nav.faq"></a>
   <a href="/contact/" class="nav-link" aria-current="page" data-i18n="nav.contact_page"></a>
+  <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/#jnana" class="nav-link" data-i18n="nav.jnana"></a>
   <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app"></a>
   <div class="lang-switcher mobile-lang" role="group" aria-label="Language">
@@ -116,27 +116,29 @@ window.AARAMBHAX_CONTACT_API = "https://www.aarambhax.ai/api/contact.php";
 
 <main id="main-content" class="page-main" tabindex="-1">
 
-<section class="page-hero reveal" style="text-align:center;max-width:640px;margin:0 auto">
-  <div class="sec-eyebrow">Contact</div>
-  <h1>Baat karte hain</h1>
-  <p class="lead">Schools, partners, students — <a href="mailto:hello@aarambhax.com">hello@aarambhax.com</a></p>
-</section>
-<section class="product-section reveal" style="max-width:900px;margin:0 auto">
+<div class="about-longform reveal">
+<div class="about-meta-row">
+  <span class="about-meta-tag about-meta-tag--teal">Contact</span>
+</div>
+<h1 class="about-story-title">Baat karte hain</h1>
+<p class="about-story-sub">Schools, partners, students — <a href="mailto:hello@aarambhax.ai">hello@aarambhax.ai</a></p>
+
+<section class="product-section reveal">
   <div class="contact-grid">
-    <div class="contact-card"><h3>Email</h3><p><a href="mailto:hello@aarambhax.com">hello@aarambhax.com</a></p></div>
+    <div class="contact-card"><h3>Email</h3><p><a href="mailto:hello@aarambhax.ai">hello@aarambhax.ai</a></p></div>
     <div class="contact-card"><h3>Schools</h3><p><a href="mailto:schools@aarambhax.com">schools@aarambhax.com</a><br><small>Subject: SCHOOL PARTNERSHIP</small></p></div>
     <div class="contact-card"><h3>Privacy</h3><p><a href="mailto:privacy@aarambhax.com">privacy@aarambhax.com</a><br><a href="/privacy/">Policy →</a></p></div>
   </div>
-  <h2 class="sec-h2" style="font-size:22px">Message</h2>
-  <form id="contact-api-form" style="display:flex;flex-direction:column;gap:14px;max-width:520px;margin:0 auto" novalidate>
+  <h2 class="sec-h2 sec-h2--contact">Message</h2>
+  <form id="contact-api-form" class="contact-form-narrow form-stack" novalidate>
     <label class="form-label" for="cf-name">Name</label>
-    <input id="cf-name" name="name" required autocomplete="name" maxlength="100" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white)">
+    <input id="cf-name" class="form-input" name="name" required autocomplete="name" maxlength="100">
     <label class="form-label" for="cf-email">Email</label>
-    <input id="cf-email" name="email" type="email" required autocomplete="email" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white)">
+    <input id="cf-email" class="form-input" name="email" type="email" required autocomplete="email">
     <label class="form-label" for="cf-phone">Phone (optional)</label>
-    <input id="cf-phone" name="phone" type="tel" autocomplete="tel" maxlength="20" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white)">
+    <input id="cf-phone" class="form-input" name="phone" type="tel" autocomplete="tel" maxlength="20">
     <label class="form-label" for="cf-type">I am a…</label>
-    <select id="cf-type" name="type" required style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--navy);color:var(--white)">
+    <select id="cf-type" class="form-select" name="type" required>
       <option value="student">Student</option>
       <option value="parent">Parent</option>
       <option value="teacher">Teacher</option>
@@ -147,21 +149,22 @@ window.AARAMBHAX_CONTACT_API = "https://www.aarambhax.ai/api/contact.php";
       <option value="other">Other</option>
     </select>
     <label class="form-label" for="cf-subject">Subject</label>
-    <input id="cf-subject" name="subject" required maxlength="255" placeholder="Kya poochna hai?" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white)">
+    <input id="cf-subject" class="form-input" name="subject" required maxlength="255" placeholder="Kya poochna hai?">
     <label class="form-label" for="cf-message">Message</label>
-    <textarea id="cf-message" name="message" rows="5" required maxlength="2000" style="width:100%;padding:14px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,0.35);color:var(--white);font-family:inherit"></textarea>
-    <button type="submit" class="btn-glow" id="contact-submit" style="border:none;cursor:pointer">Send →</button>
+    <textarea id="cf-message" class="form-textarea" name="message" rows="5" required maxlength="2000"></textarea>
+    <button type="submit" class="btn-glow" id="contact-submit">Send →</button>
     <p class="contact-form-note">Protected by Google reCAPTCHA v3. <a href="/faq/">FAQ →</a></p>
     <div id="contact-form-status" class="contact-form-status" hidden></div>
   </form>
-  <p style="margin-top:16px;text-align:center;color:var(--dim);font-size:14px">Prefer email? <a href="mailto:hello@aarambhax.com">hello@aarambhax.com</a></p>
+  <p class="contact-email-fallback">Prefer email? <a href="mailto:hello@aarambhax.ai">hello@aarambhax.ai</a></p>
 </section>
+</div>
 </main>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-grid">
     <div class="footer-col">
-      <a href="/" class="foot-logo" style="margin-bottom:12px;display:inline-block">
-        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha" style="height:40px;width:auto">
+      <a href="/" class="foot-logo">
+        <img src="/assets/images/aarambha-logo-nav.png" alt="Aarambha">
       </a>
       <p data-i18n="footer.blurb">Audio-first AI education — CG Board &amp; CBSE. SAAVI didi, Hinglish mein.</p>
     </div>
