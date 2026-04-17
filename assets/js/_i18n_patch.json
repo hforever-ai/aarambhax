@@ -173,7 +173,14 @@
       "band_lead": "Bulk pricing, teacher-friendly reporting, SCERT-aligned chapters — plus lite/offline options for uneven networks.",
       "link_faq": "School questions in FAQ →",
       "link_contact": "Contact →",
-      "link_waitlist": "Waitlist →"
+      "link_waitlist": "Waitlist →",
+      "features": [
+        "Bulk pricing: ₹99/student/month",
+        "Teacher dashboard",
+        "Progress reports",
+        "SCERT-aligned content",
+        "Offline mode available"
+      ]
     },
     "saavi": {
       "eyebrow": "AI Teacher Didi",
