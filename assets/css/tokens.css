@@ -58,4 +58,30 @@
   --gutter-sm: 20px;
   --gutter-md: 24px;
   --gutter-lg: 32px;
+
+  /* ---- AI Studio palette (homepage redesign, 2026-04-17) -----------------
+     A separate palette for the Aarambha AI Studio homepage. Co-exists with
+     the existing edu-product palette (--blue-bright, --gold-warm, --bg-void).
+     Inner product pages continue using the legacy tokens; the studio home
+     adopts this sky + amber editorial scheme. */
+  --bg-dark:         #060d1a;
+  --bg-darker:       #020710;
+  --bg-card:         #0d1525;
+  --bg-light:        #ffffff;
+  --bg-subtle:       #f8fafc;
+  --primary:         #0ea5e9;
+  --primary-dark:    #0284c7;
+  --primary-glow:    rgba(14, 165, 233, 0.15);
+  --accent:          #f59e0b;
+  --accent-glow:     rgba(245, 158, 11, 0.15);
+  --text-on-dark:    #e2e8f0;
+  --text-muted-dark: #64748b;
+  --border-dark:     rgba(255, 255, 255, 0.08);
+  --border-glow:     rgba(14, 165, 233, 0.3);
+
+  --fs-display:   clamp(3rem, 8vw, 6rem);     /* 48 → 96 — studio hero */
+  --fs-mega:      clamp(2.5rem, 6vw, 4.5rem); /* 40 → 72 — section drama */
+  --fs-section:   clamp(2rem, 4vw, 3rem);     /* 32 → 48 — section h2 */
+  --studio-y:     clamp(5rem, 10vw, 8rem);    /* 80 → 128 — studio section rhythm */
+  --studio-shell: 1200px;                     /* studio content max width */
 }

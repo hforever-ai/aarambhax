@@ -121,14 +121,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=4956772000-d457313c">
-<script src="/assets/js/analytics-config.js?v=4956772000-d457313c"></script>
-<script defer src="/assets/js/translations.js?v=4956772000-d457313c"></script>
-<script defer src="/assets/js/i18n.js?v=4956772000-d457313c"></script>
-<script defer src="/assets/js/site.js?v=4956772000-d457313c"></script>
-<script defer src="/assets/js/nav.js?v=4956772000-d457313c"></script>
-<script defer src="/assets/js/home.js?v=4956772000-d457313c"></script>
-<script defer src="/assets/js/analytics.js?v=4956772000-d457313c"></script>
+<link rel="stylesheet" href="/assets/css/site.css?v=4150568000-498ad86c">
+<script src="/assets/js/analytics-config.js?v=4150568000-498ad86c"></script>
+<script defer src="/assets/js/translations.js?v=4150568000-498ad86c"></script>
+<script defer src="/assets/js/i18n.js?v=4150568000-498ad86c"></script>
+<script defer src="/assets/js/site.js?v=4150568000-498ad86c"></script>
+<script defer src="/assets/js/nav.js?v=4150568000-498ad86c"></script>
+<script defer src="/assets/js/home.js?v=4150568000-498ad86c"></script>
+<script defer src="/assets/js/analytics.js?v=4150568000-498ad86c"></script>
 
 
 <!-- Sitemap: https://www.aarambhax.ai/sitemap.xml -->
@@ -211,161 +211,363 @@
   <a href="/waitlist/" class="nav-btn mobile-menu-cta btn-primary" data-i18n="nav.cta"></a>
 </div>
 
-<main id="main-content" class="page-main" tabindex="-1">
+<main id="main-content" class="page-main aarambha-home" tabindex="-1">
 
-<!-- 1 Hero -->
-<section class="hero home-hero" aria-labelledby="hero-heading">
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-ring ring1" aria-hidden="true"></div>
-  <div class="hero-ring ring2" aria-hidden="true"></div>
-  <div class="hero-ring ring3" aria-hidden="true"></div>
-  <div class="home-hero-inner">
-    <div class="home-hero-copy">
-      <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span><span data-i18n="hero.badge">CG Board + CBSE • Class 6-10</span></p>
-      <h1 id="hero-heading" class="home-hero-h1" data-i18n="home.master.hero_h1">गाँव गाँव तक, ज्ञान की रोशनी</h1>
-      <p class="home-hero-tagline" data-i18n="hero.tagline">Where Intelligence Begins</p>
-      <p class="home-hero-sub" data-i18n="home.master.hero_sub">For India’s students — villages, Hindi medium, Hinglish.</p>
-      <div class="home-hero-stats">
-        <div class="home-hero-stat"><span class="home-hero-stat-n">160+</span><span class="home-hero-stat-l" data-i18n="stats.chapters">Chapters</span></div>
-        <div class="home-hero-stat"><span class="home-hero-stat-n">5</span><span class="home-hero-stat-l" data-i18n="stats.languages">Languages</span></div>
-        <div class="home-hero-stat"><span class="home-hero-stat-n">&#8377;199</span><span class="home-hero-stat-l" data-i18n="stats.price">Per month</span></div>
-        <div class="home-hero-stat"><span class="home-hero-stat-n">May 20</span><span class="home-hero-stat-l" data-i18n="stats.launch">Launch</span></div>
-      </div>
-      <div class="hero-ctas home-hero-ctas">
-        <a href="/waitlist/" class="btn-primary"><span data-i18n="common.join_waitlist">Join Waitlist</span></a>
-        <a href="/shrutam/" class="btn-ghost" data-i18n="home.master.shrutam_cta">See Shrutam →</a>
-      </div>
-      <p class="home-hero-domain" data-i18n="hero.url_label">aarambhax.ai</p>
+<!-- ═══ 1. HERO — India's AI Studio ═══ -->
+<section class="astro-hero" aria-labelledby="hero-heading">
+  <div class="astro-hero__atmosphere" aria-hidden="true">
+    <div class="astro-dotgrid"></div>
+    <div class="astro-glow astro-glow--sky"></div>
+    <div class="astro-glow astro-glow--amber"></div>
+  </div>
+  <div class="astro-hero__frame">
+    <p class="astro-hero__badge">
+      <span class="astro-eyebrow astro-eyebrow--amber">
+        <span>🇮🇳</span>
+        <span>India's AI Studio · aarambhax.ai</span>
+      </span>
+    </p>
+    <h1 id="hero-heading" class="astro-h1">
+      <span class="astro-h1__line">India mein</span>
+      <span class="astro-h1__line">AI ki</span>
+      <span class="astro-h1__line astro-h1__line--accent">Aarambha.</span>
+    </h1>
+    <p class="astro-hero__devanagari">
+      <span>आरम्भ</span>
+      <span class="sep">—</span>
+      <span>Where Intelligence Begins</span>
+    </p>
+    <p class="astro-hero__lede">
+      We build AI that speaks India's languages, understands India's problems,
+      and reaches India's villages. Not translated. Built from the ground up —
+      for Bharat.
+    </p>
+    <div class="astro-hero__ctas">
+      <a href="#studio" class="astro-cta astro-cta--primary">
+        See Our Products <span class="astro-cta__arrow">↓</span>
+      </a>
+      <a href="/waitlist/" class="astro-cta astro-cta--ghost">
+        Join Waitlist <span class="astro-cta__arrow">→</span>
+      </a>
     </div>
-    <div class="home-hero-visual">
-      <div class="phone-mock" role="figure" aria-label="Shrutam chat preview">
-        <div class="phone-bar" aria-hidden="true"></div>
-        <div class="phone-header">
-          <div class="saavi-av" aria-hidden="true">S</div>
-          <div>
-            <div class="ph-title">SAAVI — Teacher Didi</div>
-            <div class="ph-sub" data-i18n="hero.badge">CG Board + CBSE</div>
+    <div class="astro-hero__stats" role="list">
+      <div class="astro-hero__stat" role="listitem">
+        <span class="astro-hero__stat-num"><strong>1.4</strong>B</span>
+        <span class="astro-hero__stat-label">Indians</span>
+      </div>
+      <div class="astro-hero__stat" role="listitem">
+        <span class="astro-hero__stat-num"><strong>22</strong>+</span>
+        <span class="astro-hero__stat-label">Languages</span>
+      </div>
+      <div class="astro-hero__stat" role="listitem">
+        <span class="astro-hero__stat-num"><strong>600K</strong>+</span>
+        <span class="astro-hero__stat-label">Villages</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 2. MANIFESTO — mission statement ═══ -->
+<section class="manifesto" aria-labelledby="manifesto-heading">
+  <div class="manifesto__frame">
+    <p class="manifesto__eyebrow">Mission</p>
+    <blockquote id="manifesto-heading" class="manifesto__quote" cite="https://www.aarambhax.ai/">
+      <span><em>60 crore Indians</em> deserve world-class AI.</span>
+      <span>Not translated. Not watered down.</span>
+      <span class="manifesto__quote--accent">Built <strong>for</strong> them. In their language. From the ground up.</span>
+    </blockquote>
+    <div class="manifesto__pillars">
+      <article class="manifesto__pillar">
+        <span class="manifesto__pillar-glyph" aria-hidden="true">🇮🇳</span>
+        <h3 class="manifesto__pillar-title">India First</h3>
+        <p class="manifesto__pillar-text">Built in India, for India's unique challenges — infrastructure, language, and the realities of Bharat.</p>
+      </article>
+      <article class="manifesto__pillar">
+        <span class="manifesto__pillar-glyph" aria-hidden="true">🗣️</span>
+        <h3 class="manifesto__pillar-title">Bhasha First</h3>
+        <p class="manifesto__pillar-text">Native AI in Hindi, Hinglish, Telugu, Marathi — plus eight more. Thinks in the language, doesn't just translate.</p>
+      </article>
+      <article class="manifesto__pillar">
+        <span class="manifesto__pillar-glyph" aria-hidden="true">🏘️</span>
+        <h3 class="manifesto__pillar-title">Bharat First</h3>
+        <p class="manifesto__pillar-text">Tier 2/3/4 cities are not afterthoughts — they're our market. Villages, Hindi medium, unmetro India.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3. PARADOX — the gap we're filling ═══ -->
+<section class="paradox" aria-labelledby="paradox-heading">
+  <div class="paradox__frame">
+    <p class="paradox__eyebrow">
+      <span class="astro-eyebrow">The Opportunity</span>
+    </p>
+    <h2 id="paradox-heading" class="paradox__h2">India ka <em>AI paradox</em></h2>
+    <div class="paradox__grid">
+      <article class="paradox-card">
+        <p class="paradox-card__kicker">Population</p>
+        <p class="paradox-card__num">1.4<span class="unit">B</span></p>
+        <p class="paradox-card__label">Total Indians</p>
+        <div class="paradox-card__vs">
+          <span class="paradox-card__vs-num">200M</span>
+          <span class="paradox-card__vs-label">English speakers — the only group most AI products serve</span>
+        </div>
+        <p class="paradox-card__footer">Gap: <strong>1.2 billion</strong> people without native AI.</p>
+      </article>
+      <article class="paradox-card">
+        <p class="paradox-card__kicker">EdTech</p>
+        <p class="paradox-card__num">₹4<span class="unit">LCr</span></p>
+        <p class="paradox-card__label">Indian EdTech market size</p>
+        <div class="paradox-card__vs">
+          <span class="paradox-card__vs-num">2%</span>
+          <span class="paradox-card__vs-label">Tier 2/3/4 penetration today — where the real students live</span>
+        </div>
+        <p class="paradox-card__footer">Result: <strong>98% untouched.</strong> Waiting to be served.</p>
+      </article>
+      <article class="paradox-card">
+        <p class="paradox-card__kicker">Connectivity</p>
+        <p class="paradox-card__num">500<span class="unit">M</span></p>
+        <p class="paradox-card__label">Rural mobile internet users</p>
+        <div class="paradox-card__vs">
+          <span class="paradox-card__vs-num">0</span>
+          <span class="paradox-card__vs-label">AI products built specifically for them — until now</span>
+        </div>
+        <p class="paradox-card__footer">The infrastructure exists. <strong>The AI doesn't.</strong></p>
+      </article>
+    </div>
+    <p class="paradox__punchline">Hum yahan hain — <em>yeh gap mitane ke liye.</em></p>
+  </div>
+</section>
+
+<!-- ═══ 4. STUDIO — product showcase ═══ -->
+<section id="studio" class="studio" aria-labelledby="studio-heading">
+  <div class="studio__head">
+    <p class="studio__eyebrow">
+      <span class="astro-eyebrow">Aarambha Studio</span>
+    </p>
+    <h2 id="studio-heading" class="studio__h2">
+      We build <strong>AI products</strong>, not just apps.
+    </h2>
+    <p class="studio__lede">Each one solves a real Bharat problem — ignored because it's in a village, in Hindi, or in a market the West won't scale to.</p>
+  </div>
+  <div class="studio__stack">
+    <!-- Product 1: Shrutam (LIVE) -->
+    <article class="product-card product-card--active" aria-labelledby="product-shrutam">
+      <div class="product-card__grid">
+        <div class="product-card__body">
+          <p>
+            <span class="astro-eyebrow astro-eyebrow--live">Launching May 20, 2026</span>
+          </p>
+          <div class="product-card__head">
+            <div class="product-card__mark" aria-hidden="true">श्रु</div>
+            <div>
+              <h3 id="product-shrutam" class="product-card__name">
+                <span class="dn">श्रुतम्</span>Shrutam
+              </h3>
+              <p class="product-card__tagline">सुनते हैं, सीखते हैं।</p>
+            </div>
+          </div>
+          <p class="product-card__desc">
+            AI-powered audio-first learning for CG Board &amp; CBSE students.
+            <strong>SAAVI didi</strong> teaches Science &amp; Math in Hinglish — for
+            Class 6–10 students in India's villages. Built around how real
+            Bharat learners actually study: audio over long text, Hinglish
+            over English, privacy over paywall-shame.
+          </p>
+          <dl class="product-card__meta">
+            <div>
+              <dt>Languages</dt>
+              <dd>Hindi · Hinglish · Telugu · Marathi · English</dd>
+            </div>
+            <div>
+              <dt>Class</dt>
+              <dd>6 — 10 · CG Board + CBSE</dd>
+            </div>
+            <div>
+              <dt>Pricing</dt>
+              <dd>₹199/month · 3 chapters free</dd>
+            </div>
+          </dl>
+          <div class="product-card__ctas">
+            <a href="/waitlist/" class="astro-cta astro-cta--primary">Join Waitlist <span class="astro-cta__arrow">→</span></a>
+            <a href="/shrutam/" class="astro-cta astro-cta--ghost">Learn More <span class="astro-cta__arrow">→</span></a>
+          </div>
+          <a href="https://shrutam.ai" class="product-card__domain" rel="noopener" target="_blank">shrutam.ai ↗</a>
+        </div>
+        <div class="product-card__visual" aria-hidden="true">
+          <div class="product-card__visual-frame">
+            <span class="product-card__visual-glyph">श्रु</span>
+            <span class="product-card__visual-label">Shrutam · Audio-first</span>
           </div>
         </div>
-        <div class="chat">
-          <div class="msg msg-saavi"><span class="msg-tag">SAAVI</span> Ravi! Aaj Magnetism &mdash; magnet todne par kya hota hai? &#129522;</div>
-          <div class="msg msg-student">2 poles ban jaate hain?</div>
-          <div class="msg msg-saavi"><span class="msg-tag">SAAVI</span> BILKUL SAHI! &#127881; Har tukde mein N aur S saath rahenge!</div>
+      </div>
+    </article>
+
+    <!-- Product 2: WhatsApp Commerce AI (IN DEV) -->
+    <article class="product-card" aria-labelledby="product-commerce">
+      <div class="product-card__grid">
+        <div class="product-card__body">
+          <p>
+            <span class="astro-eyebrow astro-eyebrow--dev">In Development — 2026</span>
+          </p>
+          <div class="product-card__head">
+            <div class="product-card__mark" aria-hidden="true" style="font-size:28px;font-family:var(--font-en)">W</div>
+            <div>
+              <h3 id="product-commerce" class="product-card__name">WhatsApp Commerce AI</h3>
+              <p class="product-card__tagline" style="font-family:var(--font-en)">Kirana se enterprise tak</p>
+            </div>
+          </div>
+          <p class="product-card__desc">
+            AI-powered B2B order management for Indian distributors. WhatsApp
+            se order, AI se catalog matching, smart reorder predictions. Built
+            for the kirana-to-enterprise lane that every large SaaS tool
+            ignores — where WhatsApp and Hindi voice are the real interface.
+          </p>
+          <dl class="product-card__meta">
+            <div>
+              <dt>Channel</dt>
+              <dd>WhatsApp-native · Hindi voice</dd>
+            </div>
+            <div>
+              <dt>Core</dt>
+              <dd>4-layer NLP · catalog AI</dd>
+            </div>
+            <div>
+              <dt>Segments</dt>
+              <dd>Kirana · Pharma · FMCG</dd>
+            </div>
+          </dl>
+          <div class="product-card__ctas">
+            <a href="/contact/?topic=whatsapp-commerce" class="astro-cta astro-cta--amber">Express Interest <span class="astro-cta__arrow">→</span></a>
+          </div>
+        </div>
+        <div class="product-card__visual" aria-hidden="true">
+          <div class="product-card__visual-frame">
+            <span class="product-card__visual-glyph" style="font-family:var(--font-en);font-weight:300">W</span>
+            <span class="product-card__visual-label">Commerce · WhatsApp</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Product 3: Future -->
+    <article class="product-card product-card--future" aria-labelledby="product-future">
+      <div class="product-card__grid">
+        <div class="product-card__body">
+          <p>
+            <span class="astro-eyebrow astro-eyebrow--future">Coming Next</span>
+          </p>
+          <div class="product-card__head" style="justify-content:center">
+            <div class="product-card__mark" aria-hidden="true">+</div>
+            <div>
+              <h3 id="product-future" class="product-card__name">More AI Products</h3>
+              <p class="product-card__tagline" style="font-family:var(--font-en);color:var(--text-muted-dark)">We're building India's AI future, one product at a time.</p>
+            </div>
+          </div>
+          <p class="product-card__desc">
+            Each new Aarambha product solves a problem that's been ignored —
+            because it's in a village, in Hindi, or in a market that
+            &ldquo;doesn't scale.&rdquo; If you have a problem that looks like
+            that, we want to hear about it.
+          </p>
+          <div class="product-card__ctas" style="justify-content:center">
+            <a href="/contact/" class="astro-cta astro-cta--ghost">Follow Our Journey <span class="astro-cta__arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ 5. WHY NOW — timeline ═══ -->
+<section class="whynow" aria-labelledby="whynow-heading">
+  <div class="whynow__frame">
+    <div class="whynow__head">
+      <p class="whynow__eyebrow">
+        <span class="astro-eyebrow">Why This Moment</span>
+      </p>
+      <h2 id="whynow-heading" class="whynow__h2">Why Aarambha. <strong>Why now.</strong></h2>
+    </div>
+    <div class="whynow__rows">
+      <div class="whynow-row">
+        <span class="whynow-row__num">01</span>
+        <div>
+          <h3 class="whynow-row__title"><span aria-hidden="true">📱</span> India's smartphone moment is here</h3>
+          <p class="whynow-row__text"><strong>500M+ rural internet users.</strong> Jio happened. Data is ₹10/GB. The last-mile infrastructure exists. What's missing is the AI layer that actually speaks to them.</p>
+        </div>
+      </div>
+      <div class="whynow-row">
+        <span class="whynow-row__num">02</span>
+        <div>
+          <h3 class="whynow-row__title"><span aria-hidden="true">🤖</span> AI is finally good enough</h3>
+          <p class="whynow-row__text">LLMs in 2026 can <strong>think</strong> in Hindi, Hinglish, Telugu — not just translate English scaffolding. The quality is there; only the courage to build <em>for Bharat</em> is missing.</p>
+        </div>
+      </div>
+      <div class="whynow-row">
+        <span class="whynow-row__num">03</span>
+        <div>
+          <h3 class="whynow-row__title"><span aria-hidden="true">💡</span> The opportunity window is open</h3>
+          <p class="whynow-row__text">Every major AI lab is building for the West. <strong>We're building for the rest.</strong> This window closes when the global giants notice — and they will. We have a few years. That's enough.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 2 Mission -->
-<section class="home-mission-wrap" aria-label="Mission">
-  <blockquote class="home-mission" cite="https://www.aarambhax.ai/">
-    <p class="home-mission-quote" data-i18n="home.master.mission_quote">गाँव गाँव तक, ज्ञान की रोशनी</p>
-    <p class="home-mission-kicker" data-i18n="home.master.mission_kicker">22/7 — smart pauses beat endless strain.</p>
-  </blockquote>
-</section>
-
-<!-- 3 Problem + solution -->
-<section class="home-section home-section--surface" aria-labelledby="problem-heading">
-  <div class="home-section-inner">
-    <p class="sec-eyebrow" data-i18n="home.master.problem_eyebrow">The problem</p>
-    <h2 id="problem-heading" class="sec-h2" data-i18n="home.master.problem_title">India’s education gap</h2>
-    <div class="home-problem-grid">
-      <div class="home-problem-card">
-        <div class="home-problem-stat" data-i18n="home.master.problem_1_stat">60%</div>
-        <div class="home-problem-label" data-i18n="home.master.problem_1_label">Hindi-medium students</div>
-      </div>
-      <div class="home-problem-card">
-        <div class="home-problem-stat" data-i18n="home.master.problem_2_stat">6L+</div>
-        <div class="home-problem-label" data-i18n="home.master.problem_2_label">Villages without tutors</div>
-      </div>
-      <div class="home-problem-card">
-        <div class="home-problem-stat" data-i18n="home.master.problem_3_stat">70%</div>
-        <div class="home-problem-label" data-i18n="home.master.problem_3_label">Tier 2/3/4 students</div>
-      </div>
+<!-- ═══ 6. FOUNDER — personal note ═══ -->
+<section class="founder" aria-labelledby="founder-heading">
+  <div class="founder__frame">
+    <span class="founder__mark">A Note from the Founder</span>
+    <h2 id="founder-heading" class="sr-only">Founder's note</h2>
+    <div class="founder__letter">
+      <p>Maine <strong>22 saal</strong> enterprise technology mein kaam kiya. US Fortune 500 companies ke liye. Kafka architectures. Search systems. AI pipelines.</p>
+      <p>Phir ek din socha — <em>yeh sab gaon tak kyun nahi pahuncha?</em></p>
+      <p>Millions of brilliant Indian minds are being left behind — not because they lack intelligence, but because the tools speak the wrong language, assume the wrong context, and serve the wrong market.</p>
+      <p><strong>Aarambha is my answer to that question.</strong></p>
     </div>
-    <p class="home-solution" data-i18n="home.master.solution_line">Aarambha — AI for Bharat.</p>
-  </div>
-</section>
-
-<!-- 4 Shrutam preview + demo -->
-<section class="home-section" id="jnana" aria-labelledby="shrutam-heading">
-  <div class="home-section-inner">
-    <p class="sec-eyebrow" data-i18n="home.master.shrutam_eyebrow">Our first product</p>
-    <h2 id="shrutam-heading" class="sec-h2" data-i18n="home.master.shrutam_title">Meet Shrutam</h2>
-    <p class="sec-sub home-sec-sub--tight" data-i18n="shrutam.features_title">SAAVI’s 6 powers</p>
-
-    <div class="home-carousel" role="region" aria-label="Shrutam features">
-      <div class="home-feature-carousel-shell">
-        <div class="home-feature-track">
-        <div class="home-feature-card"><div class="home-feature-icon" aria-hidden="true">&#127919;</div><div class="home-feature-title" data-i18n="shrutam.features.0.title">SAAVI Jadoo</div><p class="home-feature-desc" data-i18n="shrutam.features.0.desc">Mood-aware, personal, never judges.</p></div>
-        <div class="home-feature-card"><div class="home-feature-icon" aria-hidden="true">&#128247;</div><div class="home-feature-title" data-i18n="shrutam.features.1.title">Photo Doubt Solver</div><p class="home-feature-desc" data-i18n="shrutam.features.1.desc">Snap a textbook photo — get steps in seconds.</p></div>
-        <div class="home-feature-card"><div class="home-feature-icon" aria-hidden="true">&#128221;</div><div class="home-feature-title" data-i18n="shrutam.features.2.title">Mock Exams</div><p class="home-feature-desc" data-i18n="shrutam.features.2.desc">Four levels per chapter up to exam-ready.</p></div>
-        <div class="home-feature-card"><div class="home-feature-icon" aria-hidden="true">&#128483;</div><div class="home-feature-title" data-i18n="shrutam.features.3.title">Spoken English</div><p class="home-feature-desc" data-i18n="shrutam.features.3.desc">Hinglish bridge from zero to confident.</p></div>
-        <div class="home-feature-card"><div class="home-feature-icon" aria-hidden="true">&#128241;</div><div class="home-feature-title" data-i18n="shrutam.features.4.title">Notes Community</div><p class="home-feature-desc" data-i18n="shrutam.features.4.desc">Share and catch up when you miss class.</p></div>
-        <div class="home-feature-card"><div class="home-feature-icon" aria-hidden="true">&#127769;</div><div class="home-feature-title" data-i18n="shrutam.features.5.title">Whisper Mode</div><p class="home-feature-desc" data-i18n="shrutam.features.5.desc">Late-night study with a dim, quiet UI.</p></div>
-        </div>
-      </div>
-      <div class="home-carousel-dots" role="group" aria-label="Choose feature slide">
-        <button type="button" class="home-carousel-dot is-active" aria-label="Feature 1 of 6" aria-current="true"></button>
-        <button type="button" class="home-carousel-dot" aria-label="Feature 2 of 6"></button>
-        <button type="button" class="home-carousel-dot" aria-label="Feature 3 of 6"></button>
-        <button type="button" class="home-carousel-dot" aria-label="Feature 4 of 6"></button>
-        <button type="button" class="home-carousel-dot" aria-label="Feature 5 of 6"></button>
-        <button type="button" class="home-carousel-dot" aria-label="Feature 6 of 6"></button>
-      </div>
-    </div>
-
-    <div class="home-shrutam-grid home-shrutam-grid--demo">
-      <div class="home-demo-box">
-        <p class="sec-eyebrow home-demo-eyebrow" data-i18n="shrutam.demo.eyebrow">Demo</p>
-        <label for="home-demo-in" class="sr-only" data-i18n="shrutam.demo.input_label">Your question</label>
-        <input id="home-demo-in" class="home-demo-input" type="text" data-i18n-placeholder="shrutam.demo.input_placeholder" autocomplete="off" aria-describedby="home-demo-hint">
-        <p id="home-demo-hint" class="sr-only" data-i18n="shrutam.demo.hint"></p>
-        <button type="button" id="home-demo-go" class="btn-primary home-demo-submit" data-i18n="shrutam.demo.btn">Send →</button>
-        <div id="home-demo-out" class="home-demo-out" role="status" aria-live="polite"></div>
-      </div>
-      <div class="home-shrutam-aside">
-        <p class="sec-sub home-sec-sub--tight" data-i18n="shrutam.subtitle">SAAVI didi in Hinglish.</p>
-        <a href="/shrutam/" class="btn-ghost" data-i18n="home.master.shrutam_cta">See full product →</a>
+    <div class="founder__sig">
+      <div class="founder__avatar" aria-hidden="true">AA</div>
+      <div class="founder__sig-meta">
+        <p class="founder__sig-name">Ajay Agrawal</p>
+        <p class="founder__sig-role">Founder · Aarambha &nbsp;·&nbsp; 22+ years Enterprise Architecture — Eaton (HCL), US Foods, Office Depot</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 5 Languages -->
-<section class="home-section home-section--surface" aria-labelledby="lang-heading">
-  <div class="home-section-inner">
-    <h2 id="lang-heading" class="sec-h2" data-i18n="home.master.lang_title">Languages</h2>
-    <div class="home-lang-grid home-lang-grid--spaced">
-      <div class="home-lang-card" data-i18n="home.master.lang_hindi">हिंदी</div>
-      <div class="home-lang-card" data-i18n="home.master.lang_hinglish">Hinglish</div>
-      <div class="home-lang-card" data-i18n="home.master.lang_marathi">मराठी</div>
-      <div class="home-lang-card" data-i18n="home.master.lang_telugu">&#x0C24;&#x0C46;&#x0C32;&#x0C41;&#x0C17;&#x0C41;</div>
-      <div class="home-lang-card" data-i18n="home.master.lang_english">English</div>
-      <div class="home-lang-card home-lang-more" data-i18n="home.master.lang_more">+8 more</div>
+<!-- ═══ 7. LAUNCHPAD — final CTA ═══ -->
+<section class="launchpad" aria-labelledby="launchpad-heading">
+  <div class="launchpad__frame">
+    <h2 id="launchpad-heading" class="launchpad__h2">
+      India ki AI ki aarambh mein<br>
+      <strong>shamil ho jaao.</strong>
+    </h2>
+    <div class="launchpad__ctas">
+      <a href="/waitlist/" class="astro-cta astro-cta--primary">🎓 Join Shrutam Waitlist</a>
+      <a href="/contact/?topic=partnership" class="astro-cta astro-cta--amber">🤝 Partner With Us</a>
+      <a href="/blog/" class="astro-cta astro-cta--ghost">📬 Follow Our Journey</a>
     </div>
-  </div>
-</section>
-
-<!-- 6 Vision -->
-<section class="home-section" aria-labelledby="vision-heading">
-  <div class="home-section-inner home-vision">
-    <h2 id="vision-heading" class="sr-only">Vision</h2>
-    <p class="home-vision-quote" data-i18n="home.master.vision_quote">Light for every child.</p>
-    <a href="/about/" class="btn-ghost" data-i18n="home.master.vision_cta">Read our vision →</a>
-  </div>
-</section>
-
-<!-- FAQ teaser -->
-<section class="home-faq-teaser" aria-label="FAQ">
-  <div class="home-faq-teaser-inner">
-    <p data-i18n="home.master.faq_teaser">More questions?</p>
-    <a href="/faq/" class="home-faq-link" data-i18n="home.master.faq_teaser_link">Full FAQ →</a>
+    <form class="launchpad__capture" action="mailto:hello@aarambhax.ai" method="get">
+      <label for="launchpad-email" class="sr-only">Email address</label>
+      <input id="launchpad-email" type="email" name="subject" placeholder="your@email.com" aria-label="Email address">
+      <button type="submit">Stay Updated</button>
+    </form>
+    <div class="launchpad__social">
+      <a href="https://x.com/" rel="noopener" target="_blank" aria-label="Twitter / X">
+        <span aria-hidden="true">𝕏</span> <span>Twitter</span>
+      </a>
+      <a href="https://linkedin.com/" rel="noopener" target="_blank" aria-label="LinkedIn">
+        <span aria-hidden="true">in</span> <span>LinkedIn</span>
+      </a>
+      <a href="mailto:hello@aarambhax.ai" aria-label="Email">
+        <span aria-hidden="true">✉</span> <span>hello@aarambhax.ai</span>
+      </a>
+    </div>
   </div>
 </section>
 
 </main>
+
 
 <!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
