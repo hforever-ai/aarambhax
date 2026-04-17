@@ -26,7 +26,8 @@
     },
     "waitlist": {
       "countdown_aria": "Shrutam launch countdown, May 20, 2026. Values update on screen only.",
-      "form_note": "Form submit se tumhara email client khulega. Zaroori fields form mein mark kiye gaye hain."
+      "form_note": "Form submit se tumhara email client khulega. Zaroori fields form mein mark kiye gaye hain.",
+      "form_heading": "Apni details — waitlist mein naam"
     },
     "home": {
       "how": {
@@ -156,7 +157,8 @@
     },
     "waitlist": {
       "countdown_aria": "Shrutam launch countdown, May 20, 2026. Values update on screen only.",
-      "form_note": "Submitting opens your email client. Required fields are marked in the form."
+      "form_note": "Submitting opens your email client. Required fields are marked in the form.",
+      "form_heading": "Your details — join the waitlist"
     },
     "saavi": {
       "eyebrow": "AI Teacher Didi",
