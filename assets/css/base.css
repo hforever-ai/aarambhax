@@ -76,20 +76,9 @@
   --dur-slow: 600ms;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Legacy aliases — still heavily used in site.css/home.css/blog.css/
-     sections.css. Kept until every consumer is migrated to the canonical
-     token name. --cosmos, --deep, --glow had zero references at last
-     audit (2026-04-17) and were removed. */
-  --navy: var(--bg-elevated);
-  --teal: var(--blue-mid);
-  --teal2: var(--blue-bright);
-  --gold: var(--gold-warm);
-  --gold2: var(--gold-bright);
+  /* Named accents without a canonical equivalent — kept as first-class. */
   --violet: #818cf8;
-  --white: var(--text-primary);
-  --muted: var(--text-secondary);
   --dim: rgba(232, 244, 255, 0.45);
-  --border: var(--border-mid);
 }
 
 *,

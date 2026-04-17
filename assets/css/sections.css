@@ -29,12 +29,12 @@
   font-weight:800;
   margin-bottom:16px;
   letter-spacing:-.02em;
-  color:var(--white);
+  color:var(--text-primary);
   line-height:1.12;
 }
 .page-hero--compact{padding-bottom:24px;}
 .page-hero p.lead{
-  color:var(--muted);
+  color:var(--text-secondary);
   font-size:var(--text-lead);
   line-height:var(--lh-lead);
   font-family:var(--font-hi);
@@ -44,13 +44,13 @@
   font-size:var(--text-lead);
   line-height:var(--lh-lead);
 }
-.page-hero__note{margin-top:16px;color:var(--muted);}
+.page-hero__note{margin-top:16px;color:var(--text-secondary);}
 
 /* ---- Policy / legal hero + body (privacy, terms, /faq) -------------------- */
 .policy-hero{
   margin-bottom:36px;
   padding-bottom:24px;
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid var(--border-mid);
   text-align:left;
 }
 .policy-hero h1{
@@ -58,13 +58,13 @@
   font-weight:800;
   margin-bottom:8px;
   font-family:var(--font-hi);
-  color:var(--white);
+  color:var(--text-primary);
   letter-spacing:-.02em;
   line-height:1.12;
 }
 .policy-subtitle{
   font-size:17px;
-  color:var(--teal2);
+  color:var(--blue-bright);
   font-family:'Noto Sans Devanagari',sans-serif;
   margin-bottom:6px;
 }
@@ -73,18 +73,18 @@
 .policy-content{
   font-size:var(--prose-body-size);
   line-height:var(--prose-body-lh);
-  color:var(--muted);
+  color:var(--text-secondary);
   font-family:var(--font-hi);
 }
 .policy-section{margin-top:28px;}
 .policy-section h2{
   font-size:clamp(20px,3vw,28px);
-  color:var(--gold);
+  color:var(--gold-warm);
   margin-bottom:12px;
   font-family:var(--font-hi);
   font-weight:700;
 }
-.policy-section h3{font-size:16px;color:var(--white);margin:22px 0 10px;}
+.policy-section h3{font-size:16px;color:var(--text-primary);margin:22px 0 10px;}
 .policy-section p{margin-bottom:12px;}
 .policy-section ul{margin:8px 0 12px 18px;}
 .policy-section li{margin-bottom:8px;}
@@ -104,7 +104,7 @@
 .page-404__lead{
   max-width:36rem;
   margin:0 0 28px;
-  color:var(--muted);
+  color:var(--text-secondary);
   font-size:var(--text-lead);
   line-height:var(--lh-lead);
 }
@@ -123,21 +123,21 @@
   margin:0 auto;
   position:relative;z-index:1;
 }
-.faq-item{border-bottom:1px solid var(--border);}
+.faq-item{border-bottom:1px solid var(--border-mid);}
 .faq-q{
   width:100%;text-align:left;
   background:none;border:none;
-  color:var(--white);
+  color:var(--text-primary);
   font-size:16px;font-weight:600;
   padding:20px 0;
   cursor:pointer;
   display:flex;justify-content:space-between;align-items:center;
   gap:16px;
 }
-.faq-q:hover{color:var(--teal2);}
+.faq-q:hover{color:var(--blue-bright);}
 .faq-a{
   padding:0 0 22px;
-  color:var(--muted);
+  color:var(--text-secondary);
   line-height:1.65;
   font-size:15px;
 }

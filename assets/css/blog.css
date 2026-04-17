@@ -11,11 +11,11 @@
 
 /* ---- Shared card link styling (appears in blog index + other card grids) -- */
 a.feat-card{display:block;text-decoration:none;color:inherit;cursor:pointer;}
-a.feat-card .feat-title{color:var(--teal2);transition:color .2s;}
-a.feat-card:hover .feat-title{color:var(--gold2);}
+a.feat-card .feat-title{color:var(--blue-bright);transition:color .2s;}
+a.feat-card:hover .feat-title{color:var(--gold-bright);}
 a.feat-card .pill{
   background:rgb(77 200 240 / 0.12);
-  color:var(--teal2);
+  color:var(--blue-bright);
   border:1px solid rgb(77 200 240 / 0.25);
   font-size:11px;font-weight:700;
   padding:4px 10px;border-radius:100px;
@@ -32,9 +32,9 @@ a.feat-card .pill{
   position:relative;z-index:1;
   font-family:var(--font-en);
 }
-.blog-breadcrumbs a{color:var(--teal2);text-decoration:none;}
+.blog-breadcrumbs a{color:var(--blue-bright);text-decoration:none;}
 .blog-breadcrumbs a:hover{text-decoration:underline;}
-.blog-breadcrumbs [aria-current="page"]{color:var(--muted);}
+.blog-breadcrumbs [aria-current="page"]{color:var(--text-secondary);}
 
 /* ---- Blog index: card list inside longform shell ------------------------- */
 .blog-index .feat-grid{margin-top:8px;}
@@ -46,7 +46,7 @@ a.feat-card .pill{
 .about-longform .product-section.blog-index .feat-desc{
   font-size:14.5px;
   line-height:1.75;
-  color:var(--muted);
+  color:var(--text-secondary);
   font-family:var(--font-hi);
 }
 .about-longform .product-section.blog-index .blog-index__list-title{
@@ -54,7 +54,7 @@ a.feat-card .pill{
   font-weight:700;
   line-height:1.25;
   letter-spacing:-.01em;
-  color:var(--gold);
+  color:var(--gold-warm);
   margin:0 0 16px;
   font-family:var(--font-hi);
 }
@@ -76,10 +76,10 @@ a.feat-card .pill{
 .about-longform.blog-post > .article-meta{
   font-size:16px;
   line-height:1.55;
-  color:var(--muted);
+  color:var(--text-secondary);
   margin:0 0 32px;
   padding-left:18px;
-  border-left:3px solid var(--teal);
+  border-left:3px solid var(--blue-mid);
   font-family:var(--font-hi);
 }
 
@@ -87,14 +87,14 @@ a.feat-card .pill{
 .about-longform.blog-post .article-body{
   font-size:15.5px;
   line-height:1.85;
-  color:var(--muted);
+  color:var(--text-secondary);
   font-family:var(--font-hi);
 }
 .about-longform.blog-post .article-body .policy-section{margin-top:0;}
 .about-longform.blog-post .article-body .policy-section h2{
   font-size:clamp(17px,2.4vw,24px);
   font-weight:700;
-  color:var(--gold);
+  color:var(--gold-warm);
   margin:44px 0 14px;
   padding-top:8px;
   font-family:var(--font-hi);
@@ -105,12 +105,12 @@ a.feat-card .pill{
   margin-bottom:20px;
   line-height:1.85;
   font-family:var(--font-hi);
-  color:var(--muted);
+  color:var(--text-secondary);
 }
 .about-longform.blog-post .article-body .policy-section h3{
   font-size:18px;
   font-weight:600;
-  color:var(--teal2);
+  color:var(--blue-bright);
   margin:32px 0 12px;
   font-family:var(--font-en);
 }
@@ -123,7 +123,7 @@ a.feat-card .pill{
   padding:8px 0 8px 22px;
   border-bottom:1px solid rgba(255,255,255,0.04);
   font-size:15px;
-  color:var(--muted);
+  color:var(--text-secondary);
   position:relative;
   font-family:var(--font-hi);
   margin-bottom:0;
@@ -132,18 +132,18 @@ a.feat-card .pill{
   content:'→';
   position:absolute;
   left:0;
-  color:var(--teal);
+  color:var(--blue-mid);
   font-family:var(--font-en);
 }
 .about-longform.blog-post .article-body .policy-section a{
-  color:var(--teal2);
+  color:var(--blue-bright);
   text-decoration:none;
 }
 .about-longform.blog-post .article-body .policy-section a:hover{
   text-decoration:underline;
 }
 .about-longform.blog-post .article-body .policy-section strong{
-  color:var(--white);
+  color:var(--text-primary);
   font-weight:600;
 }
-.article-body .policy-section strong{color:var(--white);}
+.article-body .policy-section strong{color:var(--text-primary);}
