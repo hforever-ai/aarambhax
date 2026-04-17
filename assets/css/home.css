@@ -15,7 +15,13 @@
   min-height:100vh;
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
-  padding:120px 48px 80px;
+  /* Fluid rhythm across 375 -> 1440. Closes the dead zone between mobile
+     (100 24 60) and desktop (120 48 80) that the stepped @media left gapping
+     on tablet widths. */
+  padding:
+    clamp(100px, 10vh, 120px)
+    clamp(24px, 4vw, 48px)
+    clamp(60px, 7vh, 80px);
   text-align:center;
   overflow:hidden;
 }
@@ -119,10 +125,10 @@
 }
 .tick::after{content:'✦';color:rgb(77 200 240 / 0.4);font-size:9px;}
 
-/* ---- Hero responsive ------------------------------------------------------ */
-@media (max-width:900px){
-  .hero{padding:100px 24px 60px;}
-}
+/* ---- Hero responsive ------------------------------------------------------
+   Mobile padding now flows through the clamp() above; no explicit @media
+   override needed. Removes the 480-900 dead zone where neither desktop
+   (120 48 80) nor mobile (100 24 60) values were active. */
 
 /* ---- Home master-layout split hero (.hero.home-hero variant) -------------- */
 .hero.home-hero{
