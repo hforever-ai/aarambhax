@@ -982,6 +982,33 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
 .about-longform .hero-ctas{margin-bottom:4px;}
 .about-longform .page-hero__note{margin:14px 0 18px;color:var(--muted);font-size:16px;line-height:1.55;font-family:var(--font-hi);}
 .about-longform .pill-row{margin-top:4px;}
+/* Product pages in longform (Saavi, Shrutam, About footer band, etc.): section type = About story h2 scale */
+.about-longform .product-section .sec-h2:not(.sec-h2--sm):not(.sec-h2--form):not(.sec-h2--contact){
+  font-size:clamp(20px,3vw,28px);
+  font-weight:700;
+  line-height:1.2;
+  letter-spacing:-.01em;
+  margin-bottom:16px;
+}
+.about-longform .product-section .sec-sub{
+  font-size:15.5px;
+  line-height:1.85;
+  max-width:none;
+  margin-bottom:24px;
+}
+.about-longform .product-section .sec-sub.sec-sub--mb32{margin-bottom:32px;}
+.about-longform .product-section .sec-sub.sec-sub--mb20{margin-bottom:20px;}
+.about-longform .product-section .sec-sub.sec-sub--tight{margin-bottom:0;}
+.about-longform .product-section .compare-col-title{
+  font-size:18px;
+  font-weight:600;
+  font-family:var(--font-en);
+}
+.about-longform .product-section .compare-col-title--teal{color:var(--teal2);}
+.about-longform .product-section .compare-list{font-size:15.5px;}
+.about-longform .product-section .feat-title{font-size:15.5px;line-height:1.85;}
+.about-longform .product-section .price-list{font-size:15.5px;line-height:1.85;}
+.about-longform .product-section .bullet-list-loose{font-size:15.5px;font-family:var(--font-hi);}
 .about-longform .waitlist-countdown{margin-top:4px;}
 .about-longform .waitlist-spots{margin-bottom:28px;}
 .about-longform > .about-story-title + .policy-subtitle{margin-top:-6px;}
