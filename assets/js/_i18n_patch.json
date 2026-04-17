@@ -104,6 +104,7 @@
     "blog_page": {
       "eyebrow": "ब्लॉग",
       "title": "Seekhte Rahenge",
+      "list_heading": "Naye guides — padho, share karo",
       "lead": "CG Board aur CBSE ke liye guides — Class 10 Science strategy, Hindi medium learning, aur science Hinglish mein.",
       "c1t": "CG Board Class 10 Science 2026",
       "c1d": "Syllabus focus, practicals, revision — ek practical prep guide.",
@@ -266,6 +267,7 @@
     "blog_page": {
       "eyebrow": "Blog",
       "title": "Seekhte Rahenge",
+      "list_heading": "Latest guides",
       "lead": "Guides for CG Board & CBSE — Class 10 Science strategy, Hindi-medium learning, and simple science explainers in Hinglish.",
       "c1t": "CG Board Class 10 Science 2026",
       "c1d": "Syllabus priorities, practicals, revision rhythm — one practical prep guide.",

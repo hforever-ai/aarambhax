@@ -941,7 +941,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
 .faq-cat-pill:hover{color:var(--white);border-color:var(--teal);}
 .faq-cat-pill.active{background:rgb(77 200 240 / 0.15);border-color:var(--teal);color:var(--teal2);}
 .faq-directory .faq-section{margin-bottom:36px;}
-.faq-directory .section-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--border);color:var(--gold);}
+.faq-directory h2.section-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border);color:var(--gold);line-height:1.35;}
 .faq-directory .faq-item{background:rgba(10,22,40,0.5);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;}
 .faq-directory .faq-item.open{border-color:rgb(77 200 240 / 0.35);}
 .faq-directory .faq-a-inner{padding-top:0;color:var(--muted);font-size:14px;line-height:1.65;}
@@ -1091,6 +1091,15 @@ a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1p
 /* Blog listing: card copy same scale/rhythm as About body */
 .about-longform .product-section.blog-index .feat-title{font-size:clamp(17px,2.5vw,18px);font-weight:700;margin-bottom:10px;}
 .about-longform .product-section.blog-index .feat-desc{font-size:15.5px;line-height:1.85;color:var(--muted);font-family:var(--font-hi);}
+.about-longform .product-section.blog-index .blog-index__list-title{
+  font-size:clamp(17px,2.5vw,20px);
+  font-weight:700;
+  line-height:1.25;
+  letter-spacing:-.01em;
+  color:var(--gold);
+  margin:0 0 20px;
+  font-family:var(--font-hi);
+}
 .blog-breadcrumbs{max-width:var(--shell-max);margin:0 auto;padding:var(--hero-pad-top) var(--shell-pad-x) 0;font-size:13px;color:var(--dim);position:relative;z-index:1;font-family:var(--font-en);}
 .blog-breadcrumbs a{color:var(--teal2);text-decoration:none;}
 .blog-breadcrumbs a:hover{text-decoration:underline;}
