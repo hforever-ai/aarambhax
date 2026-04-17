@@ -24,10 +24,10 @@
 @keyframes glowBreathe {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(77, 200, 240, 0.3);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--blue-bright) 30%, transparent);
   }
   50% {
-    box-shadow: 0 0 40px rgba(77, 200, 240, 0.55);
+    box-shadow: 0 0 40px color-mix(in srgb, var(--blue-bright) 55%, transparent);
   }
 }
 

@@ -14,9 +14,9 @@ a.feat-card{display:block;text-decoration:none;color:inherit;cursor:pointer;}
 a.feat-card .feat-title{color:var(--blue-bright);transition:color .2s;}
 a.feat-card:hover .feat-title{color:var(--gold-bright);}
 a.feat-card .pill{
-  background:rgb(77 200 240 / 0.12);
+  background:color-mix(in srgb, var(--blue-bright) 12%, transparent);
   color:var(--blue-bright);
-  border:1px solid rgb(77 200 240 / 0.25);
+  border:1px solid color-mix(in srgb, var(--blue-bright) 25%, transparent);
   font-size:11px;font-weight:700;
   padding:4px 10px;border-radius:100px;
   display:inline-block;margin-top:12px;
