@@ -1,0 +1,15 @@
+/* =============================================================================
+   AARAMBHAX TYPOGRAPHY — global element rules for h1-h6, p, a, lists, etc.
+   Consumes tokens from tokens.css.
+   Spec: docs/superpowers/specs/2026-04-17-aarambhax-structural-refactor-design.md
+
+   NOTE: This file is intentionally minimal in Phase 1. Phase 2 populates the
+   full heading/text rules as part of the section sweep, so the visual change
+   lands atomically with updated section rules (avoiding a half-migrated look).
+   ============================================================================= */
+
+/* Safe global defaults — additive only, no overrides of existing site.css */
+img {
+  max-width: 100%;
+  height: auto;
+}

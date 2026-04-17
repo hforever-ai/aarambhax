@@ -1,4 +1,6 @@
+@import url("tokens.css");
 @import url("base.css");
+@import url("typography.css");
 @import url("animations.css");
 @import url("components.css");
 @import url("layout.css");

@@ -1,0 +1,59 @@
+/* =============================================================================
+   AARAMBHAX TOKENS — sole source of truth for breakpoints, type, spacing,
+   containers. Consumed by every other CSS file. No rules live here.
+   Spec: docs/superpowers/specs/2026-04-17-aarambhax-structural-refactor-design.md
+   ============================================================================= */
+
+:root {
+  /* ---- Breakpoints (reference values; use via @media queries) ------------- */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+
+  /* ---- Typography — display (fluid) -------------------------------------- */
+  --fs-h1:    clamp(2.25rem, 1.25rem + 4.5vw, 4.5rem);   /* 36 → 72 */
+  --fs-h2:    clamp(1.75rem, 1.25rem + 2.5vw, 3rem);     /* 28 → 48 */
+  --fs-h3:    clamp(1.375rem, 1.1rem + 1.2vw, 1.875rem); /* 22 → 30 */
+  --fs-h4:    clamp(1.125rem, 1rem + 0.6vw, 1.375rem);   /* 18 → 22 */
+
+  /* ---- Typography — text (stepped) --------------------------------------- */
+  --fs-body-lg: 1.125rem;  /* 18 — long-form, Hindi-friendly */
+  --fs-body:    1rem;      /* 16 */
+  --fs-small:   0.875rem;  /* 14 */
+  --fs-micro:   0.75rem;   /* 12 — labels only */
+
+  /* ---- Typography — signature exception ---------------------------------- */
+  --fs-devanagari: clamp(3.5rem, 1rem + 7vw, 7.5rem);    /* 56 → 120 (आरम्भ) */
+
+  /* ---- Line-heights ------------------------------------------------------ */
+  --lh-display: 1.05;
+  --lh-heading: 1.2;
+  --lh-body:    1.55;
+  --lh-body-hi: 1.7;   /* Devanagari matras need headroom (W3C ilreq) */
+
+  /* ---- Spacing — 4px grid ------------------------------------------------ */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --section-y: clamp(4rem, 8vw, 8rem);    /* 64 → 128 */
+  --hero-y:    clamp(5rem, 11vw, 9rem);   /* 80 → 144 */
+
+  /* ---- Containers -------------------------------------------------------- */
+  --shell-max:   1440px;
+  --content-max: 1200px;
+  --narrow-max:   720px;
+
+  /* ---- Gutters ----------------------------------------------------------- */
+  --gutter-sm: 20px;
+  --gutter-md: 24px;
+  --gutter-lg: 32px;
+}
