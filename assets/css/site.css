@@ -616,7 +616,7 @@ footer{
   .cta-section{padding:60px 24px}
   footer{padding:32px 24px}
 }
-@media(max-width:600px){
+@media (max-width:640px){
   .feat-grid{grid-template-columns:1fr}
   .brands-grid{grid-template-columns:repeat(2,1fr)}
   .jnana-stats{grid-template-columns:repeat(3,1fr)}
@@ -726,7 +726,7 @@ footer.site-footer{
   .testi-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;}
 }
-@media(max-width:600px){
+@media (max-width:640px){
   .stats-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr;}
 }
