@@ -1,0 +1,64 @@
+# Hostinger / Apache — public_html/api/
+# If anything returns 500, comment out blocks one at a time to find the conflict.
+
+Options -Indexes
+
+# ---------------------------------------------------------------------------
+# Block direct HTTP access to secrets, dumps, and tooling (PHP may still read files on disk).
+# ---------------------------------------------------------------------------
+<FilesMatch "\.(properties|ini|env|sql|bak|backup|old|orig|log|md|yml|yaml|dist|neon|lock)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Dotfiles (e.g. .env, .gitignore) — not served as documents by default; deny explicitly.
+<FilesMatch "^\.">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# ---------------------------------------------------------------------------
+# contact.php — only POST (form JSON) and OPTIONS (CORS preflight).
+# ---------------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # contact.php: POST + OPTIONS only (matches /api/contact.php or docroot-in-api /contact.php).
+  RewriteCond %{REQUEST_URI} contact\.php$ [NC]
+  RewriteCond %{REQUEST_METHOD} !^(POST|OPTIONS)$ [NC]
+  RewriteRule .* - [F,L]
+
+  # Block VCS / dependency manifests if ever present under this path.
+  RewriteCond %{REQUEST_URI} \.git [NC,OR]
+  RewriteCond %{REQUEST_URI} composer\.(json|lock)$ [NC,OR]
+  RewriteCond %{REQUEST_URI} package(-lock)?\.json$ [NC]
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Response headers (API JSON; still helps if an error page is HTML).
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "DENY"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+  Header set X-XSS-Protection "1; mode=block"
+  # Uncomment if not already set at site root (forces HTTPS for 1 year).
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+</IfModule>
+
+# ---------------------------------------------------------------------------
+# Limit upload/body size for this folder (contact JSON is small).
+# ---------------------------------------------------------------------------
+LimitRequestBody 1048576

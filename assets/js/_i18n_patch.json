@@ -1,0 +1,361 @@
+{
+  "hi": {
+    "skip": {
+      "main": "मुख्य सामग्री पर जाएं · Skip to main content"
+    },
+    "nav": {
+      "jnana": "ज्ञान",
+      "launch_app": "Shrutam ऐप खोलें →",
+      "launch_aria": "Shrutam ऐप खोलें (नया टैब)",
+      "faq": "FAQ",
+      "contact_page": "संपर्क"
+    },
+    "footer": {
+      "blurb": "Audio-first AI education — CG Board और CBSE. SAAVI दीदी, Hinglish में.",
+      "contact": "संपर्क",
+      "trademark": "ट्रेडमार्क"
+    },
+    "common": {
+      "cd_days": "दिन",
+      "cd_hours": "घंटे",
+      "cd_mins": "मिनट",
+      "cd_secs": "सेकंड",
+      "cd_until": "लॉन्च तक",
+      "cd_live": "लॉन्च दिन!",
+      "soon": "जल्द"
+    },
+    "waitlist": {
+      "countdown_aria": "Shrutam launch countdown, May 20, 2026. Values update on screen only.",
+      "form_note": "Form submit se tumhara email client khulega. Zaroori fields form mein mark kiye gaye hain."
+    },
+    "home": {
+      "how": {
+        "eyebrow": "कैसे काम करता है",
+        "title": "Teen step. Ek flow.",
+        "sub": "Suno. Samjho. Seekho. — har chapter ke liye simple rhythm.",
+        "steps": [
+          {
+            "label": "Step 1",
+            "title": "Apna chapter chuno",
+            "desc": "Class, board, subject — jo tumhara chapter hai wahi kholo. CG Board ya CBSE, dono."
+          },
+          {
+            "label": "Step 2",
+            "title": "SAAVI samjhayegi",
+            "desc": "Audio-first explainers, Hinglish mein — slow, clear, bina judge kiye."
+          },
+          {
+            "label": "Step 3",
+            "title": "Practice + quiz",
+            "desc": "Mock exams aur quick checks — jab tak concept clear na ho, repeat karo."
+          }
+        ]
+      },
+      "testi": {
+        "eyebrow": "Social proof",
+        "title": "Abhi early access — yeh hai vibe",
+        "sub": "Pilot students & teachers se seedha feedback (names illustrative).",
+        "items": [
+          {
+            "quote": "Raat ko doubt hota tha — ab SAAVI didi se pooch leta hoon. Dar nahi lagta.",
+            "author": "— Class 9, Raipur"
+          },
+          {
+            "quote": "Hinglish samajh aata hai. Textbook dry lagti thi — ab story jaise lagti hai.",
+            "author": "— Class 7, Bilaspur"
+          },
+          {
+            "quote": "Photo se doubt solve — game changer. 30 sec mein direction mil jaata hai.",
+            "author": "— Class 10, Jagdalpur"
+          }
+        ]
+      },
+      "press": {
+        "eyebrow": "Press & community",
+        "tag0": "Coming soon — local press & school partners",
+        "tag1": "CG Board focus",
+        "tag2": "EdTech India"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Sawal jo sab poochte hain",
+        "items": [
+          {
+            "q": "Shrutam kya hai?",
+            "a": "Shrutam audio-first learning app hai — SAAVI AI tumhe CG Board / CBSE Class 6–10 Science, Maths, English mein guide karti hai."
+          },
+          {
+            "q": "Kya Hindi medium ke liye hai?",
+            "a": "Haan. Hinglish + Hindi focus — tumhari speed pe, bina shame ke."
+          },
+          {
+            "q": "Price kya hai?",
+            "a": "Pro roughly ₹199/month (intro pricing). Waitlist pe kuch early perks mil sakte hain."
+          },
+          {
+            "q": "Launch kab hai?",
+            "a": "May 20, 2026 — exact rollout waitlist + email se announce hoga."
+          }
+        ],
+        "full_faq_link": "Saara FAQ →"
+      }
+    },
+    "blog_page": {
+      "eyebrow": "ब्लॉग",
+      "title": "Seekhte Rahenge",
+      "lead": "CG Board aur CBSE ke liye guides — Class 10 Science strategy, Hindi medium learning, aur science Hinglish mein.",
+      "c1t": "CG Board Class 10 Science 2026",
+      "c1d": "Syllabus focus, practicals, revision — ek practical prep guide.",
+      "c2t": "SAAVI vs tuition",
+      "c2d": "Daam, bhasha, judgment, time — Hindi medium students ke liye seedhi tulna.",
+      "c3t": "Photosynthesis — Class 6 Hindi",
+      "c3d": "Prakash sanshleshan: CO₂, oxygen, patte — simple Hinglish explainer.",
+      "read": "Padho →"
+    },
+    "shrutam": {
+      "demo": {
+        "eyebrow": "Demo",
+        "title": "Chat simulation",
+        "sub": "Message likho — sample reply (sirf frontend).",
+        "input_label": "Tumhara sawal",
+        "input_placeholder": "Photosynthesis kya hai?",
+        "hint": "Sample question bhejne ke baad neeche SAAVI ka jawab dikhega.",
+        "btn": "Bhejo →",
+        "empty": "Pehle kuch likho."
+      }
+    },
+    "about": {
+      "timeline_eyebrow": "Timeline",
+      "timeline_note": "Chota sa journey map."
+    }
+  },
+  "en": {
+    "skip": {
+      "main": "Skip to main content · मुख्य सामग्री पर जाएं"
+    },
+    "nav": {
+      "jnana": "Jnana",
+      "launch_app": "Launch App →",
+      "launch_aria": "Open Shrutam app (opens in new tab)",
+      "faq": "FAQ",
+      "contact_page": "Contact"
+    },
+    "footer": {
+      "blurb": "Audio-first AI education — CG Board & CBSE. SAAVI didi, in Hinglish.",
+      "contact": "Contact",
+      "trademark": "Trademark"
+    },
+    "common": {
+      "cd_days": "days",
+      "cd_hours": "hours",
+      "cd_mins": "minutes",
+      "cd_secs": "seconds",
+      "cd_until": "until launch",
+      "cd_live": "Launch day!",
+      "soon": "Soon"
+    },
+    "waitlist": {
+      "countdown_aria": "Shrutam launch countdown, May 20, 2026. Values update on screen only.",
+      "form_note": "Submitting opens your email client. Required fields are marked in the form."
+    },
+    "saavi": {
+      "eyebrow": "AI Teacher Didi",
+      "title": "SAAVI",
+      "subtitle": "Savii — Wise • Warm • Never Judges",
+      "intro": "Hey! What doubt do you have? 😊",
+      "personality_title": "She is different",
+      "compare": [
+        {
+          "label": "Speed",
+          "teacher": "One speed for the whole class",
+          "saavi": "Explains at your pace"
+        },
+        {
+          "label": "Judgment",
+          "teacher": "Judges wrong answers harshly",
+          "saavi": "\"A little different — try once more!\""
+        },
+        {
+          "label": "Time",
+          "teacher": "Only school hours",
+          "saavi": "There even at 11 p.m."
+        },
+        {
+          "label": "Language",
+          "teacher": "Mostly one language",
+          "saavi": "Hindi, Hinglish, English, Telugu, Marathi"
+        }
+      ],
+      "demo_title": "How SAAVI speaks",
+      "voice_title": "Listen to SAAVI's voice"
+    },
+    "home": {
+      "how": {
+        "eyebrow": "How it works",
+        "title": "Three steps. One flow.",
+        "sub": "Listen. Understand. Learn. — a simple rhythm for every chapter.",
+        "steps": [
+          {
+            "label": "Step 1",
+            "title": "Pick your chapter",
+            "desc": "Class, board, subject — open the chapter you need. CG Board or CBSE."
+          },
+          {
+            "label": "Step 2",
+            "title": "SAAVI explains",
+            "desc": "Audio-first explainers in Hinglish — slow, clear, no judgment."
+          },
+          {
+            "label": "Step 3",
+            "title": "Practice + quiz",
+            "desc": "Mock exams and quick checks — repeat until the concept clicks."
+          }
+        ]
+      },
+      "testi": {
+        "eyebrow": "Social proof",
+        "title": "Early access — this is the vibe",
+        "sub": "Straight from pilot students and teachers (names illustrative).",
+        "items": [
+          {
+            "quote": "I used to get doubts at night — now I ask SAAVI didi. I'm not scared.",
+            "author": "— Class 9, Raipur"
+          },
+          {
+            "quote": "Hinglish works for me. The textbook felt dry — now it feels like a story.",
+            "author": "— Class 7, Bilaspur"
+          },
+          {
+            "quote": "Photo doubt solve is a game changer. I get direction in 30 seconds.",
+            "author": "— Class 10, Jagdalpur"
+          }
+        ]
+      },
+      "press": {
+        "eyebrow": "Press & community",
+        "tag0": "Coming soon — local press & school partners",
+        "tag1": "CG Board focus",
+        "tag2": "EdTech India"
+      },
+      "faq": {
+        "eyebrow": "FAQ",
+        "title": "Questions everyone asks",
+        "items": [
+          {
+            "q": "What is Shrutam?",
+            "a": "Shrutam is an audio-first learning app — SAAVI AI guides you in CG Board / CBSE Class 6–10 Science, Maths, and English."
+          },
+          {
+            "q": "Is it for Hindi medium students?",
+            "a": "Yes. Hinglish + Hindi focus — at your pace, without shame."
+          },
+          {
+            "q": "What is the price?",
+            "a": "Pro is roughly ₹199/month (intro pricing). Waitlist may get early perks."
+          },
+          {
+            "q": "When is launch?",
+            "a": "May 20, 2026 — exact rollout will be announced via waitlist and email."
+          }
+        ],
+        "full_faq_link": "Full FAQ →"
+      }
+    },
+    "blog_page": {
+      "eyebrow": "Blog",
+      "title": "Seekhte Rahenge",
+      "lead": "Guides for CG Board & CBSE — Class 10 Science strategy, Hindi-medium learning, and simple science explainers in Hinglish.",
+      "c1t": "CG Board Class 10 Science 2026",
+      "c1d": "Syllabus priorities, practicals, revision rhythm — one practical prep guide.",
+      "c2t": "SAAVI vs tuition",
+      "c2d": "Cost, language, judgment, time — honest comparison for Hindi medium students.",
+      "c3t": "Photosynthesis — Class 6 Hindi",
+      "c3d": "Prakash sanshleshan basics: CO₂, oxygen, leaves — simple Hinglish explainer.",
+      "read": "Read →"
+    },
+    "shrutam": {
+      "demo": {
+        "eyebrow": "Demo",
+        "title": "Chat simulation",
+        "sub": "Type a message — sample reply (frontend only).",
+        "input_label": "Your question",
+        "input_placeholder": "What is photosynthesis?",
+        "hint": "After you send a sample question, SAAVI’s reply appears below.",
+        "btn": "Send →",
+        "empty": "Type something first."
+      }
+    },
+    "about": {
+      "timeline_eyebrow": "Timeline",
+      "timeline_note": "Key milestones on the journey."
+    }
+  },
+  "mr": {
+    "skip": {
+      "main": "मुख्य सामग्री वर जा · Skip to main content"
+    },
+    "nav": {
+      "jnana": "ज्ञान",
+      "launch_app": "Shrutam अ‍र्एप उघडा →",
+      "launch_aria": "Shrutam अ‍र्एप उघडा (नवा टैब)"
+    },
+    "footer": {
+      "blurb": "Audio-first AI education — CG Board आणि CBSE. SAAVI दीदी, Hinglish मध्ये.",
+      "contact": "संपर्क",
+      "trademark": "ट्रेडमार्क"
+    },
+    "common": {
+      "cd_days": "days",
+      "cd_hours": "hours",
+      "cd_mins": "minutes",
+      "cd_secs": "seconds",
+      "cd_until": "until launch",
+      "cd_live": "Launch day!"
+    },
+    "waitlist": {
+      "countdown_aria": "Shrutam launch countdown, May 20, 2026. Values update on screen only."
+    },
+    "home": {
+      "faq": {
+        "full_faq_link": "सर्व FAQ →"
+      }
+    },
+    "blog_page": {
+      "read": "वाचा →"
+    }
+  },
+  "te": {
+    "skip": {
+      "main": "ప్రధాన విషయానికి వెళ్లు · Skip to main content"
+    },
+    "nav": {
+      "jnana": "జ్ఞానం",
+      "launch_app": "Shrutam యాప్ తెరవండి →",
+      "launch_aria": "Shrutam యాప్ తెరవండి (కొత్త టైబ్)"
+    },
+    "footer": {
+      "blurb": "Audio-first AI education — CG Board & CBSE. SAAVI అక్క, Hinglish లో.",
+      "contact": "సంపర్కం",
+      "trademark": "Trademark"
+    },
+    "common": {
+      "cd_days": "days",
+      "cd_hours": "hours",
+      "cd_mins": "minutes",
+      "cd_secs": "seconds",
+      "cd_until": "until launch",
+      "cd_live": "Launch day!"
+    },
+    "waitlist": {
+      "countdown_aria": "Shrutam launch countdown, May 20, 2026. Values update on screen only."
+    },
+    "home": {
+      "faq": {
+        "full_faq_link": "మొత్తం FAQ →"
+      }
+    },
+    "blog_page": {
+      "read": "చదవండి →"
+    }
+  }
+}
