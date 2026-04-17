@@ -35,6 +35,10 @@ from pathlib import Path
 CSS_HREF = re.compile(r'href="/assets/css/site\.css(?:\?v=[^"#]*)?"')
 # Match any script tag that references /assets/js/<name>.js with optional ?v=
 JS_SRC = re.compile(r'src="/assets/js/([a-zA-Z0-9_\-]+)\.js(?:\?v=[^"#]*)?"')
+# Match @import url("name.css") inside site.css — needs busting too because
+# the CDN caches these downstream files for a week and the HTML ?v= doesn't
+# cascade into CSS-level imports.
+IMPORT_URL = re.compile(r'@import\s+url\(\s*"([a-zA-Z0-9_\-]+)\.css(?:\?v=[^"#]*)?"\s*\)\s*;')
 
 
 def _webroot() -> Path:
@@ -70,9 +74,37 @@ def _cache_bust_token(webroot: Path) -> str:
     return f"{ns}-{full[:8]}"
 
 
+def _bust_site_css_imports(webroot: Path, v: str) -> int:
+    """Rewrite @import url("x.css") in site.css to @import url("x.css?v=<v>").
+    Returns the number of imports updated. The site.css entry-point carries
+    the ?v= on its HTML <link>, but its CSS-level @imports must carry their
+    own ?v= to defeat CDN cache on downstream files (tokens.css, home.css...).
+    """
+    site_css = webroot / "assets" / "css" / "site.css"
+    if not site_css.exists():
+        return 0
+
+    def sub(m: re.Match) -> str:
+        return f'@import url("{m.group(1)}.css?v={v}");'
+
+    text = site_css.read_text(encoding="utf-8")
+    new, n = IMPORT_URL.subn(sub, text)
+    if n and new != text:
+        site_css.write_text(new, encoding="utf-8")
+        print(f"updated assets/css/site.css (@import {n}x) -> v={v}")
+    return n
+
+
 def main() -> int:
     webroot = _webroot()
     v = _cache_bust_token(webroot)
+
+    # First, rewrite site.css @import URLs. This must happen BEFORE the
+    # bundle hash influences the token (but since we already computed v
+    # above, just note: the hash will shift next run to reflect this edit,
+    # which is fine — CDN still sees a unique URL per change).
+    _bust_site_css_imports(webroot, v)
+
     css_replacement = f'href="/assets/css/site.css?v={v}"'
 
     def js_sub(m: re.Match) -> str:
