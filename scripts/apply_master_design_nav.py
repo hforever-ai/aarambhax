@@ -102,11 +102,17 @@ def build_nav(current):
 {chr(10).join(desktop)}
     </div>
     <div class="nav-actions">
-      <div class="lang-switcher nav-lang-desktop" role="group" aria-label="Language">
-        <button type="button" class="lang-btn" data-lang="hi" aria-pressed="false">हि</button>
-        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">En</button>
-        <button type="button" class="lang-btn" data-lang="mr" aria-pressed="false">म</button>
-        <button type="button" class="lang-btn" data-lang="te" aria-pressed="false">తె</button>
+      <div class="lang-dropdown nav-lang-desktop" data-lang-dropdown>
+        <button type="button" class="lang-dropdown__btn" id="lang-dropdown-desktop" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown-menu-desktop">
+          <span class="lang-dropdown__current" data-lang-current>हिंदी</span>
+          <span class="lang-dropdown__chev" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-dropdown__menu" id="lang-dropdown-menu-desktop" role="listbox" aria-labelledby="lang-dropdown-desktop" hidden>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="hi" data-lang-label="हिंदी" aria-pressed="false">हिंदी</button></li>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="en" data-lang-label="English" aria-pressed="false">English</button></li>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="mr" data-lang-label="मराठी" aria-pressed="false">मराठी</button></li>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="te" data-lang-label="తెలుగు" aria-pressed="false">తెలుగు</button></li>
+        </ul>
       </div>
       <a href="/waitlist/" class="nav-btn nav-waitlist-cta" data-i18n="nav.cta"></a>
       <button type="button" class="hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -118,11 +124,17 @@ def build_nav(current):
 <div id="menu-overlay" class="menu-overlay" aria-hidden="true"></div>
 <div id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
 {chr(10).join(mobile)}
-  <div class="lang-switcher mobile-lang" role="group" aria-label="Language">
-    <button type="button" class="lang-btn" data-lang="hi" aria-pressed="false">हिंदी</button>
-    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-    <button type="button" class="lang-btn" data-lang="mr" aria-pressed="false">मराठी</button>
-    <button type="button" class="lang-btn" data-lang="te" aria-pressed="false">&#x0C24;&#x0C47;&#x0C32;&#x0C41;&#x0C17;&#x0C41;</button>
+  <div class="lang-dropdown mobile-lang" data-lang-dropdown>
+    <button type="button" class="lang-dropdown__btn" id="lang-dropdown-mobile" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown-menu-mobile">
+      <span class="lang-dropdown__current" data-lang-current>हिंदी</span>
+      <span class="lang-dropdown__chev" aria-hidden="true">▾</span>
+    </button>
+    <ul class="lang-dropdown__menu" id="lang-dropdown-menu-mobile" role="listbox" aria-labelledby="lang-dropdown-mobile" hidden>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="hi" data-lang-label="हिंदी" aria-pressed="false">हिंदी</button></li>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="en" data-lang-label="English" aria-pressed="false">English</button></li>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="mr" data-lang-label="मराठी" aria-pressed="false">मराठी</button></li>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="te" data-lang-label="తెలుగు" aria-pressed="false">తెలుగు</button></li>
+    </ul>
   </div>
   <a href="/waitlist/" class="nav-btn mobile-menu-cta btn-primary" data-i18n="nav.cta"></a>
 </div>
