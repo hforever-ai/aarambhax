@@ -992,7 +992,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
 .about-meta-tag--teal{background:rgba(10,172,186,0.1);color:var(--teal);border:1px solid rgba(10,172,186,0.2);}
 .about-meta-tag--gold{background:rgba(240,192,96,0.1);color:var(--gold);border:1px solid rgba(240,192,96,0.2);}
 .about-read-time{font-size:13px;color:var(--dim);}
-.about-story-title{font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-.02em;}
+.about-story-title{font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-.02em;color:var(--white);}
 .about-story-title span{color:var(--gold);font-family:var(--font-hi);}
 .about-story-sub{font-size:18px;color:var(--muted);margin-bottom:40px;line-height:1.6;border-left:3px solid var(--teal);padding-left:18px;font-family:var(--font-hi);}
 .about-story h2{font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--gold);margin:52px 0 16px;padding-top:8px;font-family:var(--font-hi);}
@@ -1046,11 +1046,73 @@ a.feat-card{display:block;text-decoration:none;color:inherit;cursor:pointer;}
 a.feat-card .feat-title{color:var(--teal2);transition:color .2s;}
 a.feat-card:hover .feat-title{color:var(--gold2);}
 a.feat-card .pill{background:rgba(14,165,233,0.12);color:var(--teal2);border:1px solid rgba(14,165,233,0.25);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;display:inline-block;margin-top:12px;}
+/* Blog listing: card copy same scale/rhythm as About body */
+.about-longform .product-section.blog-index .feat-title{font-size:clamp(17px,2.5vw,18px);font-weight:700;margin-bottom:10px;}
+.about-longform .product-section.blog-index .feat-desc{font-size:15.5px;line-height:1.85;color:var(--muted);font-family:var(--font-hi);}
 .blog-breadcrumbs{max-width:var(--shell-max);margin:0 auto;padding:var(--hero-pad-top) var(--shell-pad-x) 0;font-size:13px;color:var(--dim);position:relative;z-index:1;font-family:var(--font-en);}
 .blog-breadcrumbs a{color:var(--teal2);text-decoration:none;}
 .blog-breadcrumbs a:hover{text-decoration:underline;}
 .blog-breadcrumbs [aria-current="page"]{color:var(--muted);}
-.blog-post .article-meta{font-size:13px;color:var(--dim);margin:10px 0 28px;font-family:var(--font-en);}
+/* Article byline: same visual language as About lead (teal bar + Hinglish scale) */
+.about-longform.blog-post > .article-meta{
+  font-size:var(--text-lead);
+  line-height:var(--lh-lead);
+  color:var(--muted);
+  margin:0 0 40px;
+  padding-left:18px;
+  border-left:3px solid var(--teal);
+  font-family:var(--font-hi);
+}
+/* Blog article body: match .about-story typography (privacy/legal keep .policy-* defaults elsewhere) */
+.about-longform.blog-post .article-body{font-size:15.5px;line-height:1.85;color:var(--muted);font-family:var(--font-hi);}
+.about-longform.blog-post .article-body .policy-section{margin-top:0;}
+.about-longform.blog-post .article-body .policy-section h2{
+  font-size:clamp(20px,3vw,28px);
+  font-weight:700;
+  color:var(--gold);
+  margin:52px 0 16px;
+  padding-top:8px;
+  font-family:var(--font-hi);
+}
+.about-longform.blog-post .article-body h2:first-of-type{margin-top:36px;}
+.about-longform.blog-post .article-body .policy-section p{
+  font-size:15.5px;
+  margin-bottom:20px;
+  line-height:1.85;
+  font-family:var(--font-hi);
+  color:var(--muted);
+}
+.about-longform.blog-post .article-body .policy-section h3{
+  font-size:18px;
+  font-weight:600;
+  color:var(--teal2);
+  margin:32px 0 12px;
+  font-family:var(--font-en);
+}
+.about-longform.blog-post .article-body .policy-section ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 20px;
+}
+.about-longform.blog-post .article-body .policy-section li{
+  padding:8px 0 8px 22px;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  font-size:15px;
+  color:var(--muted);
+  position:relative;
+  font-family:var(--font-hi);
+  margin-bottom:0;
+}
+.about-longform.blog-post .article-body .policy-section li::before{
+  content:'→';
+  position:absolute;
+  left:0;
+  color:var(--teal);
+  font-family:var(--font-en);
+}
+.about-longform.blog-post .article-body .policy-section a{color:var(--teal2);text-decoration:none;}
+.about-longform.blog-post .article-body .policy-section a:hover{text-decoration:underline;}
+.about-longform.blog-post .article-body .policy-section strong{color:var(--white);font-weight:600;}
 .policy-section h3{font-size:16px;color:var(--white);margin:22px 0 10px;}
 .article-body .policy-section strong{color:var(--white);}
 
