@@ -22,6 +22,8 @@
   --gold-glow: rgba(240, 192, 96, 0.1);
 
   --text-primary: #e8f4ff;
+  /* Pale slate for light→accent marketing gradients (legacy “sky” pair) */
+  --pale-slate: #f8fafc;
   --text-secondary: #8aaec8;
   --text-muted: #4a6680;
   --text-gold: #f0c060;

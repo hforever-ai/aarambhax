@@ -169,7 +169,7 @@
   font-size:clamp(64px,10vw,120px);
   font-weight:800;
   line-height:1;
-  background:linear-gradient(135deg, #f8fafc 30%, rgb(77 200 240 / 0.8) 100%);
+  background:linear-gradient(135deg, var(--pale-slate) 30%, rgb(77 200 240 / 0.8) 100%);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
   background-clip:text;
@@ -548,7 +548,7 @@
 .cta-devanagari{
   font-family:'Noto Sans Devanagari',sans-serif;
   font-size:48px;font-weight:800;
-  background:linear-gradient(135deg,#f8fafc,var(--blue-bright));
+  background:linear-gradient(135deg,var(--pale-slate),var(--blue-bright));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   margin-bottom:8px;
 }
@@ -1099,6 +1099,36 @@ a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1p
   color:var(--gold);
   margin:0 0 20px;
   font-family:var(--font-hi);
+}
+.about-longform .schools-band__title{
+  font-size:clamp(17px,2.5vw,20px);
+  font-weight:700;
+  line-height:1.25;
+  letter-spacing:-.01em;
+  color:var(--gold);
+  margin:0 0 12px;
+  font-family:var(--font-hi);
+}
+.about-longform .schools-band__lead{
+  font-size:15.5px;
+  line-height:1.85;
+  color:var(--muted);
+  margin:0 0 18px;
+  max-width:42rem;
+  font-family:var(--font-hi);
+}
+.about-longform .schools-band__links{
+  margin-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:center;
+}
+.about-longform .schools-band__links .btn-outline{
+  padding:10px 18px;
+  font-size:14px;
+  font-weight:500;
+  border-radius:100px;
 }
 .blog-breadcrumbs{max-width:var(--shell-max);margin:0 auto;padding:var(--hero-pad-top) var(--shell-pad-x) 0;font-size:13px;color:var(--dim);position:relative;z-index:1;font-family:var(--font-en);}
 .blog-breadcrumbs a{color:var(--teal2);text-decoration:none;}

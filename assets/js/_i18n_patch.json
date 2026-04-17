@@ -29,6 +29,13 @@
       "form_note": "Form submit se tumhara email client khulega. Zaroori fields form mein mark kiye gaye hain.",
       "form_heading": "Apni details — waitlist mein naam"
     },
+    "schools": {
+      "band_title": "School partnership — kya milta hai?",
+      "band_lead": "Bulk access, teacher reporting, SCERT-aligned content — aur weak network ke liye lite/offline options.",
+      "link_faq": "School sawaal — FAQ →",
+      "link_contact": "Contact →",
+      "link_waitlist": "Waitlist →"
+    },
     "home": {
       "how": {
         "eyebrow": "कैसे काम करता है",
@@ -160,6 +167,13 @@
       "countdown_aria": "Shrutam launch countdown, May 20, 2026. Values update on screen only.",
       "form_note": "Submitting opens your email client. Required fields are marked in the form.",
       "form_heading": "Your details — join the waitlist"
+    },
+    "schools": {
+      "band_title": "What schools get",
+      "band_lead": "Bulk pricing, teacher-friendly reporting, SCERT-aligned chapters — plus lite/offline options for uneven networks.",
+      "link_faq": "School questions in FAQ →",
+      "link_contact": "Contact →",
+      "link_waitlist": "Waitlist →"
     },
     "saavi": {
       "eyebrow": "AI Teacher Didi",
