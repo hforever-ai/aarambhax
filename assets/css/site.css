@@ -10,9 +10,8 @@
   --shell-pad-x:24px;
   --hero-pad-top:88px;
   --hero-pad-bottom:40px;
-  --text-hero-h1:clamp(32px,5vw,56px);
-  /* Home hero only — long EN/Hinglish headline reads huge at full --text-hero-h1 */
-  --text-home-hero-h1:clamp(24px,4vw,44px);
+  /* Primary page / hero H1s (home, inner heroes, legal, 404) — one scale site-wide */
+  --text-hero-h1:clamp(24px,4vw,44px);
   --text-lead:18px;
   --lh-lead:1.6;
   --prose-body-size:15.5px;
@@ -726,7 +725,7 @@ footer.site-footer{
   margin-bottom:16px;
   letter-spacing:-.02em;
   color:var(--white);
-  line-height:1.15;
+  line-height:1.12;
 }
 .page-hero--compact{padding-bottom:24px;}
 .page-hero p.lead{
@@ -827,7 +826,7 @@ footer.site-footer .foot-logo img{
   margin:0 auto;
   padding:var(--hero-pad-top) var(--shell-pad-x) 80px;
 }
-.page-404__title{font-size:var(--text-hero-h1);margin-bottom:16px;}
+.page-404__title{font-size:var(--text-hero-h1);line-height:1.12;margin-bottom:16px;}
 .page-404__lead{max-width:36rem;margin:0 0 28px;color:var(--muted);font-size:var(--text-lead);line-height:var(--lh-lead);}
 .page-404__actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start;margin-top:8px;}
 .product-section--ruled{
@@ -919,6 +918,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
   font-family:var(--font-hi);
   color:var(--white);
   letter-spacing:-.02em;
+  line-height:1.12;
 }
 .policy-subtitle{font-size:17px;color:var(--teal2);font-family:'Noto Sans Devanagari',sans-serif;margin-bottom:6px;}
 .policy-date{font-size:13px;color:var(--dim);}
@@ -1031,7 +1031,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
 .about-meta-tag--teal{background:rgba(10,172,186,0.1);color:var(--teal);border:1px solid rgba(10,172,186,0.2);}
 .about-meta-tag--gold{background:rgba(240,192,96,0.1);color:var(--gold);border:1px solid rgba(240,192,96,0.2);}
 .about-read-time{font-size:13px;color:var(--dim);}
-.about-story-title{font-size:clamp(32px,5vw,56px);font-weight:800;line-height:1.1;margin-bottom:16px;letter-spacing:-.02em;color:var(--white);}
+.about-story-title{font-size:var(--text-hero-h1);font-weight:800;line-height:1.12;margin-bottom:16px;letter-spacing:-.02em;color:var(--white);}
 .about-story-title span{color:var(--gold);font-family:var(--font-hi);}
 /* Saavi / Shrutam: keep primary line white — override gold span rule above */
 .about-longform .product-hero-split .product-hero-split__primary{color:var(--white);font-family:var(--font-en);}
@@ -1247,7 +1247,7 @@ a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1p
 }
 .home-hero-h1{
   font-family:var(--font-hi);
-  font-size:var(--text-home-hero-h1);
+  font-size:var(--text-hero-h1);
   font-weight:800;line-height:1.12;letter-spacing:-.02em;
   color:var(--white);
   text-shadow:none;
