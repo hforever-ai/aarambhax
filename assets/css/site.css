@@ -20,8 +20,11 @@
   --hero-pad-top:88px;
   --hero-pad-bottom:40px;
   /* Primary page / hero H1s (home, inner heroes, legal, 404) — one scale site-wide.
-     Consumed from tokens.css (--fs-h1 = clamp(36px, 1.25rem + 4.5vw, 72px)). */
-  --text-hero-h1: var(--fs-h1);
+     Tuned down from --fs-h1 (72px ceiling) to 52px. Aarambhax heroes carry
+     multi-word Devanagari slogans ("गाँव गाँव तक, ज्ञान की रोशनी") where
+     matras eat vertical space; 72 overwhelms. 52 still reads bigger than
+     the pre-refactor 36px cap and unifies across pages. */
+  --text-hero-h1: clamp(28px, 1.25rem + 2.5vw, 52px);
   --text-lead:18px;
   --lh-lead:1.6;
   --prose-body-size:15.5px;
