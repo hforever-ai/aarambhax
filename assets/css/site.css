@@ -1158,11 +1158,10 @@ a.feat-card .pill{background:rgba(14,165,233,0.12);color:var(--teal2);border:1px
 /* Above #main-nav (1000), below menu-overlay / mobile-menu (1999+) */
 .nova-widget{
   position:fixed;bottom:22px;right:22px;z-index:1200;font-family:inherit;
-  isolation:isolate;
 }
-/* Full-viewport layer: reliable outside-tap to close (no fragile document capture). */
+/* Full-viewport layer behind panel + launcher; must stay lower z-index than panel. */
 .nova-backdrop{
-  position:fixed;inset:0;z-index:0;
+  position:fixed;inset:0;z-index:1;
   display:none;pointer-events:none;
   background:rgba(2,6,12,0.28);
   cursor:pointer;
@@ -1172,7 +1171,7 @@ a.feat-card .pill{background:rgba(14,165,233,0.12);color:var(--teal2);border:1px
   display:block;pointer-events:auto;
 }
 .nova-launcher{
-  position:relative;z-index:2;
+  position:relative;z-index:12;
   display:flex;align-items:center;gap:10px;padding:12px 18px 12px 14px;border-radius:100px;
   border:1px solid rgba(14,165,233,0.35);background:rgba(10,22,40,0.92);
   color:var(--white);cursor:pointer;font-size:14px;font-weight:600;
@@ -1192,10 +1191,11 @@ a.feat-card .pill{background:rgba(14,165,233,0.12);color:var(--teal2);border:1px
 }
 .nova-launcher-label{font-size:13px;letter-spacing:.02em;}
 .nova-panel{
-  position:absolute;z-index:3;bottom:58px;right:0;width:min(100vw - 32px,380px);max-height:min(72vh,520px);
+  position:absolute;z-index:11;bottom:58px;right:0;width:min(100vw - 32px,380px);max-height:min(72vh,520px);
   display:flex;flex-direction:column;border-radius:18px;border:1px solid var(--border);
   background:rgba(6,13,26,0.96);backdrop-filter:blur(16px);
   box-shadow:0 20px 60px rgba(0,0,0,0.5);overflow:hidden;
+  pointer-events:auto;
 }
 /* [hidden] must win over display:flex (otherwise panel never visually closes) */
 .nova-widget .nova-panel[hidden]{
@@ -1207,12 +1207,20 @@ a.feat-card .pill{background:rgba(14,165,233,0.12);color:var(--teal2);border:1px
   display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
   padding:16px 16px 12px;border-bottom:1px solid var(--border);
   background:rgba(10,22,40,0.6);
+  flex-shrink:0;
+}
+.nova-panel-head > div:first-of-type{
+  flex:1;
+  min-width:0;
 }
 .nova-title{font-size:16px;font-weight:700;color:var(--white);}
 .nova-sub{font-size:11px;color:var(--dim);margin-top:4px;}
 .nova-close{
   border:none;background:transparent;color:var(--muted);font-size:22px;line-height:1;
-  cursor:pointer;padding:4px 8px;border-radius:8px;font-family:inherit;
+  cursor:pointer;padding:8px 10px;border-radius:8px;font-family:inherit;
+  flex-shrink:0;
+  position:relative;
+  z-index:2;
   touch-action:manipulation;-webkit-tap-highlight-color:transparent;
 }
 .nova-close:hover{color:var(--white);background:rgba(255,255,255,0.06);}

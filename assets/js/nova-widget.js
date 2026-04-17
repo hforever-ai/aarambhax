@@ -283,8 +283,8 @@
     root.appendChild(backdrop);
     root.appendChild(launcher);
     root.appendChild(panel);
-    /* documentElement avoids position:fixed quirks when body has overflow-x:hidden (iOS / some Chrome). */
-    document.documentElement.appendChild(root);
+    /* Prefer body (predictable stacking); fallback for edge embed cases. */
+    (document.body || document.documentElement).appendChild(root);
 
     var panelOpen = false;
     /** Ignore stray document clicks right after open (mobile synthetic / delayed clicks). */
@@ -386,29 +386,29 @@
       setOpen(!panelOpen);
     });
 
-    function closeFromUi(e) {
-      if (e) {
-        e.preventDefault();
-        if (e.stopImmediatePropagation) e.stopImmediatePropagation();
-        else e.stopPropagation();
+    function closeNova(ev) {
+      if (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
       }
       setOpen(false);
     }
 
+    closeBtn.addEventListener("click", closeNova);
     closeBtn.addEventListener(
-      "pointerdown",
-      function (e) {
-        if (e.button != null && e.button !== 0) return;
-        closeFromUi(e);
+      "touchend",
+      function (ev) {
+        ev.preventDefault();
+        closeNova(ev);
       },
-      true
+      { passive: false }
     );
-    closeBtn.addEventListener("click", closeFromUi, true);
 
     function onBackdropClose(e) {
       if (!panelOpen) return;
       if (Date.now() < ignoreOutsideCloseUntil) return;
       if (e.type === "mousedown" && e.button !== 0) return;
+      if (e.target !== backdrop) return;
       e.preventDefault();
       e.stopPropagation();
       setOpen(false);
