@@ -6,7 +6,8 @@
 /* ===== Central tokens — one column + type rhythm for every template ===== */
 /* Theme: use base.css :root for colour + font tokens (--text-*, --font-en/--font-hi, --teal/--gold). Prefer var() over raw hex in new rules. */
 :root{
-  --shell-max:780px;
+  /* Readable column — aligned with #main-nav .nav-inner below */
+  --shell-max:880px;
   --shell-pad-x:24px;
   --hero-pad-top:88px;
   --hero-pad-bottom:40px;
@@ -62,6 +63,12 @@
 #main-nav {
   padding: 0;
 }
+/* Align sticky nav width with main content column (was 1200px in base — felt wider than body copy) */
+#main-nav .nav-inner{
+  max-width:var(--shell-max);
+  padding-left:var(--shell-pad-x);
+  padding-right:var(--shell-pad-x);
+}
 .logo-wrap{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo-icon{
   width:40px;height:40px;
@@ -103,6 +110,48 @@
 .lang-switcher{
   display:flex;align-items:center;gap:4px;margin-right:4px;
   flex-wrap:wrap;
+}
+/* Language: single compact dropdown (replaces 4-button row) */
+.lang-dropdown{position:relative;margin-right:4px}
+.lang-dropdown__btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 12px;border-radius:10px;
+  border:1px solid var(--border);
+  background:rgba(255,255,255,0.04);
+  color:var(--muted);
+  cursor:pointer;
+  font-size:12px;font-weight:600;font-family:var(--font-en);
+  min-width:7.25rem;
+  justify-content:space-between;
+  transition:color .2s,background .2s,border-color .2s;
+}
+.lang-dropdown__btn:hover{color:var(--white);background:rgba(255,255,255,0.08);}
+.lang-dropdown__btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+.lang-dropdown__chev{font-size:10px;opacity:.75;transition:transform .2s var(--ease-out, ease);}
+.lang-dropdown.is-open .lang-dropdown__chev{transform:rotate(180deg);}
+.lang-dropdown__menu{
+  position:absolute;right:0;top:calc(100% + 8px);
+  min-width:12rem;padding:6px 0;margin:0;list-style:none;
+  background:rgba(8,14,26,0.98);
+  border:1px solid var(--border);
+  border-radius:12px;
+  box-shadow:0 16px 48px rgba(0,0,0,0.5);
+  z-index:1002;
+}
+.lang-dropdown__menu[hidden]{display:none!important;}
+.lang-dropdown__menu li{margin:0;padding:0;}
+.lang-dropdown__opt.lang-btn{
+  width:100%;text-align:left;border-radius:0;border:none;
+  background:transparent;padding:10px 14px;font-size:13px;
+  color:var(--muted);
+}
+.lang-dropdown__opt.lang-btn:hover{color:var(--white);background:rgba(255,255,255,0.06);}
+.lang-dropdown__opt.lang-btn.active{color:var(--white);background:rgba(77,200,240,0.15);}
+.mobile-menu .lang-dropdown{width:100%;}
+.mobile-menu .lang-dropdown__btn{width:100%;min-width:0;}
+.mobile-menu .lang-dropdown__menu{
+  position:static;width:100%;margin-top:10px;top:auto;right:auto;
+  box-shadow:none;border-radius:10px;
 }
 .lang-btn{
   font-family:inherit;
@@ -1106,17 +1155,21 @@ a.feat-card .feat-title{color:var(--teal2);transition:color .2s;}
 a.feat-card:hover .feat-title{color:var(--gold2);}
 a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1px solid rgb(77 200 240 / 0.25);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;display:inline-block;margin-top:12px;}
 /* Blog listing: card copy same scale/rhythm as About body */
-.about-longform .product-section.blog-index .feat-title{font-size:clamp(17px,2.5vw,18px);font-weight:700;margin-bottom:10px;}
-.about-longform .product-section.blog-index .feat-desc{font-size:15.5px;line-height:1.85;color:var(--muted);font-family:var(--font-hi);}
+.about-longform .product-section.blog-index .feat-title{font-size:clamp(14px,1.85vw,16px);font-weight:600;margin-bottom:8px;}
+.about-longform .product-section.blog-index .feat-desc{font-size:14.5px;line-height:1.75;color:var(--muted);font-family:var(--font-hi);}
 .about-longform .product-section.blog-index .blog-index__list-title{
-  font-size:clamp(17px,2.5vw,20px);
+  font-size:clamp(15px,2vw,17px);
   font-weight:700;
   line-height:1.25;
   letter-spacing:-.01em;
   color:var(--gold);
-  margin:0 0 20px;
+  margin:0 0 16px;
   font-family:var(--font-hi);
 }
+/* Blog hub: hero line + lead slightly smaller than generic longform */
+.about-longform.blog-index > .about-story-title{font-size:clamp(18px,3.2vw,32px);}
+.about-longform.blog-index > .about-story-sub{font-size:16px;line-height:1.55;margin-bottom:28px;}
+.about-longform.blog-post > .about-story-title{font-size:clamp(18px,3.2vw,32px);}
 .about-longform .schools-band__title{
   font-size:clamp(17px,2.5vw,20px);
   font-weight:700;
@@ -1153,10 +1206,10 @@ a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1p
 .blog-breadcrumbs [aria-current="page"]{color:var(--muted);}
 /* Article byline: same visual language as About lead (teal bar + Hinglish scale) */
 .about-longform.blog-post > .article-meta{
-  font-size:var(--text-lead);
-  line-height:var(--lh-lead);
+  font-size:16px;
+  line-height:1.55;
   color:var(--muted);
-  margin:0 0 40px;
+  margin:0 0 32px;
   padding-left:18px;
   border-left:3px solid var(--teal);
   font-family:var(--font-hi);
@@ -1165,10 +1218,10 @@ a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1p
 .about-longform.blog-post .article-body{font-size:15.5px;line-height:1.85;color:var(--muted);font-family:var(--font-hi);}
 .about-longform.blog-post .article-body .policy-section{margin-top:0;}
 .about-longform.blog-post .article-body .policy-section h2{
-  font-size:clamp(20px,3vw,28px);
+  font-size:clamp(17px,2.4vw,24px);
   font-weight:700;
   color:var(--gold);
-  margin:52px 0 16px;
+  margin:44px 0 14px;
   padding-top:8px;
   font-family:var(--font-hi);
 }

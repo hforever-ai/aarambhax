@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Noto+Sans+Telugu:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v=8608768000-6562ea4b">
+<link rel="stylesheet" href="/assets/css/site.css?v=1727666000-b1921bfb">
 <script src="/assets/js/analytics-config.js"></script>
 <script defer src="/assets/js/translations.js"></script>
 <script defer src="/assets/js/i18n.js"></script>
@@ -63,11 +63,17 @@
       <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app" data-i18n-aria-label="nav.launch_aria"></a>
     </div>
     <div class="nav-actions">
-      <div class="lang-switcher nav-lang-desktop" role="group" aria-label="Language">
-        <button type="button" class="lang-btn" data-lang="hi" aria-pressed="false">हि</button>
-        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">En</button>
-        <button type="button" class="lang-btn" data-lang="mr" aria-pressed="false">म</button>
-        <button type="button" class="lang-btn" data-lang="te" aria-pressed="false">తె</button>
+      <div class="lang-dropdown nav-lang-desktop" data-lang-dropdown>
+        <button type="button" class="lang-dropdown__btn" id="lang-dropdown-desktop" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown-menu-desktop">
+          <span class="lang-dropdown__current" data-lang-current>हिंदी</span>
+          <span class="lang-dropdown__chev" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-dropdown__menu" id="lang-dropdown-menu-desktop" role="listbox" aria-labelledby="lang-dropdown-desktop" hidden>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="hi" data-lang-label="हिंदी" aria-pressed="false">हिंदी</button></li>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="en" data-lang-label="English" aria-pressed="false">English</button></li>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="mr" data-lang-label="मराठी" aria-pressed="false">मराठी</button></li>
+          <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="te" data-lang-label="తెలుగు" aria-pressed="false">తెలుగు</button></li>
+        </ul>
       </div>
       <a href="/waitlist/" class="nav-btn nav-waitlist-cta" data-i18n="nav.cta"></a>
       <button type="button" class="hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -87,11 +93,17 @@
   <a href="/schools/" class="nav-link" data-i18n="nav.schools"></a>
   <a href="/#jnana" class="nav-link" data-i18n="nav.jnana"></a>
   <a href="https://shrutam.ai" class="nav-link" rel="noopener noreferrer" target="_blank" data-i18n="nav.launch_app"></a>
-  <div class="lang-switcher mobile-lang" role="group" aria-label="Language">
-    <button type="button" class="lang-btn" data-lang="hi" aria-pressed="false">हिंदी</button>
-    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
-    <button type="button" class="lang-btn" data-lang="mr" aria-pressed="false">मराठी</button>
-    <button type="button" class="lang-btn" data-lang="te" aria-pressed="false">&#x0C24;&#x0C47;&#x0C32;&#x0C41;&#x0C17;&#x0C41;</button>
+  <div class="lang-dropdown mobile-lang" data-lang-dropdown>
+    <button type="button" class="lang-dropdown__btn" id="lang-dropdown-mobile" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-dropdown-menu-mobile">
+      <span class="lang-dropdown__current" data-lang-current>हिंदी</span>
+      <span class="lang-dropdown__chev" aria-hidden="true">▾</span>
+    </button>
+    <ul class="lang-dropdown__menu" id="lang-dropdown-menu-mobile" role="listbox" aria-labelledby="lang-dropdown-mobile" hidden>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="hi" data-lang-label="हिंदी" aria-pressed="false">हिंदी</button></li>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="en" data-lang-label="English" aria-pressed="false">English</button></li>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="mr" data-lang-label="मराठी" aria-pressed="false">मराठी</button></li>
+      <li role="presentation"><button type="button" class="lang-btn lang-dropdown__opt" role="option" data-lang="te" data-lang-label="తెలుగు" aria-pressed="false">తెలుగు</button></li>
+    </ul>
   </div>
   <a href="/waitlist/" class="nav-btn mobile-menu-cta btn-primary" data-i18n="nav.cta"></a>
 </div>

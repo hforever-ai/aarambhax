@@ -53,6 +53,11 @@
         closeMenu();
       });
     });
+    menu.querySelectorAll(".lang-dropdown__opt").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        closeMenu();
+      });
+    });
 
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") closeMenu();
