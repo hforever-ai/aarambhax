@@ -4,6 +4,7 @@
 @import url("layout.css");
 
 /* ===== Central tokens — one column + type rhythm for every template ===== */
+/* Theme: use base.css :root for colour + font tokens (--text-*, --font-en/--font-hi, --teal/--gold). Prefer var() over raw hex in new rules. */
 :root{
   --shell-max:780px;
   --shell-pad-x:24px;
@@ -12,6 +13,8 @@
   --text-hero-h1:clamp(32px,5vw,56px);
   --text-lead:18px;
   --lh-lead:1.6;
+  --prose-body-size:15.5px;
+  --prose-body-lh:1.85;
 }
 
 /* Shared teal “pill” eyebrow (inner heroes + home + legal headers) */
@@ -330,9 +333,10 @@
 }
 .jnana-en{font-size:13px;color:var(--teal);font-weight:600;letter-spacing:.05em}
 .jnana-desc{
-  font-size:17px;line-height:1.65;
-  color:rgba(248,250,252,0.7);
+  font-size:var(--text-md);line-height:1.65;
+  color:var(--muted);
   margin-bottom:28px;
+  font-family:var(--font-hi);
 }
 .jnana-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
 .pill{
@@ -916,7 +920,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
 }
 .policy-subtitle{font-size:17px;color:var(--teal2);font-family:'Noto Sans Devanagari',sans-serif;margin-bottom:6px;}
 .policy-date{font-size:13px;color:var(--dim);}
-.policy-content{font-size:15px;line-height:1.7;color:var(--muted);font-family:var(--font-hi);}
+.policy-content{font-size:var(--prose-body-size);line-height:var(--prose-body-lh);color:var(--muted);font-family:var(--font-hi);}
 .policy-section{margin-top:28px;}
 .policy-section h2{font-size:clamp(20px,3vw,28px);color:var(--gold);margin-bottom:12px;font-family:var(--font-hi);font-weight:700;}
 .policy-section p{margin-bottom:12px;}
@@ -1153,124 +1157,6 @@ a.feat-card .pill{background:rgba(14,165,233,0.12);color:var(--teal2);border:1px
 .about-longform.blog-post .article-body .policy-section strong{color:var(--white);font-weight:600;}
 .policy-section h3{font-size:16px;color:var(--white);margin:22px 0 10px;}
 .article-body .policy-section strong{color:var(--white);}
-
-/* --- Nova help widget --- */
-/* Above #main-nav (1000), below menu-overlay / mobile-menu (1999+) */
-.nova-widget{
-  position:fixed;bottom:22px;right:22px;z-index:1200;font-family:inherit;
-}
-/* Full-viewport layer behind panel + launcher; must stay lower z-index than panel. */
-.nova-backdrop{
-  position:fixed;inset:0;z-index:1;
-  display:none;pointer-events:none;
-  background:rgba(2,6,12,0.28);
-  cursor:pointer;
-  -webkit-tap-highlight-color:transparent;
-}
-.nova-widget.nova--open .nova-backdrop{
-  display:block;pointer-events:auto;
-}
-.nova-launcher{
-  position:relative;z-index:12;
-  display:flex;align-items:center;gap:10px;padding:12px 18px 12px 14px;border-radius:100px;
-  border:1px solid rgba(14,165,233,0.35);background:rgba(10,22,40,0.92);
-  color:var(--white);cursor:pointer;font-size:14px;font-weight:600;
-  box-shadow:0 8px 32px rgba(0,0,0,0.35),0 0 0 1px rgba(255,255,255,0.06) inset;
-  backdrop-filter:blur(12px);transition:transform .2s,border-color .2s,box-shadow .2s;
-  touch-action:manipulation;-webkit-tap-highlight-color:transparent;
-}
-.nova-launcher:hover{
-  transform:translateY(-2px);border-color:var(--teal);
-  box-shadow:0 12px 36px rgba(14,165,233,0.2),0 0 0 1px rgba(255,255,255,0.08) inset;
-}
-.nova-launcher:focus-visible{outline:3px solid var(--gold2);outline-offset:3px;}
-.nova-launcher-inner{
-  width:36px;height:36px;border-radius:50%;
-  background:linear-gradient(135deg,var(--teal),var(--violet));
-  box-shadow:0 0 20px rgba(14,165,233,0.45);
-}
-.nova-launcher-label{font-size:13px;letter-spacing:.02em;}
-.nova-panel{
-  position:absolute;z-index:11;bottom:58px;right:0;width:min(100vw - 32px,380px);max-height:min(72vh,520px);
-  display:flex;flex-direction:column;border-radius:18px;border:1px solid var(--border);
-  background:rgba(6,13,26,0.96);backdrop-filter:blur(16px);
-  box-shadow:0 20px 60px rgba(0,0,0,0.5);overflow:hidden;
-  pointer-events:auto;
-}
-/* [hidden] must win over display:flex (otherwise panel never visually closes) */
-.nova-widget .nova-panel[hidden]{
-  display:none !important;
-  pointer-events:none;
-  visibility:hidden;
-}
-.nova-panel-head{
-  display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
-  padding:16px 16px 12px;border-bottom:1px solid var(--border);
-  background:rgba(10,22,40,0.6);
-  flex-shrink:0;
-}
-.nova-panel-head > div:first-of-type{
-  flex:1;
-  min-width:0;
-}
-.nova-title{font-size:16px;font-weight:700;color:var(--white);}
-.nova-sub{font-size:11px;color:var(--dim);margin-top:4px;}
-.nova-close{
-  border:none;background:transparent;color:var(--muted);font-size:22px;line-height:1;
-  cursor:pointer;padding:8px 10px;border-radius:8px;font-family:inherit;
-  flex-shrink:0;
-  position:relative;
-  z-index:2;
-  touch-action:manipulation;-webkit-tap-highlight-color:transparent;
-}
-.nova-close:hover{color:var(--white);background:rgba(255,255,255,0.06);}
-.nova-messages{
-  flex:1;overflow-y:auto;padding:14px 14px 10px;min-height:140px;max-height:280px;
-  display:flex;flex-direction:column;gap:10px;
-}
-.nova-msg{display:flex;}
-.nova-msg-user{justify-content:flex-end;}
-.nova-msg-nova{justify-content:flex-start;}
-.nova-bubble{
-  max-width:92%;padding:10px 14px;border-radius:14px;font-size:13px;line-height:1.55;color:var(--muted);
-}
-.nova-msg-user .nova-bubble{
-  background:rgba(14,165,233,0.2);border:1px solid rgba(14,165,233,0.25);color:var(--white);
-}
-.nova-msg-nova .nova-bubble{
-  background:rgba(255,255,255,0.04);border:1px solid var(--border);
-}
-.nova-bubble a{color:var(--teal2);text-decoration:none;}
-.nova-bubble a:hover{text-decoration:underline;}
-.nova-bubble strong{color:var(--white);}
-.nova-quick{
-  display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;border-bottom:1px solid var(--border);
-}
-.nova-chip{
-  font-size:11px;font-weight:600;padding:6px 11px;border-radius:100px;cursor:pointer;
-  border:1px solid var(--border);background:rgba(255,255,255,0.05);color:var(--teal2);font-family:inherit;
-}
-.nova-chip:hover{color:var(--white);border-color:var(--teal);}
-.nova-form{display:flex;gap:8px;padding:12px 14px 14px;background:rgba(3,7,15,0.5);}
-.nova-input{
-  flex:1;min-width:0;padding:11px 14px;border-radius:12px;border:1px solid var(--border);
-  background:rgba(0,0,0,0.35);color:var(--white);font-size:14px;font-family:inherit;
-}
-.nova-input::placeholder{color:var(--dim);}
-.nova-input:focus{outline:none;border-color:var(--teal2);}
-.nova-send{
-  padding:11px 16px;border-radius:12px;border:none;cursor:pointer;font-weight:600;font-size:13px;font-family:inherit;
-  background:linear-gradient(135deg,var(--teal),#6366f1);color:#fff;
-}
-.nova-send:hover{filter:brightness(1.06);}
-@media (max-width:600px){
-  .nova-widget{bottom:16px;right:12px;}
-  .nova-panel{width:min(100vw - 24px,380px);right:0;bottom:54px;}
-}
-@media (prefers-reduced-motion:reduce){
-  .nova-launcher{transition:none;}
-  .nova-launcher:hover{transform:none;}
-}
 
 /* Contact form (API + reCAPTCHA) */
 .contact-form-status{
