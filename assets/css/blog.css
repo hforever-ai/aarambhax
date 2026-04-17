@@ -1,0 +1,149 @@
+/* =============================================================================
+   AARAMBHAX BLOG — rules for /blog/ index + individual posts.
+   Consumes tokens from tokens.css and section patterns from sections.css.
+   Spec: docs/superpowers/specs/2026-04-17-aarambhax-structural-refactor-design.md
+
+   Covers: blog index card list, blog-post article body typography,
+   breadcrumbs, article meta byline. Uses .about-longform.blog-index and
+   .about-longform.blog-post combinators because blog pages share the
+   same longform shell as /about/ with targeted overrides.
+   ============================================================================= */
+
+/* ---- Shared card link styling (appears in blog index + other card grids) -- */
+a.feat-card{display:block;text-decoration:none;color:inherit;cursor:pointer;}
+a.feat-card .feat-title{color:var(--teal2);transition:color .2s;}
+a.feat-card:hover .feat-title{color:var(--gold2);}
+a.feat-card .pill{
+  background:rgb(77 200 240 / 0.12);
+  color:var(--teal2);
+  border:1px solid rgb(77 200 240 / 0.25);
+  font-size:11px;font-weight:700;
+  padding:4px 10px;border-radius:100px;
+  display:inline-block;margin-top:12px;
+}
+
+/* ---- Blog breadcrumbs (global, above longform shell) --------------------- */
+.blog-breadcrumbs{
+  max-width:var(--shell-max);
+  margin:0 auto;
+  padding:var(--hero-pad-top) var(--shell-pad-x) 0;
+  font-size:13px;
+  color:var(--dim);
+  position:relative;z-index:1;
+  font-family:var(--font-en);
+}
+.blog-breadcrumbs a{color:var(--teal2);text-decoration:none;}
+.blog-breadcrumbs a:hover{text-decoration:underline;}
+.blog-breadcrumbs [aria-current="page"]{color:var(--muted);}
+
+/* ---- Blog index: card list inside longform shell ------------------------- */
+.blog-index .feat-grid{margin-top:8px;}
+.about-longform .product-section.blog-index .feat-title{
+  font-size:clamp(14px,1.85vw,16px);
+  font-weight:600;
+  margin-bottom:8px;
+}
+.about-longform .product-section.blog-index .feat-desc{
+  font-size:14.5px;
+  line-height:1.75;
+  color:var(--muted);
+  font-family:var(--font-hi);
+}
+.about-longform .product-section.blog-index .blog-index__list-title{
+  font-size:clamp(15px,2vw,17px);
+  font-weight:700;
+  line-height:1.25;
+  letter-spacing:-.01em;
+  color:var(--gold);
+  margin:0 0 16px;
+  font-family:var(--font-hi);
+}
+
+/* ---- Blog hub & blog post: hero title + sub overrides -------------------- */
+.about-longform.blog-index > .about-story-title{
+  font-size:clamp(18px,3.2vw,32px);
+}
+.about-longform.blog-index > .about-story-sub{
+  font-size:16px;
+  line-height:1.55;
+  margin-bottom:28px;
+}
+.about-longform.blog-post > .about-story-title{
+  font-size:clamp(18px,3.2vw,32px);
+}
+
+/* ---- Article byline (blog post lead) ------------------------------------- */
+.about-longform.blog-post > .article-meta{
+  font-size:16px;
+  line-height:1.55;
+  color:var(--muted);
+  margin:0 0 32px;
+  padding-left:18px;
+  border-left:3px solid var(--teal);
+  font-family:var(--font-hi);
+}
+
+/* ---- Article body (mirrors .about-story typography) ---------------------- */
+.about-longform.blog-post .article-body{
+  font-size:15.5px;
+  line-height:1.85;
+  color:var(--muted);
+  font-family:var(--font-hi);
+}
+.about-longform.blog-post .article-body .policy-section{margin-top:0;}
+.about-longform.blog-post .article-body .policy-section h2{
+  font-size:clamp(17px,2.4vw,24px);
+  font-weight:700;
+  color:var(--gold);
+  margin:44px 0 14px;
+  padding-top:8px;
+  font-family:var(--font-hi);
+}
+.about-longform.blog-post .article-body h2:first-of-type{margin-top:36px;}
+.about-longform.blog-post .article-body .policy-section p{
+  font-size:15.5px;
+  margin-bottom:20px;
+  line-height:1.85;
+  font-family:var(--font-hi);
+  color:var(--muted);
+}
+.about-longform.blog-post .article-body .policy-section h3{
+  font-size:18px;
+  font-weight:600;
+  color:var(--teal2);
+  margin:32px 0 12px;
+  font-family:var(--font-en);
+}
+.about-longform.blog-post .article-body .policy-section ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 20px;
+}
+.about-longform.blog-post .article-body .policy-section li{
+  padding:8px 0 8px 22px;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  font-size:15px;
+  color:var(--muted);
+  position:relative;
+  font-family:var(--font-hi);
+  margin-bottom:0;
+}
+.about-longform.blog-post .article-body .policy-section li::before{
+  content:'→';
+  position:absolute;
+  left:0;
+  color:var(--teal);
+  font-family:var(--font-en);
+}
+.about-longform.blog-post .article-body .policy-section a{
+  color:var(--teal2);
+  text-decoration:none;
+}
+.about-longform.blog-post .article-body .policy-section a:hover{
+  text-decoration:underline;
+}
+.about-longform.blog-post .article-body .policy-section strong{
+  color:var(--white);
+  font-weight:600;
+}
+.article-body .policy-section strong{color:var(--white);}

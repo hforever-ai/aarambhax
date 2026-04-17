@@ -6,6 +6,7 @@
 @import url("layout.css");
 @import url("sections.css");
 @import url("home.css");
+@import url("blog.css");
 
 /* ===== Central tokens — one column + type rhythm for every template ===== */
 /* Theme: use base.css :root for colour + font tokens (--text-*, --font-en/--font-hi, --teal/--gold). Prefer var() over raw hex in new rules. */
@@ -1052,28 +1053,7 @@ a:focus-visible,button:focus-visible,.nav-link:focus-visible,.nav-btn:focus-visi
 .about-cta-btns a.btn2{border:1px solid var(--border-bright);color:var(--muted);padding:12px 28px;border-radius:50px;font:500 14px var(--font-en);transition:.2s;text-decoration:none;}
 .about-cta-btns a.btn2:hover{border-color:var(--teal);color:var(--white);}
 
-/* --- Blog hub & articles (SEO-friendly layout) --- */
-.blog-index .feat-grid{margin-top:8px;}
-a.feat-card{display:block;text-decoration:none;color:inherit;cursor:pointer;}
-a.feat-card .feat-title{color:var(--teal2);transition:color .2s;}
-a.feat-card:hover .feat-title{color:var(--gold2);}
-a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1px solid rgb(77 200 240 / 0.25);font-size:11px;font-weight:700;padding:4px 10px;border-radius:100px;display:inline-block;margin-top:12px;}
-/* Blog listing: card copy same scale/rhythm as About body */
-.about-longform .product-section.blog-index .feat-title{font-size:clamp(14px,1.85vw,16px);font-weight:600;margin-bottom:8px;}
-.about-longform .product-section.blog-index .feat-desc{font-size:14.5px;line-height:1.75;color:var(--muted);font-family:var(--font-hi);}
-.about-longform .product-section.blog-index .blog-index__list-title{
-  font-size:clamp(15px,2vw,17px);
-  font-weight:700;
-  line-height:1.25;
-  letter-spacing:-.01em;
-  color:var(--gold);
-  margin:0 0 16px;
-  font-family:var(--font-hi);
-}
-/* Blog hub: hero line + lead slightly smaller than generic longform */
-.about-longform.blog-index > .about-story-title{font-size:clamp(18px,3.2vw,32px);}
-.about-longform.blog-index > .about-story-sub{font-size:16px;line-height:1.55;margin-bottom:28px;}
-.about-longform.blog-post > .about-story-title{font-size:clamp(18px,3.2vw,32px);}
+/* --- Blog hub & articles → blog.css --- */
 .about-longform .schools-band__title{
   font-size:clamp(17px,2.5vw,20px);
   font-weight:700;
@@ -1104,72 +1084,8 @@ a.feat-card .pill{background:rgb(77 200 240 / 0.12);color:var(--teal2);border:1p
   font-weight:500;
   border-radius:100px;
 }
-.blog-breadcrumbs{max-width:var(--shell-max);margin:0 auto;padding:var(--hero-pad-top) var(--shell-pad-x) 0;font-size:13px;color:var(--dim);position:relative;z-index:1;font-family:var(--font-en);}
-.blog-breadcrumbs a{color:var(--teal2);text-decoration:none;}
-.blog-breadcrumbs a:hover{text-decoration:underline;}
-.blog-breadcrumbs [aria-current="page"]{color:var(--muted);}
-/* Article byline: same visual language as About lead (teal bar + Hinglish scale) */
-.about-longform.blog-post > .article-meta{
-  font-size:16px;
-  line-height:1.55;
-  color:var(--muted);
-  margin:0 0 32px;
-  padding-left:18px;
-  border-left:3px solid var(--teal);
-  font-family:var(--font-hi);
-}
-/* Blog article body: match .about-story typography (privacy/legal keep .policy-* defaults elsewhere) */
-.about-longform.blog-post .article-body{font-size:15.5px;line-height:1.85;color:var(--muted);font-family:var(--font-hi);}
-.about-longform.blog-post .article-body .policy-section{margin-top:0;}
-.about-longform.blog-post .article-body .policy-section h2{
-  font-size:clamp(17px,2.4vw,24px);
-  font-weight:700;
-  color:var(--gold);
-  margin:44px 0 14px;
-  padding-top:8px;
-  font-family:var(--font-hi);
-}
-.about-longform.blog-post .article-body h2:first-of-type{margin-top:36px;}
-.about-longform.blog-post .article-body .policy-section p{
-  font-size:15.5px;
-  margin-bottom:20px;
-  line-height:1.85;
-  font-family:var(--font-hi);
-  color:var(--muted);
-}
-.about-longform.blog-post .article-body .policy-section h3{
-  font-size:18px;
-  font-weight:600;
-  color:var(--teal2);
-  margin:32px 0 12px;
-  font-family:var(--font-en);
-}
-.about-longform.blog-post .article-body .policy-section ul{
-  list-style:none;
-  padding:0;
-  margin:0 0 20px;
-}
-.about-longform.blog-post .article-body .policy-section li{
-  padding:8px 0 8px 22px;
-  border-bottom:1px solid rgba(255,255,255,0.04);
-  font-size:15px;
-  color:var(--muted);
-  position:relative;
-  font-family:var(--font-hi);
-  margin-bottom:0;
-}
-.about-longform.blog-post .article-body .policy-section li::before{
-  content:'→';
-  position:absolute;
-  left:0;
-  color:var(--teal);
-  font-family:var(--font-en);
-}
-.about-longform.blog-post .article-body .policy-section a{color:var(--teal2);text-decoration:none;}
-.about-longform.blog-post .article-body .policy-section a:hover{text-decoration:underline;}
-.about-longform.blog-post .article-body .policy-section strong{color:var(--white);font-weight:600;}
+/* .blog-breadcrumbs + .about-longform.blog-post/.blog-index overrides → blog.css */
 /* .policy-section h3 → sections.css */
-.article-body .policy-section strong{color:var(--white);}
 
 /* Contact form (API + reCAPTCHA) */
 .contact-form-status{
