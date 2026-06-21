@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   Aarambhax Legal — Theme System
+   Light theme (default): cream + navy + gold
+   Dark theme: near-black navy + cream + brightened gold
+   ───────────────────────────────────────────────────────────── */
+
+:root {
+    --bg:           #F8F6F0;
+    --surface:      #FFFFFF;
+    --surface-2:    #F1ECE0;
+    --fg:           #0B1F3A;
+    --fg-muted:     #475569;
+    --border:       #E5DFD0;
+    --primary:      #0B1F3A;
+    --primary-fg:   #F8F6F0;
+    --accent:       #C8A24B;
+    --accent-fg:    #0B1F3A;
+    --link:         #1E5FAE;
+    --success:      #15803D;
+    --warning:      #D97706;
+    --danger:       #B91C1C;
+
+    --font-serif: 'Fraunces', 'Noto Serif Devanagari', ui-serif, Georgia, serif;
+    --font-sans:  'Inter', 'Noto Sans Devanagari', ui-sans-serif, system-ui, sans-serif;
+    --font-mono:  'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+[data-theme='dark'] {
+    --bg:           #070E1C;
+    --surface:      #0B1F3A;
+    --surface-2:    #13294B;
+    --fg:           #F8F6F0;
+    --fg-muted:     #94A3B8;
+    --border:       #1E3A5F;
+    --primary:      #D4B062;
+    --primary-fg:   #070E1C;
+    --accent:       #D4B062;
+    --accent-fg:    #070E1C;
+    --link:         #60A5FA;
+    --success:      #22C55E;
+    --warning:      #F59E0B;
+    --danger:       #EF4444;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+        --bg:           #070E1C;
+        --surface:      #0B1F3A;
+        --surface-2:    #13294B;
+        --fg:           #F8F6F0;
+        --fg-muted:     #94A3B8;
+        --border:       #1E3A5F;
+        --primary:      #D4B062;
+        --primary-fg:   #070E1C;
+        --accent:       #D4B062;
+        --accent-fg:    #070E1C;
+        --link:         #60A5FA;
+        --success:      #22C55E;
+        --warning:      #F59E0B;
+        --danger:       #EF4444;
+    }
+}
+
+@layer base {
+    html { scroll-behavior: smooth; }
+
+    html, body { overflow-x: hidden; }   /* hard guard against any element forcing horizontal scroll */
+    body {
+        background-color: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-sans);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif);
+        font-weight: 500;
+        letter-spacing: -0.01em;
+    }
+
+    code, pre, kbd { font-family: var(--font-mono); }
+
+    a { color: var(--link); text-underline-offset: 3px; }
+
+    *:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}
+
+@layer components {
+    .container-page { @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 w-full min-w-0; }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.625rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        font-size: 0.95rem;
+        line-height: 1.25;
+        transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+        cursor: pointer;
+        text-decoration: none;
+        min-height: 44px;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: var(--primary-fg);
+        border: 1px solid var(--primary);
+    }
+    .btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px -4px rgba(0,0,0,0.18);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: var(--fg);
+        border: 1.5px solid var(--border);
+    }
+    .btn-secondary:hover {
+        border-color: var(--fg);
+        background: var(--surface-2);
+    }
+
+    .btn-ghost {
+        background: transparent;
+        color: var(--link);
+        border: none;
+    }
+
+    .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 0.875rem;
+        padding: 1.25rem;
+        transition: border-color 0.15s ease;
+        min-width: 0;     /* permit children to shrink inside grid */
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+    @media (min-width: 640px) { .card { padding: 1.5rem; } }
+    .card:hover { border-color: var(--fg); }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+        padding: 0.125rem 0.625rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+    .badge-success { background: color-mix(in srgb, var(--success) 18%, transparent); color: var(--success); }
+    .badge-warning { background: color-mix(in srgb, var(--warning) 18%, transparent); color: var(--warning); }
+    .badge-danger  { background: color-mix(in srgb, var(--danger)  18%, transparent); color: var(--danger);  }
+    .badge-accent  { background: color-mix(in srgb, var(--accent)  20%, transparent); color: var(--accent);  }
+
+    .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 100;
+        padding: 0.5rem 1rem;
+        background: var(--primary);
+        color: var(--primary-fg);
+        text-decoration: none;
+        border-radius: 0 0 0.5rem 0;
+    }
+    .skip-link:focus { left: 0; }
+
+    .prose-aarambhax {
+        max-width: 70ch;
+        font-size: 1.0625rem;
+        line-height: 1.7;
+    }
+    .prose-aarambhax h2 { font-size: 1.875rem; margin-top: 2.5rem; margin-bottom: 1rem; }
+    .prose-aarambhax h3 { font-size: 1.375rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+    .prose-aarambhax p  { margin: 1.125rem 0; }
+    .prose-aarambhax ul, .prose-aarambhax ol { padding-left: 1.5rem; margin: 1rem 0; }
+    .prose-aarambhax li { margin: 0.375rem 0; }
+    .prose-aarambhax code {
+        background: var(--surface-2);
+        padding: 0.125rem 0.375rem;
+        border-radius: 0.25rem;
+        font-size: 0.875em;
+    }
+    .prose-aarambhax pre {
+        background: var(--surface-2);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+    }
+    .prose-aarambhax blockquote {
+        border-left: 3px solid var(--accent);
+        padding-left: 1rem;
+        margin: 1.5rem 0;
+        color: var(--fg-muted);
+        font-style: italic;
+    }
+    .prose-aarambhax a {
+        color: var(--link);
+        text-decoration: underline;
+        text-decoration-color: color-mix(in srgb, var(--link) 40%, transparent);
+    }
+    .prose-aarambhax a:hover { text-decoration-color: var(--link); }
+
+    /* ─── Semantic colour utilities (replace inline style="color: var(...)") ─── */
+    .text-fg       { color: var(--fg); }
+    .text-fg-muted { color: var(--fg-muted); }
+    .text-link     { color: var(--link); }
+    .text-accent   { color: var(--accent); }
+    .text-success  { color: var(--success); }
+    .text-warning  { color: var(--warning); }
+    .text-danger   { color: var(--danger); }
+
+    .bg-surface    { background-color: var(--surface); }
+    .bg-surface-2  { background-color: var(--surface-2); }
+
+    .border-default { border-color: var(--border); }
+    .border-fg      { border-color: var(--fg); }
+
+    /* ─── Form primitives (consistent fonts, focus, sizing across the app) ─── */
+    .input {
+        width: 100%;
+        background: var(--surface);
+        color: var(--fg);
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        padding: 0.625rem 0.875rem;
+        font-family: var(--font-sans);
+        font-size: 0.95rem;
+        line-height: 1.4;
+        min-height: 44px;
+        transition: border-color 0.12s ease, box-shadow 0.12s ease;
+    }
+    .input:hover { border-color: var(--fg-muted); }
+    .input:focus,
+    .input:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+        border-color: var(--accent);
+    }
+    .input::placeholder { color: var(--fg-muted); opacity: 0.7; }
+
+    .form-label {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--fg-muted);
+        margin-bottom: 0.375rem;
+    }
+
+    /* Checkbox tile — used by Router doc-picker. Bigger touch target + visible state. */
+    .check-tile {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        background: var(--surface);
+        cursor: pointer;
+        font-size: 0.875rem;
+        color: var(--fg);
+        transition: border-color 0.12s ease, background-color 0.12s ease;
+        min-height: 44px;
+    }
+    .check-tile:hover { border-color: var(--fg-muted); }
+    .check-tile:has(input:checked) {
+        border-color: var(--accent);
+        background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+    }
+    .check-tile input[type='checkbox'] {
+        accent-color: var(--accent);
+        width: 1rem;
+        height: 1rem;
+    }
+
+    /* ─── Standard page typography (use these instead of ad-hoc text-3xl combos) ─── */
+    .h1-page {
+        font-family: var(--font-serif);
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        color: var(--fg);
+        font-size: 1.75rem;       /* 28px — mobile */
+        line-height: 1.15;
+        word-wrap: break-word;
+    }
+    @media (min-width: 640px) { .h1-page { font-size: 2.125rem; } }   /* 34px tablet */
+    @media (min-width: 1024px){ .h1-page { font-size: 2.5rem; } }     /* 40px desktop */
+
+    .h2-section {
+        font-family: var(--font-serif);
+        font-weight: 500;
+        color: var(--fg);
+        font-size: 1.25rem;       /* 20px */
+        line-height: 1.25;
+    }
+    @media (min-width: 640px) { .h2-section { font-size: 1.5rem; } }  /* 24px */
+
+    .h3-card {
+        font-family: var(--font-serif);
+        font-weight: 600;
+        color: var(--fg);
+        font-size: 1.0625rem;     /* 17px */
+        line-height: 1.3;
+    }
+
+    .lead {
+        color: var(--fg-muted);
+        font-size: 0.9375rem;     /* 15px */
+        line-height: 1.5;
+    }
+    @media (min-width: 640px) { .lead { font-size: 1rem; } }
+
+    /* Smaller variant of .btn — for inline secondary actions (still ≥44px touch on mobile, scaled down on desktop) */
+    .btn-sm {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.875rem;
+        min-height: 36px;
+    }
+    @media (max-width: 640px) { .btn-sm { min-height: 44px; padding: 0.5rem 0.875rem; } }
+
+    /* ─── Brand display modes — chambers app top-bar logo responsiveness ─── */
+    /* 8 nav items + brand + theme + logout don't fit on a single row at typical desktop widths.
+       Solution: scale brand DOWN as viewport gets tighter. */
+    .brand-mobile  { display: none; }   /* default off; per-bp activates */
+    .brand-compact { display: none; }
+    .brand-full    { display: none; }
+    @media (max-width: 1023px) {
+        .brand-mobile { display: inline-flex; }
+    }
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        .brand-compact { display: inline-flex; }
+    }
+    @media (min-width: 1440px) {
+        .brand-full { display: inline-flex; }
+    }
+
+    /* ─── Mobile hamburger + drawer ─────────────────────────────────────── */
+    .hamburger-btn {
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        background: var(--surface);
+        cursor: pointer;
+        padding: 0;
+    }
+    .hamburger-btn:hover { background: var(--surface-2); }
+    .hamburger-bar {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--fg);
+        border-radius: 2px;
+    }
+
+    .mobile-drawer {
+        max-height: 0;
+        overflow: hidden;
+        border-top: 0 solid var(--border);
+        background: var(--bg);
+        transition: max-height 0.18s ease, border-top-width 0.18s ease;
+    }
+    .mobile-drawer.is-open {
+        max-height: 80vh;
+        overflow-y: auto;
+        border-top: 1px solid var(--border);
+    }
+
+    /* Theme toggle — circular, fits next to nav */
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        cursor: pointer;
+        transition: background-color 0.12s ease, border-color 0.12s ease;
+        font-size: 1.125rem;
+    }
+    .theme-toggle:hover { background: var(--surface-2); border-color: var(--fg-muted); }
+
+    /* Top-bar navigation links — bigger, clearer, with active-state pill.
+       Tight at 1024-1279px (must fit 8 items beside brand+toggle+logout),
+       comfortable at ≥1280px. */
+    .nav-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.4rem 0.55rem;     /* tight — fits 1024px */
+        border-radius: 0.5rem;
+        font-family: var(--font-sans);
+        font-size: 0.9rem;
+        font-weight: 500;
+        line-height: 1.2;
+        color: var(--fg);
+        text-decoration: none;
+        transition: background-color 0.12s ease, color 0.12s ease;
+        white-space: nowrap;
+    }
+    .nav-link:hover {
+        background: var(--surface-2);
+        color: var(--fg);
+    }
+    .nav-link-active {
+        background: color-mix(in srgb, var(--accent) 20%, transparent);
+        color: var(--fg);
+        font-weight: 600;
+        box-shadow: inset 0 -2px 0 var(--accent);
+    }
+    [data-theme='dark'] .nav-link-active {
+        background: color-mix(in srgb, var(--accent) 18%, transparent);
+        box-shadow: inset 0 -2px 0 var(--accent);
+    }
+    @media (min-width: 1280px) {
+        .nav-link { font-size: 0.95rem; padding: 0.45rem 0.8rem; }
+    }
+    @media (min-width: 1440px) {
+        .nav-link { font-size: 1rem; padding: 0.5rem 1rem; }
+    }
+
+    /* Visually-hidden helper (a11y — text only screen readers see) */
+    .sr-only {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden; clip: rect(0,0,0,0);
+        white-space: nowrap; border: 0;
+    }
+}
+

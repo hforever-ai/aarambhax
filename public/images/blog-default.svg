@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Aarambhax Editorial">
+  <defs>
+    <linearGradient id="blogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#070E1C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Navy background -->
+  <rect width="1200" height="630" fill="url(#blogBg)"/>
+
+  <!-- Decorative corner border (gold) -->
+  <rect x="60" y="60" width="1080" height="510" fill="none" stroke="#1E3A5F" stroke-width="1.5" rx="12"/>
+
+  <!-- Geometric pattern: stacked rectangles representing pages of a brief -->
+  <g transform="translate(180, 180)" opacity="0.92">
+    <rect x="0"   y="60" width="220" height="250" rx="4" fill="#1E3A5F" stroke="#D4B062" stroke-width="0.5"/>
+    <rect x="40"  y="30" width="220" height="250" rx="4" fill="#13294B" stroke="#D4B062" stroke-width="0.5"/>
+    <rect x="80"  y="0"  width="220" height="250" rx="4" fill="#0B1F3A" stroke="#D4B062" stroke-width="0.7"/>
+    <!-- Top-most page text suggestion -->
+    <line x1="100" y1="30"  x2="240" y2="30"  stroke="#94A3B8" stroke-width="1.5" opacity="0.65"/>
+    <line x1="100" y1="55"  x2="280" y2="55"  stroke="#94A3B8" stroke-width="1.5" opacity="0.50"/>
+    <line x1="100" y1="80"  x2="260" y2="80"  stroke="#94A3B8" stroke-width="1.5" opacity="0.45"/>
+    <line x1="100" y1="105" x2="280" y2="105" stroke="#94A3B8" stroke-width="1.5" opacity="0.40"/>
+    <line x1="100" y1="130" x2="220" y2="130" stroke="#94A3B8" stroke-width="1.5" opacity="0.35"/>
+    <!-- Gold paragraph marker -->
+    <rect x="100" y="160" width="60" height="3" rx="1" fill="#D4B062"/>
+    <line x1="100" y1="180" x2="280" y2="180" stroke="#94A3B8" stroke-width="1.5" opacity="0.40"/>
+    <line x1="100" y1="200" x2="240" y2="200" stroke="#94A3B8" stroke-width="1.5" opacity="0.35"/>
+  </g>
+
+  <!-- Right-side wordmark + tagline -->
+  <g transform="translate(620, 230)">
+    <!-- Aarambhax Legal in serif -->
+    <text x="0" y="0" font-family="Fraunces, Georgia, serif" font-size="64" font-weight="500" fill="#F8F6F0">
+      Aarambha<tspan fill="#D4B062">x</tspan>
+      <tspan fill="#94A3B8" font-weight="400" font-size="48"> Legal</tspan>
+    </text>
+    <!-- Tagline -->
+    <text x="0" y="50" font-family="Inter, sans-serif" font-size="20" letter-spacing="3" fill="#D4B062" font-weight="600">
+      AARAMBHAX EDITORIAL
+    </text>
+    <text x="0" y="100" font-family="Fraunces, Georgia, serif" font-size="32" font-weight="400" fill="#F8F6F0">
+      Practical drafting reference
+    </text>
+    <text x="0" y="140" font-family="Fraunces, Georgia, serif" font-size="32" font-weight="400" fill="#F8F6F0">
+      for working advocates.
+    </text>
+  </g>
+
+  <!-- Bottom strip: domain -->
+  <text x="80" y="585" font-family="JetBrains Mono, monospace" font-size="18" fill="#94A3B8">aarambhax.net/blog</text>
+  <text x="1120" y="585" font-family="JetBrains Mono, monospace" font-size="18" fill="#94A3B8" text-anchor="end">CG HC · BNS / BNSS / BSA · CG LRC</text>
+</svg>

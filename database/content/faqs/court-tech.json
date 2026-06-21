@@ -1,0 +1,78 @@
+{
+  "topic": "court-tech",
+  "language": "en",
+  "faqs": [
+    {
+      "question": "How do I check my case status and next hearing date using the eCourts portal?",
+      "answer": "To check your case status and next hearing date, navigate to the official eCourts portal (ecourts.gov.in). From the homepage, select your state, district, and court complex. You can then search for your case using various parameters such as **CNR Number**, Party Name, Filing Number, or Case Number. Once searched, the portal displays comprehensive details including the current status, `अगली सुनवाई की तारीख` (next hearing date), case history, orders, and judgments. This service provides real-time updates, significantly enhancing convenience and transparency for advocates.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What are the primary benefits of using the eCourts portal for an advocate?",
+      "answer": "The eCourts portal offers significant benefits for advocates, primarily enhancing accessibility, transparency, and efficiency. It allows 24/7 access to critical case information, including `वाद सूची` (cause lists), case status, orders, and judgments, from any location. This reduces the need for physical visits to courts, saving valuable time and resources. Furthermore, it facilitates online filing of petitions, payment of court fees, and monitoring of case progress, thereby streamlining litigation processes and promoting a more agile and responsive `न्याय प्रशासन` (administration of justice).",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "Is a Digital Signature Certificate (DSC) mandatory for all e-filings in Indian courts, and what type is required?",
+      "answer": "Yes, a Digital Signature Certificate (DSC) is generally mandatory for e-filing in Indian courts to ensure the authenticity and integrity of electronic documents. Typically, a **Class 3 DSC** with both signing and encryption capabilities is required. The `सूचना प्रौद्योगिकी अधिनियम, 2000` (*Information Technology Act, 2000*), particularly **Section 5**, grants legal recognition to digital signatures, making them equivalent to physical signatures for electronic records. This statutory backing ensures the sender's identity, non-repudiation, and the security of electronically transmitted documents, forming a cornerstone of the e-filing system.",
+      "related_statute_code": "IT Act",
+      "related_section_no": "5"
+    },
+    {
+      "question": "Can I access certified copies of orders and judgments through the eCourts services, or must I still apply physically?",
+      "answer": "While the eCourts project is continually evolving, the availability of *e-certified copies* of orders and judgments varies across different courts. Many High Courts and District Courts now provide digitally signed copies of orders, which can be downloaded directly from the eCourts portal. These digital copies often hold the same legal validity as physically certified copies. However, for certain specific documents, or depending on the court's particular rules or requirements for `प्रमाणित प्रतिलिपि` (certified copies), advocates might still need to apply physically or collect hard copies. Always verify the specific court's practice directions.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What are the essential steps for an advocate to initiate an e-filing in the Chhattisgarh High Court?",
+      "answer": "To initiate an e-filing in the Chhattisgarh High Court (or any High Court with e-filing facilities), an advocate must first register on the designated e-filing portal. The essential steps involve preparing all documents, including the petition, affidavits, and annexures, in **PDF format**, ensuring proper pagination and indexing. All documents, notably the `वकालतनामा` (Vakalatnama), must be digitally signed using a valid Class 3 DSC. Subsequently, these files are uploaded to the portal, case details are accurately filled, and court fees are paid online through the integrated e-payment gateway. A system-generated acknowledgment confirms successful submission, often followed by a physical scrutiny of the original documents.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "How does the Bharatiya Sakshya Adhiniyam, 2023 (BSA) impact the admissibility and evidentiary value of electronically filed documents?",
+      "answer": "The *Bharatiya Sakshya Adhiniyam, 2023 (BSA)* significantly strengthens the legal framework for electronically filed documents. **Section 61 of BSA** explicitly declares that electronic records are admissible as evidence, effectively placing them on par with traditional documentary evidence. Furthermore, **Section 62** outlines the procedure for proving electronic records, typically requiring a certificate from a person in a responsible official position concerning the operation of the relevant device. This legislative clarity provides a robust legal basis for the admissibility and evidentiary value of all electronically filed pleadings, affidavits, and exhibits, ensuring their acceptance and consideration in court proceedings.",
+      "related_statute_code": "BSA",
+      "related_section_no": "61, 62"
+    },
+    {
+      "question": "What are the technical prerequisites, such as software and hardware, an advocate needs to effectively use the eCourts services and e-filing?",
+      "answer": "To effectively use eCourts services and e-filing, an advocate requires several technical prerequisites. Essential hardware includes a reliable computer or laptop, a stable internet connection, and a functional scanner for digitizing physical documents. For software, a modern web browser (e.g., Chrome, Firefox), a robust PDF reader (e.g., Adobe Acrobat Reader), and specific utilities for managing the Digital Signature Certificate (DSC) token are necessary. A valid `क्लास 3 डीएससी` (Class 3 DSC) token is indispensable for digitally signing documents. Familiarity with basic computer operations and file management is also crucial for seamless navigation and document uploads.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "Can an advocate challenge the authenticity or integrity of an electronically filed document or a digitally signed pleading?",
+      "answer": "Yes, an advocate can challenge the authenticity or integrity of an electronically filed document or a digitally signed pleading. While the *Information Technology Act, 2000*, bestows legal validity upon digital signatures and electronic records, this validity is contingent upon their security and reliability. Challenges can arise if there's evidence of tampering, unauthorized access, or non-compliance with prescribed technical standards. The *Bharatiya Sakshya Adhiniyam, 2023 (BSA)*, particularly **Section 62**, which outlines the requirements for proving electronic records, also provides grounds for challenging authenticity if the conditions for reliability (e.g., proper certification) are not met or if manipulation is suspected.",
+      "related_statute_code": "IT Act, BSA",
+      "related_section_no": "4, 5, 62"
+    },
+    {
+      "question": "How does the eCourts portal facilitate the payment of court fees and process fees for e-filed cases?",
+      "answer": "The eCourts portal significantly streamlines the payment of court fees and process fees for e-filed cases through integrated online payment gateways. Advocates can conveniently pay these fees using various methods, including net banking, debit/credit cards, or Unified Payments Interface (UPI). Upon successful transaction, an e-receipt or e-challan is instantly generated, which serves as valid proof of payment and is electronically linked to the respective case filing. This digital system eliminates the need for physical `न्यायालय शुल्क` (court fee) stamps or manual challans, enhancing transparency, reducing queues, and accelerating the overall e-filing process.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What provisions in the Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) support the use of video conferencing for recording evidence or appearances, and how does this integrate with eCourts?",
+      "answer": "The *Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS)* provides robust legislative support for the integration of technology in criminal justice. **Section 211 of BNSS** explicitly allows for the recording of evidence and examination of witnesses through video conferencing, ensuring fair trial principles are upheld. Furthermore, **Section 530** facilitates electronic communication and transmission of documents. This integrates seamlessly with the eCourts project by enabling virtual appearances, remand proceedings, and even arguments, thereby enhancing efficiency, reducing delays, and ensuring access to justice, particularly for remote or vulnerable individuals, aligning with the broader goal of digitalizing judicial processes.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "211, 530"
+    },
+    {
+      "question": "Beyond basic e-filing, what advanced features or integrations does the eCourts project envision for greater interoperability between different justice delivery stakeholders, such as police or prisons?",
+      "answer": "Beyond basic e-filing, the eCourts project envisions deep integration through the **Interoperable Criminal Justice System (ICJS)**. This advanced initiative aims to create a seamless ecosystem by connecting all pillars of the criminal justice system: courts, police (e-Police), prisons (e-Prisons), prosecution (e-Prosecution), and forensic science laboratories. The goal is to facilitate real-time, instantaneous data exchange, eliminating manual data entry and reducing errors. This interoperability will allow for immediate access to `अपराधिक रिकॉर्ड` (criminal records), case histories, and prisoner data across departments, significantly improving investigation, trial management, and the overall efficiency of the justice delivery system.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What are the legal implications and potential liabilities for an advocate when a technical glitch or system error during e-filing leads to a delay or rejection of a crucial document?",
+      "answer": "When technical glitches during e-filing cause delay or rejection, an advocate faces potential legal implications, primarily concerning `विलंब माफी` (condonation of delay) under the *Limitation Act*. Courts generally adopt a pragmatic approach, exercising `न्यायपालिका का विवेक` (judicial discretion) to condone delays resulting from bonafide technical issues, provided the advocate demonstrates due diligence and promptly rectifies the error. However, repeated or negligent technical failures could lead to adverse orders, including rejection of filings, cost imposition, or even professional liability. Advocates must maintain meticulous records of e-filing attempts and system errors to substantiate such claims and fulfill their professional responsibilities.",
+      "related_statute_code": null,
+      "related_section_no": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <path fill="#0B1F3A" fill-rule="evenodd" d="
+    M 32 8                // Outer path: Top point
+    L 10 52               // Left outer leg top
+    H 6                   // Left serif outer-left
+    V 56                  // Left serif bottom-left
+    H 58                  // Go across to right serif bottom-right
+    V 52                  // Right serif outer-right
+    L 54 52               // Right outer leg top (implicit inner line of right serif)
+    L 32 8                // Back to top point
+    Z                     // Close outer path
+
+    M 28 20               // Inner path (counter): Top-left
+    L 24 40               // Bottom-left
+    L 40 40               // Bottom-right
+    L 36 20               // Top-right
+    Z                     // Close inner path
+  "/>
+  <rect x="26" y="30" width="12" height="2" fill="#C8A24B"/>
+</svg>

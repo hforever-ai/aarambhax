@@ -1,0 +1,78 @@
+{
+  "topic": "revenue",
+  "language": "en",
+  "faqs": [
+    {
+      "question": "What is the standard procedure for applying for mutation (नामांतरण) based on inheritance in Chhattisgarh?",
+      "answer": "The standard procedure for applying for mutation (नामांतरण) based on inheritance in Chhattisgarh involves filing an application before the Tahsildar or Naib Tahsildar. The application, supported by relevant documents like death certificates, family tree affidavit, and copies of previous land records, is filed under *Section 109 and 110* of the CG LRC. The court then issues a general proclamation (`इश्तहार`) inviting objections. After conducting an inquiry and hearing any objections, if satisfied with the claim, the Tahsildar passes an order for mutation, updating the `khasra` and `khatauni` records accordingly. This process ensures the legal heir's name is recorded as the new `Bhumiswami`.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "109, 110"
+    },
+    {
+      "question": "How can I obtain certified copies of land records like Khasra P-II and Khatauni B-I in Chhattisgarh?",
+      "answer": "To obtain certified copies of land records like `Khasra P-II` and `Khatauni B-I` in Chhattisgarh, an application must be made to the concerned `Tahsildar` or `Naib Tahsildar` office, or through the `Bhuiyan` portal (भूइयां पोर्टल). The application usually requires details such as the village name, `patwari हल्का` number, `khasra` number, and the names of the `Bhumiswamis`. A prescribed fee is paid, and the copies are issued after verification. *Section 113* of the CG LRC implicitly supports the provision for obtaining copies of land records maintained under *Section 108*, which are public documents and presumed correct under *Section 117*.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "108, 113, 117"
+    },
+    {
+      "question": "What is the basic jurisdiction for filing an application for partition (बंटवारा) of agricultural land among co-owners in Chhattisgarh?",
+      "answer": "The basic jurisdiction for filing an application for partition (बंटवारा) of agricultural land among co-owners in Chhattisgarh lies with the `Tahsildar` or `Naib Tahsildar`. *Section 178* of the Chhattisgarh Land Revenue Code, 1959, specifically empowers these revenue officers to effect partition of a holding among co-Bhumiswamis. The application must identify all co-owners and their respective shares, along with the land details. The Revenue Court ensures proper notice to all parties, hears objections, and then passes an order for partition, which may involve physical demarcation of shares. It is crucial that the shares are undisputed for the Revenue Court to proceed.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "178"
+    },
+    {
+      "question": "What is 'diversion' (व्यपवर्तन) of land in Chhattisgarh, and when is it required?",
+      "answer": "'Diversion' (व्यपवर्तन) of land in Chhattisgarh refers to the change in the use of agricultural land for non-agricultural purposes, such as residential, commercial, or industrial. It is required whenever a `Bhumiswami` intends to use agricultural land for any purpose other than agriculture. *Section 172* of the CG LRC governs this process. An application for diversion must be made to the Collector, who, after due inquiry and payment of prescribed premium and assessment, may grant permission. Without proper diversion, the change in land use is illegal and can lead to penalties, including restoration of the land to its original use.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "172"
+    },
+    {
+      "question": "What is the implication of a mutation (नामांतरण) order passed without following due procedure, such as lack of proper notice or proclamation?",
+      "answer": "A mutation (नामांतरण) order passed without following due procedure, such as lack of proper notice or proclamation (`इश्तहार`), is *voidable* and can be challenged. While mutation entries are primarily for fiscal purposes and do not create title, procedural irregularities can render the order susceptible to appeal or revision. *Section 110* of the CG LRC mandates a summary inquiry and proclamation, ensuring all interested parties have an opportunity to object. An aggrieved party can prefer an appeal under *Section 44* to the SDO/Collector or a revision under *Section 50* to the Commissioner/Board of Revenue. Such an order, if challenged successfully, would be set aside, necessitating fresh proceedings.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "44, 50, 110"
+    },
+    {
+      "question": "Can a partition (बंटवारा) application under Section 178 CG LRC be rejected if a civil suit regarding title to the same land is pending?",
+      "answer": "Yes, a partition (बंटवारा) application under *Section 178* of the CG LRC can and often should be rejected or stayed if a civil suit regarding title to the same land is pending. The Revenue Court's jurisdiction under *Section 178* is primarily for partition among admitted co-Bhumiswamis, not for adjudicating complex title disputes. If there's a serious dispute over the share or ownership itself, *Section 178(2)* explicitly states that the Tahsildar shall dismiss the application, directing the parties to get their title decided by a competent Civil Court. The Revenue Court's role is to partition *undisputed* shares and cannot usurp the Civil Court's jurisdiction over title.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "178"
+    },
+    {
+      "question": "What are the consequences of undertaking unauthorized diversion (व्यपवर्तन) of agricultural land without obtaining prior permission under CG LRC?",
+      "answer": "Undertaking unauthorized diversion (व्यपवर्तन) of agricultural land without prior permission under *Section 172* of the CG LRC carries significant consequences. The Collector is empowered to impose a penalty, which can extend up to *five thousand rupees*, and also to recover an amount equal to the premium and revised land revenue that would have been payable if permission had been granted. Furthermore, the Collector may order the land to be restored to its original agricultural use. Continued non-compliance can lead to further penalties and even eviction under *Section 248* if the land is used in contravention of the Code, posing substantial financial and legal risks.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "172, 248"
+    },
+    {
+      "question": "What is the evidentiary value of Khasra and Khatauni entries, and can they be challenged in a Civil Court despite Section 117 CG LRC?",
+      "answer": "`Khasra` and `Khatauni` entries, maintained under *Section 108* of the CG LRC, carry a *presumption of correctness* under *Section 117*. This means they are presumed to be true until the contrary is proved. However, this presumption is *rebuttable*. While Revenue Courts are generally barred from adjudicating title disputes, a Civil Court can certainly examine and declare entries incorrect if a stronger title is established through evidence. The entries are primarily for fiscal and administrative purposes; they do not create title but reflect it. A Civil Court can declare a person's title and direct correction of revenue records, overriding the presumption under *Section 117*.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "108, 117"
+    },
+    {
+      "question": "What is the scope of revisional jurisdiction of the Board of Revenue under Section 50 CG LRC concerning orders passed by lower Revenue Courts?",
+      "answer": "The scope of revisional jurisdiction of the Board of Revenue under *Section 50* of the CG LRC is broad but not unlimited. The Board can call for records of any case decided by a subordinate Revenue Officer and pass such order as it deems fit. This power can be exercised *suo motu* or on application. However, the Board typically intervenes when there is a material irregularity, error of jurisdiction, or a perverse finding leading to substantial injustice. It is not an appellate power to re-appreciate evidence, but rather to ensure legality, propriety, and correctness of the order. The Board often focuses on procedural compliance and adherence to legal principles, ensuring subordinate courts act within their powers.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "50"
+    },
+    {
+      "question": "What is the procedure for correcting erroneous entries in the Khasra or Khatauni records in Chhattisgarh?",
+      "answer": "The procedure for correcting erroneous entries in the `Khasra` or `Khatauni` records in Chhattisgarh is governed by *Sections 115 and 116* of the CG LRC. An application for correction can be made to the `Tahsildar` or `Naib Tahsildar`. If the error is clerical or arithmetical and evident on the face of the record, it can be corrected summarily. However, if it involves a dispute or requires detailed inquiry, the officer must issue notice to all affected parties, conduct an inquiry, and then pass an order. Corrections are crucial as these records are presumed correct under *Section 117*, and incorrect entries can lead to title disputes or hinder property transactions.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "115, 116, 117"
+    },
+    {
+      "question": "How does an order of mutation (नामांतरण) based on a registered sale deed interact with a subsequent challenge to the validity of that sale deed in a Civil Court?",
+      "answer": "An order of mutation (नामांतरण) based on a registered sale deed primarily updates revenue records for fiscal purposes under *Section 110* of the CG LRC and does not confer or extinguish title. While the `Bhumiswami` name is changed, if the underlying sale deed is subsequently challenged and declared *void or voidable* by a competent Civil Court, the mutation entry loses its basis. The Civil Court's decree regarding the invalidity of the sale deed will *override* the revenue record entry. The aggrieved party can then approach the Revenue Court with the Civil Court's decree to seek correction of the revenue records under *Section 115* or other appropriate provisions, effectively reversing the mutation.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "110, 115"
+    },
+    {
+      "question": "In a partition (बंटवारा) case under Section 178 CG LRC, what specific circumstances would compel a Revenue Court to refer parties to a Civil Court beyond mere denial of share?",
+      "answer": "Beyond a mere denial of share, a Revenue Court in a partition (`बंटवारा`) case under *Section 178* CG LRC would be compelled to refer parties to a Civil Court if the dispute involves *complex questions of title, inheritance, interpretation of wills, or validity of transfers* that fall outside its summary jurisdiction. For instance, if one party claims adverse possession, or if there's a challenge to the legality of a previous gift deed affecting shares, or intricate questions of Hindu Succession Law arise. *Section 178(2)* mandates dismissal if the title itself is genuinely disputed, requiring a more elaborate trial, evidence, and legal interpretation typical of a Civil Court. The Revenue Court cannot decide such intricate questions of title.",
+      "related_statute_code": "CG LRC",
+      "related_section_no": "178"
+    }
+  ]
+}

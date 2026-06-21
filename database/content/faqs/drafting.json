@@ -1,0 +1,78 @@
+{
+  "topic": "drafting",
+  "language": "en",
+  "faqs": [
+    {
+      "question": "What are the basic formatting requirements for civil pleadings in Indian courts?",
+      "answer": "Basic formatting for civil pleadings mandates adherence to local High Court Rules. Generally, this includes using A4 size paper, leaving adequate margins (e.g., 4 cm left, 2 cm right), and double-spacing the text. The font is typically Times New Roman, size 12, with headings in size 14 or bold. Pleadings must be typed, paragraphed sequentially, and *each paragraph numbered*. The court's name, case title, and a clear heading for the document are essential. Proper indexing and binding are also crucial for filing. Ensuring clarity, legibility, and compliance with specific court rules avoids procedural defects and facilitates smooth court proceedings.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What are the mandatory components of a valid Vakalatnama (वकालतनामा)?",
+      "answer": "A valid Vakalatnama (वकालतनामा) must contain several mandatory components. It needs the name of the court, the case number, and the names of the parties involved. Crucially, it must *clearly state the name of the advocate* or firm authorized to represent the client. The client's full name, address, and signature are essential, explicitly granting powers to the advocate to act, plead, compromise, and receive money on their behalf. The advocate must also sign to signify acceptance of the brief. Without these elements, particularly the client's signature and the advocate's acceptance, the Vakalatnama is incomplete and may be deemed invalid, affecting the advocate's authority to appear.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What are the essential parts of a civil plaint (वादपत्र) that every advocate must include?",
+      "answer": "Every civil plaint (वादपत्र) must essentially include the name of the court, the full names and descriptions of the plaintiff(s) and defendant(s), and a clear statement of facts constituting the *cause of action*. It must also specify the court's jurisdiction (territorial and pecuniary), the suit's valuation for court fees and jurisdiction, and the relief(s) claimed (prayer clause). The plaint concludes with a verification clause, affirming the truthfulness of the statements, and the plaintiff's signature. *Strict adherence to stating only 'material facts'*, and not evidence, is paramount to avoid ambiguity and ensure a concise pleading.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What is the fundamental structure and key elements of an affidavit (शपथ पत्र)?",
+      "answer": "The fundamental structure of an affidavit (शपथ पत्र) begins with the court's name and case title. It then identifies the deponent, stating their full name, parentage, age, and address, followed by a solemn affirmation or oath. The body of the affidavit consists of *numbered paragraphs*, each containing a distinct fact. It's crucial to distinguish between facts known personally by the deponent and those believed to be true based on information, stating the source of such information. The affidavit concludes with a verification clause, confirming the truth of its contents, and the deponent's signature, attested by an Oath Commissioner or Notary. This structure ensures its evidentiary value.",
+      "related_statute_code": "BSA",
+      "related_section_no": "59"
+    },
+    {
+      "question": "How should a written statement (लिखित बयान) address specific allegations from the plaint?",
+      "answer": "A written statement (लिखित बयान) must address each allegation in the plaint *specifically and distinctly*. An advocate should respond paragraph-wise, either admitting, denying, or stating that the allegation is not known to be true. A denial must be *specific and not evasive*; a general denial is insufficient and may be construed as an admission. New facts constituting a defence, counter-claim, or set-off must also be pleaded clearly. The aim is to present the defendant's version of facts and legal arguments concisely, ensuring that every material allegation is squarely met, as any unaddressed material fact might be deemed admitted.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "How does the principle that pleadings are not evidence impact drafting a plaint or written statement?",
+      "answer": "The principle that pleadings are not evidence dictates that drafting a plaint (वादपत्र) or written statement (लिखित बयान) should focus solely on *material facts* and not on the evidence by which those facts are to be proved. Pleadings merely outline the issues for trial. An advocate must avoid incorporating evidentiary details, arguments, or legal conclusions within the factual narrative. The purpose of pleadings is to inform the opposing party and the court of the case to be met. The actual proof of the pleaded facts is subsequently adduced through oral and documentary evidence during trial, as per the provisions of the Bharatiya Sakshya Adhiniyam (BSA).",
+      "related_statute_code": "BSA",
+      "related_section_no": "58"
+    },
+    {
+      "question": "What are the proper procedures for attesting and filing an affidavit (शपथ पत्र), particularly regarding identification of the deponent?",
+      "answer": "Proper attestation and filing of an affidavit (शपथ पत्र) involve several key steps. The deponent must appear before an authorized officer (Oath Commissioner or Notary Public) and solemnly affirm or swear to the contents. The officer must *identify the deponent*, either through personal knowledge, identification by a person known to the officer, or by verifying official identification documents. The deponent then signs in the presence of the officer, who countersigns, seals, and dates the affidavit. Filing involves presenting the duly attested affidavit to the court registry, often with an accompanying application, ensuring compliance with court rules regarding paper, margins, and indexing. *Authenticity and proper identification are critical to its legal validity*.",
+      "related_statute_code": "BSA",
+      "related_section_no": "59"
+    },
+    {
+      "question": "What are key considerations for drafting an effective and comprehensive prayer clause in a civil suit?",
+      "answer": "Drafting an effective prayer clause requires careful consideration to ensure all reliefs sought are *specific, enforceable, and flow logically* from the facts pleaded and the cause of action. It should clearly enumerate each specific relief, such as declarations, injunctions, specific performance, or recovery of money. Advocates must also include a general prayer for \"any other relief as the court deems fit and proper\" to allow for discretion, and typically a prayer for costs and interest. *Omitting a specific relief in the prayer clause can bar its grant*, even if facts supporting it are pleaded, making precision paramount.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What are the critical aspects of drafting the verification clause in a plaint or written statement to avoid defects?",
+      "answer": "The verification clause is a critical part of a plaint (वादपत्र) or written statement (लिखित बयान). It must *distinctly specify which paragraphs are true to the deponent's personal knowledge* and which are believed to be true based on information received, stating the source of that information. A common defect is a vague or omnibus verification. The clause must be signed by the party (or authorized person), dated, and state the place of signing. A *false verification carries serious legal consequences*, including perjury, highlighting the need for meticulous drafting and factual accuracy. Ensuring proper verification lends credibility to the pleading and avoids procedural challenges.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "How does the specific relief sought influence the drafting of the factual matrix in a plaint?",
+      "answer": "The specific relief sought fundamentally dictates the drafting of the factual matrix in a plaint (वादपत्र). Every fact pleaded must be a *material fact* that directly contributes to establishing the plaintiff's entitlement to the specific relief claimed. If, for instance, an injunction is sought, the facts must clearly demonstrate a prima facie case, irreparable injury, and balance of convenience. If specific performance is the relief, facts proving a valid contract, readiness and willingness, and breach are crucial. *Irrelevant facts dilute the case*, and facts not pleaded cannot be proven, making a precise alignment between the factual narrative and the prayer clause indispensable for success.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "What are the critical drafting nuances when preparing an interlocutory application (e.g., for injunction) alongside the main plaint?",
+      "answer": "When drafting an interlocutory application, such as for an injunction, alongside the main plaint, several nuances are critical. The application must be *supported by a detailed affidavit* (शपथ पत्र) affirming the facts. While it draws from the plaint, the application's focus shifts to the *immediate need for interim relief*, emphasizing urgency, irreparable harm, prima facie case, and balance of convenience. It should succinctly cross-refer to the main plaint for context but avoid mere repetition. The prayers in the application must be precise for interim relief, distinct from the final reliefs sought in the plaint. Ensuring consistency between the application and plaint, yet highlighting the specific grounds for interim protection, is paramount.",
+      "related_statute_code": "BSA",
+      "related_section_no": "59"
+    },
+    {
+      "question": "What strategies should an advocate employ when drafting a written statement (लिखित बयान) in response to a vague or ambiguous plaint?",
+      "answer": "When faced with a vague or ambiguous plaint (वादपत्र), an advocate drafting a written statement (लिखित बयान) must employ specific strategies to protect the client's interests. Instead of a general denial, *specifically deny what can be understood* and for the vague parts, explicitly state that the allegation is ambiguous and therefore cannot be specifically admitted or denied, putting the plaintiff to strict proof. It is crucial *not to inadvertently admit* by remaining silent or making a general denial. Additionally, consider raising preliminary objections regarding the vagueness of the plaint, arguing that it fails to disclose a proper cause of action or is not maintainable due to lack of material particulars, thereby seeking its rejection or amendment.",
+      "related_statute_code": null,
+      "related_section_no": null
+    }
+  ]
+}

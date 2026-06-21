@@ -1,0 +1,11 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Deep Navy background circle -->
+  <circle cx="32" cy="32" r="32" fill="#0B1F3A"/>
+
+  <!-- Thin Warm Gold inner border ring -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#C8A24B" stroke-width="1.5"/>
+
+  <!-- Devanagari character 'अ' (first letter of Aarambhax) in Warm Gold -->
+  <!-- Rendered as a clean, modern path -->
+  <path fill="#C8A24B" d="M20 20H44V44M28 32H44M28 32C24 32,22 36,22 40C22 44,24 47,28 47C32 47,34 44,34 40C34 36,32 32,28 32Z"/>
+</svg>

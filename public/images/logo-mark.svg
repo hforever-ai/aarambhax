@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aarambhax mark">
+  <!--
+    Geometric serif "A" — narrow column with classical proportions.
+    Navy body, gold horizontal crossbar.
+  -->
+  <!-- Left leg of the A -->
+  <path d="M 32 8 L 14 56 L 22 56 L 32 28 Z" fill="currentColor"/>
+  <!-- Right leg of the A -->
+  <path d="M 32 8 L 50 56 L 42 56 L 32 28 Z" fill="currentColor"/>
+  <!-- Gold crossbar — slightly thicker than purely geometric A -->
+  <rect x="22" y="38" width="20" height="4" rx="0.5" fill="#C8A24B"/>
+</svg>

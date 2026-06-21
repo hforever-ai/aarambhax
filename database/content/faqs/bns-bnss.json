@@ -1,0 +1,82 @@
+{
+  "topic": "bns-bnss",
+  "language": "en",
+  "faqs": [
+    {
+      "question": "When do the Bharatiya Nyaya Sanhita, Bharatiya Nagarik Suraksha Sanhita, and Bharatiya Sakshya Adhiniyam officially come into force?",
+      "answer": "The Bharatiya Nyaya Sanhita (BNS), Bharatiya Nagarik Suraksha Sanhita (BNSS), and Bharatiya Sakshya Adhiniyam (BSA) are officially slated to come into force from *July 1, 2024*. This uniform commencement date applies to all three new criminal codes, marking a watershed moment in India's criminal justice system. They will replace the Indian Penal Code, 1860; the Code of Criminal Procedure, 1973; and the Indian Evidence Act, 1872, respectively. Practitioners must proactively familiarize themselves with the updated provisions and procedural frameworks from this date forward to ensure seamless navigation of ongoing and new matters, as the transition demands a comprehensive understanding of the new legal landscape.",
+      "related_statute_code": null,
+      "related_section_no": null
+    },
+    {
+      "question": "Where can I find the new equivalent of Section 302 IPC (murder) and Section 376 IPC (rape) in the Bharatiya Nyaya Sanhita?",
+      "answer": "In the Bharatiya Nyaya Sanhita (BNS), the offense of murder, previously defined and punishable under Section 302 of the Indian Penal Code, is now covered primarily under *Section 101 BNS*. Similarly, the offense of rape, which was addressed by Section 376 IPC, finds its equivalent and expanded provisions under *Section 63 BNS* onwards, dealing comprehensively with various forms of sexual offenses against women. Advocates should meticulously refer to the new numbering scheme and critically examine the slightly rephrased definitions and nuances in these sections to ensure accurate application in their pleadings, arguments, and legal advice.",
+      "related_statute_code": "BNS",
+      "related_section_no": "101, 63"
+    },
+    {
+      "question": "What are the key changes for filing a First Information Report (FIR) under the BNSS compared to the CrPC?",
+      "answer": "The Bharatiya Nagarik Suraksha Sanhita (BNSS) introduces significant changes regarding the First Information Report (FIR). While the core concept remains, *Section 173 BNSS* mandates a preliminary inquiry in cases punishable with imprisonment of less than three years, except for specific offenses. Furthermore, *Section 173(3) BNSS* explicitly allows for electronic filing of FIRs and mandates providing a copy to the informant free of cost within 24 hours. This emphasizes digital adoption and aims to streamline the initial stages of criminal proceedings, making the process more transparent and accessible for citizens and practitioners alike.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "173"
+    },
+    {
+      "question": "Has the BNSS made any major changes to the concept of anticipatory bail or regular bail?",
+      "answer": "Yes, the Bharatiya Nagarik Suraksha Sanhita (BNSS) has introduced some notable changes regarding bail. While the concepts of anticipatory bail (अग्रिम ज़मानत) and regular bail (नियमित ज़मानत) remain, *Section 482 BNSS* (equivalent to CrPC Section 438) now includes provisions for a court to grant anticipatory bail to a person who has reason to believe they may be arrested in connection with a non-bailable offense. Additionally, *Section 481 BNSS* (regular bail) emphasizes the need to consider the nature and gravity of the offense, the character of the accused, and the likelihood of the accused absconding. A key addition is that first-time offenders accused of petty offences, who are under trial for one-third of the maximum punishment for that offence, may be released on personal bond under *Section 480(3) BNSS*.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "482, 481, 480"
+    },
+    {
+      "question": "How will ongoing criminal trials and investigations, initiated before July 1, 2024, be handled under the new codes?",
+      "answer": "The Bharatiya Nagarik Suraksha Sanhita (BNSS) addresses transitional provisions for ongoing cases. *Section 531 BNSS* explicitly states that all investigations, inquiries, trials, and other proceedings pending or commenced under the repealed codes (CrPC, IPC, Evidence Act) immediately before the commencement of the BNSS, shall be continued and disposed of in accordance with the provisions of the corresponding new codes. This means that while the substantive law (BNS) and procedural law (BNSS) will apply, the proceedings will transition to the new framework, requiring advocates to adapt quickly to the updated provisions and section mappings, ensuring continuity while applying the new legal regime.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "531"
+    },
+    {
+      "question": "What specific provisions in the BSA facilitate the admissibility and proof of electronic records, and how do they differ from the old Evidence Act?",
+      "answer": "The Bharatiya Sakshya Adhiniyam (BSA) significantly expands and clarifies the admissibility of electronic records. *Section 62 BSA* broadly defines \"document\" to explicitly include electronic or digital records, broadening its scope beyond the previous definition. *Section 63 BSA* outlines the admissibility criteria for electronic records, similar to the old Section 65B, but with clearer and more comprehensive language regarding authentication and certification. Importantly, it streamlines the procedure for proving electronic records, making it easier to present digital evidence like emails, WhatsApp chats, and CCTV footage. The BSA aims to align evidence law with modern digital realities, addressing previous ambiguities and challenges in proving such evidence.",
+      "related_statute_code": "BSA",
+      "related_section_no": "62, 63"
+    },
+    {
+      "question": "Are there any substantial changes in the procedure for framing of charges under the BNSS that advocates need to be aware of?",
+      "answer": "Yes, the Bharatiya Nagarik Suraksha Sanhita (BNSS) introduces some procedural refinements to the framing of charges. While the core principle remains, *Section 237 BNSS* (corresponding to CrPC Section 228) still requires the court to be satisfied that there is ground for presuming that the accused has committed an offense. A notable change is the emphasis on expeditious disposal and the utilization of technology. For instance, processes related to supplying documents to the accused, which precede charge framing, are now streamlined, allowing for electronic delivery under *Section 207 BNSS*. This aims to reduce delays in the pre-trial phase and ensure a more efficient judicial process, demanding advocate familiarity with digital modalities.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "237, 207"
+    },
+    {
+      "question": "How does the BNSS address petty offenses, and what is the new concept of 'community service' as a punishment?",
+      "answer": "The Bharatiya Nagarik Suraksha Sanhita (BNSS) introduces a progressive approach to petty offenses. *Section 23 BNSS* allows for summary trials for offenses punishable with imprisonment up to three years, significantly expanding the scope from the previous two years. Crucially, the Bharatiya Nyaya Sanhita (BNS) introduces 'community service' as a distinct form of punishment for certain petty offenses under *Section 4(g) BNS*. This aims to decongest courts and prisons by providing a constructive alternative to imprisonment for minor infractions, promoting restorative justice and rehabilitation. *Section 35 BNSS* further elaborates on the procedure for imposing and enforcing community service, marking a notable shift in sentencing philosophy.",
+      "related_statute_code": "BNS",
+      "related_section_no": "4",
+      "related_statute_code_2": "BNSS",
+      "related_section_no_2": "23, 35"
+    },
+    {
+      "question": "What are the enhanced provisions for victim compensation under the BNSS compared to the CrPC?",
+      "answer": "The Bharatiya Nagarik Suraksha Sanhita (BNSS) significantly strengthens victim compensation provisions. *Section 397 BNSS* (corresponding to CrPC Section 357A) mandates every State Government to prepare a scheme for providing funds for compensation to victims or their dependents who have suffered loss or injury as a result of the crime and require rehabilitation. The BNSS places a greater emphasis on the victim's rights, requiring the court, under *Section 397(3) BNSS*, to consider the victim's application for compensation at the time of awarding judgment. Furthermore, it allows for interim compensation. This aims for more robust, accessible, and timely victim rehabilitation and support, making victim welfare a central tenet of the criminal justice system.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "397"
+    },
+    {
+      "question": "Have there been any modifications to the plea bargaining process under the BNSS, and how might this impact case resolution?",
+      "answer": "Yes, the Bharatiya Nagarik Suraksha Sanhita (BNSS) retains and slightly refines the plea bargaining provisions. *Section 297 BNSS* (equivalent to CrPC Section 265A) continues to offer an avenue for accused persons to negotiate a mutually satisfactory disposition of the case with the victim and the prosecutor for certain offenses. The BNSS aims to make this process more effective by emphasizing its role in reducing trial pendency and promoting quicker justice. While the core procedure remains similar, the increased focus on digital communication and expeditious disposal across the BNSS framework might indirectly encourage greater utilization of plea bargaining for faster case resolution, benefiting both the accused and the justice system.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "297"
+    },
+    {
+      "question": "Do the new codes (BNS, BNSS, BSA) in any way curtail or expand the inherent powers of the High Court under Article 226/227 or its power under Section 482 CrPC (now BNSS)?",
+      "answer": "The new codes primarily deal with substantive criminal law and criminal procedure. While they streamline processes and introduce new offenses/punishments, they do *not* directly curtail or expand the constitutional powers of the High Courts under Article 226 or 227 of the Constitution of India. The inherent powers of the High Court, previously enshrined under Section 482 CrPC, are now mirrored in *Section 530 BNSS*. This section explicitly saves the inherent power of the High Court to make such orders as may be necessary to give effect to any order under the Sanhita, or to prevent abuse of the process of any Court or otherwise to secure the ends of justice. Thus, the High Court's extraordinary jurisdiction remains intact, ensuring its supervisory role over subordinate courts.",
+      "related_statute_code": "BNSS",
+      "related_section_no": "530"
+    },
+    {
+      "question": "With the emphasis on digital evidence in BSA and BNSS, what are the new requirements for forensic investigation and ensuring the integrity of electronic evidence?",
+      "answer": "The BSA and BNSS significantly strengthen the framework for digital evidence. *Section 63 BSA* explicitly deals with the admissibility of electronic records, emphasizing their integrity through specific conditions for authentication. Crucially, *Section 176 BNSS* mandates forensic investigation for offenses punishable with imprisonment of seven years or more, including the collection and preservation of forensic evidence, which inherently extends to digital forensics. The BNSS also requires police officers to inform the victim about the progress of the investigation every 90 days (*Section 193 BNSS*). These provisions underscore the need for proper chain of custody, expert analysis, and robust forensic infrastructure, making the role of forensic experts and digital integrity paramount for proving electronic evidence in court.",
+      "related_statute_code": "BSA",
+      "related_section_no": "63",
+      "related_statute_code_2": "BNSS",
+      "related_section_no_2": "176, 193"
+    }
+  ]
+}

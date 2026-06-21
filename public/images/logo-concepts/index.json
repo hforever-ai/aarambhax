@@ -1,0 +1,37 @@
+[
+  {
+    "id": "concept-1-monogram",
+    "name": "Monogram A — Geometric Serif",
+    "direction": "A single bold capital letter A in a custom geometric serif typeface. The A should feel like a classical column — narrow, tall, elegant. Solid deep navy. The horizontal crossbar of the A is rendered in warm gold as a thin, refined line. Optional: subtle serifs at the base of the legs. Total composition is minimal — just the letterform on a white background.",
+    "size_bytes": 911,
+    "svg_path": "images/logo-concepts/concept-1-monogram.svg"
+  },
+  {
+    "id": "concept-2-arch",
+    "name": "Heritage Arch + Negative Space A",
+    "direction": "A subtle architectural arch (the kind you see at heritage courthouses in India — semicircular at the top, vertical sides) rendered in deep navy. Inside the arch, the negative space forms a stylized capital letter A or the inverted-V shape suggesting it. A single warm gold horizontal element anchors the bottom of the arch. The composition feels like both a doorway (beginning, aarambhax) and a letterform.",
+    "size_bytes": 276,
+    "svg_path": "images/logo-concepts/concept-2-arch.svg"
+  },
+  {
+    "id": "concept-3-quill-stroke",
+    "name": "Single Stroke Quill / Fountain Pen Tip",
+    "direction": "A single elegant brush-stroke that resolves into a fountain pen / quill tip at one end. Deep navy stroke. The nib catches a small gold dot of ink, OR a thin gold line trails behind the stroke as if writing. Composition is minimal, calligraphic, suggests writing the first word of a legal draft. Avoid making it look like a feathered quill — keep it modern, clean.",
+    "size_bytes": 218,
+    "svg_path": "images/logo-concepts/concept-3-quill-stroke.svg"
+  },
+  {
+    "id": "concept-4-folded-page",
+    "name": "Folded Manuscript Page",
+    "direction": "An abstract geometric representation of a folded sheet of paper — like a legal manuscript with a corner deliberately turned over. The base sheet is deep navy (or its outline is), the folded corner reveals a triangular shape. A single thin gold line runs across the base sheet suggesting the first line of text. The fold is precisely geometric — rendered as clean triangles, not soft curves.",
+    "size_bytes": 297,
+    "svg_path": "images/logo-concepts/concept-4-folded-page.svg"
+  },
+  {
+    "id": "concept-5-emblem-circle",
+    "name": "Circular Emblem with Devanagari A",
+    "direction": "A perfectly circular emblem-style mark in deep navy with a thin gold inner border ring. At the center, a single Devanagari character अ (the first letter of the Devanagari alphabet, also literally the 'aa' in Aarambhax) rendered in a clean modern style — NOT calligraphic flourishes, more like a contemporary Devanagari typeface. The character is gold against the navy background. The emblem feels like the seal of a respected legal chamber.",
+    "size_bytes": 536,
+    "svg_path": "images/logo-concepts/concept-5-emblem-circle.svg"
+  }
+]
